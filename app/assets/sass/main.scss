@@ -10,3 +10,28 @@
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
 ///////////////////////////////////////////
+
+/* sign in bar */
+.nhsuk-text-right {
+  text-align: right;
+}
+
+.done-panel {
+	background-color: #005EB8;
+	text-align: center;
+	color: white;
+	padding: 20px;
+	margin: 0px 0px 30px 0px;
+}
+
+.done-tick {
+  background-image: url(../images/done-tick.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 0px;
+  padding-left: 50px;
+ }
+
+ span.line-break{
+	display:block;
+}

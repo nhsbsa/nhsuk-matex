@@ -48,25 +48,45 @@
           Go back
         </a>
       </div>
-      <form action="/check-answers" method="post">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">
-              Mother's email address
+      <div class="content">
+        <div class="indextext">
+          <div class="done-panel">
+            <h1 class="nhsuk-heading-l" id="completed">
+              <span class="done-tick" id="done-tick">Done</span>
             </h1>
-          </legend>
-          
-          <div id="contact-by-email">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="contact-email">Email address</label>
-              <p class="nhsuk-body">An incorrect email address will prevent the mother from receiving her exemption.</p>
-              <input class="nhsuk-input nhsuk-input--width-20" id="contact-email" name="contact-email" autocomplete="off" maxlength="50" aria-required="true" type="text" />
+            <h2 class="nhsuk-heading-m" id="submitted">
+              <span id="submitted-hcp">You have completed the application</span>
+            </h2>
+          </div>
+          <div>
+            <div class="nhsuk-inset-text">
+              <p id="submitted-hcp-certNumber">Mother's certificate number: 
+                <span class="nhsuk-u-font-weight-bold">12345678</span>
+              </p>
+
+              <p class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
+                Exemption ends: <span class="nhsuk-u-font-weight-bold">20/05/2023</span></p>
+            </div>
+
+            <h3 class="nhsuk-heading-m">
+              What happens next?
+            </h3>
+            <p class="nhsuk-body">We'll email these details to the mother. She can start using her exemption straight away.</p>
+            <div>
+              <h4 class="nhsuk-heading-s">
+                Ongoing feedback from mothers
+              </h4>
+              <p class="nhsuk-body">If the mother is happy to take part in further research, <a
+                  href="#">send us a contact number (link opens in a new window)</a>.</p>
             </div>
           </div>
-          
-        </fieldset>
-        <button class="nhsuk-button" type="submit">Continue</button>
-      </form>
+          <form action="/start-page-signed-in" method="POST" class="form">
+            <div class="nhsuk-form-group">
+              <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>  
   </div>
 {% endblock %}
