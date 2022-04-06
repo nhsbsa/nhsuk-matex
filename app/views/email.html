@@ -49,24 +49,22 @@
         </a>
       </div>
       <form action="/certificate-email-or-post" method="post">
-        <fieldset class="nhsuk-fieldset" id="email-post">
+        <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading" id="title">
-              Would the mother like her exemption details sent by email or post?
+              Mother's email address
             </h1>
           </legend>
-          <div class="nhsuk-form-group">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-email" name="contact-group" type="radio" value="email" aria-required="true" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-yes" for="example-contact-by-email">Email</label>
-            </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-post" name="contact-group" type="radio" value="post" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-no" for="example-contact-by-post">Post</label>
+          
+          <div id="contact-by-email">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="contact-email">Email address</label>
+              <p class="nhsuk-body">An incorrect email address will prevent the mother from receiving her exemption.</p>
+              <input class="nhsuk-input nhsuk-input--width-20" id="contact-email" name="contact-email" autocomplete="off" maxlength="50" aria-required="true" type="text" />
             </div>
           </div>
+          
         </fieldset>
-      
         <button class="nhsuk-button" type="submit">Continue</button>
       </form>
     </div>  

@@ -49,20 +49,31 @@
         </a>
       </div>
       <form action="/certificate-email-or-post" method="post">
-        <fieldset class="nhsuk-fieldset" id="email-post">
+        <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">
-              Would the mother like her exemption details sent by email or post?
-            </h1>
+            <h1 class="nhsuk-fieldset__heading" id="title">Mother's postal address</h1>
           </legend>
-          <div class="nhsuk-form-group">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-email" name="contact-group" type="radio" value="email" aria-required="true" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-yes" for="example-contact-by-email">Email</label>
+          
+          <div id="contact-by-post">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="address1" for="addressLine1">Building and street</label>
+             
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" type="text" autocomplete="off" maxlength="30" aria-required="true" />
             </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-post" name="contact-group" type="radio" value="post" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-no" for="example-contact-by-post">Post</label>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-u-visually-hidden" id="address2"for="addressLine2">Building and street 2</label>
+              
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" type="text" autocomplete="off" maxlength="30" />
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="town" for="addressTown">Town or city</label>
+              
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressTown" type="text" name="addressTown" maxlength="30" autocomplete="off" />
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="motherPostcode" for="postcode">Postcode</label>
+             
+              <input class="nhsuk-input nhsuk-input--width-20" id="postcode" type="text" name="postcode" autocomplete="off" maxlength="8"/>
             </div>
           </div>
         </fieldset>

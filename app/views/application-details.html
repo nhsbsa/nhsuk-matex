@@ -39,189 +39,77 @@
 {% block content %}
 
   <div class="nhsuk-grid-row">
-
     <div class="nhsuk-grid-column-two-thirds">
-
-
       <div class="nhsuk-back-link">
         <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
           <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
           </svg>
-          Go back</a>
+          Go back
+        </a>
       </div>
-      <br>
 
-      <!-- Change the page title here -->
-      <h1>
-        Application details
-      </h1>
-
-      <div class="nhsuk-form-group">
-      
+      <h1 id="title" class="nhsuk-heading-l">Application details</h1>
+      <form>
         <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading">
-              About the mother
-            </h1>
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">About the mother</h2>
           </legend>
 
-      
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="example">
-            Mother's first name
-          </label>
-          <input class="nhsuk-input" id="example" name="example" type="text">
-        </div>
-
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="example">
-            Mother's last name
-          </label>
-          <input class="nhsuk-input" id="example" name="example" type="text">
-        </div>
-
-
+        
           <div class="nhsuk-form-group">
-            <label class="nhsuk-label" for="input-width-10">
-              Mother's date of birth
-              <div class="nhsuk-hint" id="contact-hint">
-                For example, 31/03/1980 
-              </div>
+            <label class="nhsuk-label" for="first-nam">
+              Mother's first name
             </label>
-
-            <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
+            <input class="nhsuk-input nhsuk-input--width-20" id="first-name" name="fname" type="text">
           </div>
 
           <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="example">
-            Mother's NHS number
-          </label>
-          <input class="nhsuk-input" id="example" name="example" type="text">
+            <label class="nhsuk-label" for="last-name">
+              Mother's last name
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="last-name" name="lname" type="text">
           </div>
           
           <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="example">
-            Mother's postcode
-          </label>
-          <input class="nhsuk-input" id="example" name="example" type="text">
-        </div>
+            <label class="nhsuk-label" for="dob">Mother's date of birth
+              <div class="nhsuk-hint" id="contact-hint">For example, 31/03/1980</div>
+            </label>
 
+            <input class="nhsuk-input nhsuk-input--width-20" id="dob" name="test-width-10" type="text">
+          </div>
 
-        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-          <h1 class="nhsuk-fieldset__heading">
-            About the baby
-          </h1>
-        </legend>
-
-
-        <div class="nhsuk-form-group">
-          <label class="nhsuk-label" for="input-width-10">
-            Due date or baby's birth date
-            <div class="nhsuk-hint" id="contact-hint">
-              For example, 31/03/2021 
-            </div>
-          </label>
-
-          <input class="nhsuk-input nhsuk-input--width-10" id="input-width-10" name="test-width-10" type="text">
-        </div>
-
-        <br><br>
-
-          <a class="nhsuk-button" type="submit" href="certificate-email-or-post">
-            Continue
-           </a>
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="nhs-no">Mother's NHS number</label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="nhs-no" name="nhs-no" type="text">
+          </div>
+            
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="postcode">Mother's postcode</label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="postcode" name="postcode" type="text">
+          </div>
         </fieldset>
-      
-      </div>
 
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
+            <h2 class="nhsuk-fieldset__heading">About the baby</h2>
+          </legend>
 
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="input-width-10">
+              Due date or baby's birth date
+              <div class="nhsuk-hint" id="contact-hint">
+                For example, 31/03/2021
+              </div>
+            </label>
 
+            <input class="nhsuk-input nhsuk-input--width-20" id="input-width-10" name="test-width-10" type="text">
+          </div>
 
-       
+          <p><a class="nhsuk-button" href="certificate-email-or-post">Continue</a></p>
+        </fieldset>  
+      </form>
+    </div>
+  </div>  
 
-
-
-
-      <!--
-      <figure class="nhsuk-image">
-        <img class="nhsuk-image__img" src="/images/placeholder-image-16-9.jpg" alt="A 16:9 image placeholder">
-        <figcaption class="nhsuk-image__caption">
-          Image example
-        </figcaption>
-      </figure>
-
-      <h2>Level heading two</h2>
-
-      {{ list({
-        "title": "Do",
-        "type": "tick",
-        "items": [
-          {
-            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
-          },
-          {
-            "item": "wash your hands before touching a burst blister"
-          },
-          {
-            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
-          }
-        ]
-      }) }}
-
-      {{ list({
-        "title": "Don't",
-        "type": "cross",
-        "items": [
-          {
-            "item": "burst a blister yourself"
-          },
-          {
-            "item": "peel the skin off a burst blister"
-          },
-          {
-            "item": "pick at the edges of the remaining skin"
-          },
-          {
-            "item": "wear the shoes or use the equipment that caused your blister until it heals"
-          }
-        ]
-      }) }}
-
-      <h3>
-        Level heading three
-      </h3>
-
-      <p>
-        Body text:
-      </p>
-
-      <ul>
-        <li>
-          The quick brown
-        </li>
-        <li>
-          fox jumps over
-        </li>
-        <li>
-          the lazy dog
-        </li>
-      </ul>
-
-      {{ warningCallout({
-        "heading": "School, nursery or work",
-        "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
-      }) }}
-
-      {{ reviewDate({
-        "lastReview": "12 February 2017",
-        "nextReview": "1 February 2020"
-      }) }}-->
-
-      <!-- End of content -->
-
-    </div>  
-
-  </div>
 {% endblock %}
