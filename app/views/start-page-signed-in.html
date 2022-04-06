@@ -1,0 +1,200 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  {{ breadcrumb({
+    href: "/help-page",
+    text: "Help"
+  }) }}
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Apply for a maternity exemption
+      </h1>
+
+      <div class="nhsuk-hint" id="contact-hint">
+        Use this service to apply for maternity exemption certificates on behalf of new or expectant mothers.
+      </div>
+      
+      <p>
+        A maternity exemption certificate entitles the mother to free prescriptions: 
+        <ul>
+          <li>while pregnant</li>
+          <li>for 12 months after the birth of the child</li>
+        </ul>
+      </p>
+
+      <p>
+        You'll need the mother's:
+        <ul>
+          <li>date of birth</li>
+          <li>NHS number</li>
+          <li>due or birth date of their child</li>
+          <li>email or postal address </li>
+        </ul>
+      </p>
+
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>You'll need to <a href="/register" title="New window">register to use this service</a>.</p>
+      </div>
+
+
+      <a class="nhsuk-button" type="submit" href="/mother-present">
+        Start now
+       </a>
+
+       <br><br>
+
+       <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I do not have an account
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>To use this servie you must:</p>
+          <ul>
+            <li>be a Midwife, GP or Health Visitor</li>
+            <li>be registered with the Nursing and Midwifery Council (NMC) or the General Medical Council (GMC) to create an account </li>
+            <li>have an NHSmail email address</li>
+          </ul>
+          <p><a href="/register" title="New window">Register to use this service</a></p>
+          <p><a href="https://www.nhsbsa.nhs.uk/exemption-certificates/maternity-exemption-certificates/digital-maternity-exemption-service" title="New window">Find out more on our website </a></p>
+      
+        </div>
+      </details>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            I'm pregnant or have had a baby in the last 12 months 
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>To get a maternity exemption certificate contact your midwife, doctor or health visitor.</p>
+          <p><a href="https://www.nhsbsa.nhs.uk/exemption-certificates/maternity-exemption-certificates" title="New window">Find out what you're entitled to</a></p>      
+        </div>
+      </details>
+
+
+
+
+
+
+      <!--
+      <figure class="nhsuk-image">
+        <img class="nhsuk-image__img" src="/images/placeholder-image-16-9.jpg" alt="A 16:9 image placeholder">
+        <figcaption class="nhsuk-image__caption">
+          Image example
+        </figcaption>
+      </figure>
+
+      <h2>Level heading two</h2>
+
+      {{ list({
+        "title": "Do",
+        "type": "tick",
+        "items": [
+          {
+            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
+          },
+          {
+            "item": "wash your hands before touching a burst blister"
+          },
+          {
+            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
+          }
+        ]
+      }) }}
+
+      {{ list({
+        "title": "Don't",
+        "type": "cross",
+        "items": [
+          {
+            "item": "burst a blister yourself"
+          },
+          {
+            "item": "peel the skin off a burst blister"
+          },
+          {
+            "item": "pick at the edges of the remaining skin"
+          },
+          {
+            "item": "wear the shoes or use the equipment that caused your blister until it heals"
+          }
+        ]
+      }) }}
+
+      <h3>
+        Level heading three
+      </h3>
+
+      <p>
+        Body text:
+      </p>
+
+      <ul>
+        <li>
+          The quick brown
+        </li>
+        <li>
+          fox jumps over
+        </li>
+        <li>
+          the lazy dog
+        </li>
+      </ul>
+
+      {{ warningCallout({
+        "heading": "School, nursery or work",
+        "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
+      }) }}
+
+      {{ reviewDate({
+        "lastReview": "12 February 2017",
+        "nextReview": "1 February 2020"
+      }) }}-->
+
+      <!-- End of content -->
+
+    </div>  
+
+  </div>
+{% endblock %}
