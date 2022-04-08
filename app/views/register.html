@@ -15,7 +15,7 @@
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
   <!-- Breadcrumb -->
-  <div class="nhsuk-breadcrumb">
+ <!-- <div class="nhsuk-breadcrumb">
     <div class="nhsuk-width-container nhsuk-text-right">
       <span class="nhsuk-u-margin-right-3">Matex Test</span>
       |
@@ -23,7 +23,7 @@
       |
       <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
     </div>
-  </div>
+  </div>-->
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -43,23 +43,32 @@
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-  <div class="nhsuk-grid-row">
+<div class="nhsuk-back-link">
+  <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
+    <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+      <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+    </svg>
+    Go back</a>
+</div>
 
-    <div class="nhsuk-grid-column-two-thirds">
 
-      <div class="nhsuk-back-link">
-        <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
-          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
-            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
-          </svg>
-          Go back</a>
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h2>Register to issue maternity exemption certificates</h2>
       </div>
-      <br>
 
-      <!-- Change the page title here -->
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here 
       <h1>
         Register to issue maternity exemption certificates 
-      </h1>
+      </h1>-->
 
       <div class="nhsuk-hint" id="contact-hint">
         Use this service to apply for maternity exemption certificates on behalf of new or expectant mothers.
@@ -90,6 +99,33 @@
        </a>
 
        <p><a href="/start-page-signed-out" title="New window">Sign in to issue maternity exemption certificates</a></p>
+
+      </div>
+
+
+      <div class="nhsuk-grid-column-one-third">
+        <h2 class="col-heading heading-medium">Related links</h2>
+          <ul class="list list-bullet">
+            <li><a href="register-dont-have-nhsmail">I do not have an NHSmail account</a></li>
+            <li><a href="register-as-a-gp">Register as a GP</a></li>
+         </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+    </div>  
+
+  </div>
+
+
+
+
+
+
+
+
 
       <!--
       <figure class="nhsuk-image">
@@ -168,7 +204,5 @@
 
       <!-- End of content -->
 
-    </div>  
 
-  </div>
 {% endblock %}

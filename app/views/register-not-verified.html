@@ -1,0 +1,107 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  <!--<div class="nhsuk-breadcrumb">
+    <div class="nhsuk-width-container nhsuk-text-right">
+      <span class="nhsuk-u-margin-right-3">Matex Test</span>
+      |
+      <a class="nhsuk-u-margin-left-3 nhsuk-u-margin-right-3" id="signout__link" href="/start-page-signed-out">Sign out</a>
+      |
+      <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
+    </div>
+  </div>-->
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back
+        </a>
+      </div>
+      <form action="/confirmation" class="form" >
+        <div class="content">
+          <h1 class="nhsuk-heading-l" id="title">You have not been verified</h1>
+          <p>Based on the details you've given us, we have not been able to verify your professional identity in ESR.</p>
+          <dl class="nhsuk-summary-list">
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-int-date" class="nhsuk-summary-list__key">NHSmail address</dt>
+              <dd class="nhsuk-summary-list__value" id="int-date">annie.apple.midwife@nhs.net</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/mother-present#contact-2" id="intdate-change"
+                  aria-label="Change date you met the mother">Change</a>
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-name" class="nhsuk-summary-list__key">last name</dt>
+              <dd class="nhsuk-summary-list__value" id="name">Apple</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-email-address" class="nhsuk-summary-list__key">NMC PIN</dt>
+              <dd class="nhsuk-summary-list__value" id="email-add">12A3456B</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/email" id="email-change" aria-label="Change mother's email address">Change</a>
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-dob" class="nhsuk-summary-list__key">Date of birth</dt>
+              <dd class="nhsuk-summary-list__value" id="moth-dob">10 January 1989</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/application-details#dob" id="dob-change" aria-label="Change mother's date of birth">Change</a>
+              </dd>
+            </div>
+          </dl>
+        </div>
+
+
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p>If your information is correct but we are still unable to confirm your details, you should email us at 
+            <a href="mailto:nhsbsa.healthcosts@nhs.net" title="New window">nhsbsa.healthcosts@nhs.net</a>.</p>
+        </div>
+
+
+      </form>
+    </div>  
+  </div>
+{% endblock %}
