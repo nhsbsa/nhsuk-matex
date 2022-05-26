@@ -15,7 +15,7 @@
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
   <!-- Breadcrumb -->
- <!-- <div class="nhsuk-breadcrumb">
+  <!--<div class="nhsuk-breadcrumb">
     <div class="nhsuk-width-container nhsuk-text-right">
       <span class="nhsuk-u-margin-right-3">Matex Test</span>
       |
@@ -43,76 +43,24 @@
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
+  <div class="nhsuk-grid-row">
 
+    <div class="nhsuk-grid-column-two-thirds">
 
-  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-        <h1>Apply for a maternity exemption</h1>
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
       </div>
+      <br>
 
-
-
-<div class="nhsuk-width-container">
-  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
-    <div class="nhsuk-grid-row">
-      <div class="nhsuk-grid-column-two-thirds">
-
-      <!-- Change the page title here 
-      <h1>
-        Register to issue maternity exemption certificates 
-      </h1>-->
-
-     
-        <p>Use this service to apply for maternity exemption certificates on behalf of new or expectant mothers.</p>
-        <p>A maternity exemption certificate entitles the mother to free prescriptions: 
-          <ul>
-           <li>while pregnant</li>
-           <li>for 12 months after the birth of the child</li>
-          </ul>
-         </p>
-
-         <p>You'll need the mother's:
-          <ul>
-           <li>date of birth</li>
-           <li>NHS number</li>
-           <li>due or birth date of their child</li>
-           <li>email or postal address </li>
-          </ul>
-         </p>
-         <div class="nhsuk-inset-text">
-          <span class="nhsuk-u-visually-hidden">Information: </span>
-            <p><a href="/register" title="External website">You'll need to register to use this service
-               </a>
-            </p>
-       </div>
-       <a class="nhsuk-button" type="submit" href="/microsoft-login">Sign in</a>
-
-
-
-      </div>
-
-
-      <div class="nhsuk-grid-column-one-third">
-        <h2 class="col-heading heading-medium">Related links</h2>
-          <ul class="list list-bullet">
-            <li><a href="/i-am-pregnant">I'm pregnant or have a had a baby in the last 12 months</a></li>
-         </ul>
-      </div>
-    </div>
-  </main>
-</div>
-
-
-    </div>  
-
-  </div>
-
-
-
-
-
-
+      <!-- Change the page title here -->
+      
+<h2>To get a maternity exemption certificate contact your midwife, doctor or health visitor.</h2>
+      
+<p><a href="https://www.nhsbsa.nhs.uk/exemption-certificates/maternity-exemption-certificates">Find out what you're entitled to</a></p>
 
 
 
@@ -193,5 +141,7 @@
 
       <!-- End of content -->
 
+    </div>  
 
+  </div>
 {% endblock %}

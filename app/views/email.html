@@ -53,19 +53,22 @@
           Go back
         </a>
       </div>
-      <form action="/check-answers" method="post">
+      <form action="/check-answers-email" method="post">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading" id="title">
               Mother's email address
             </h1>
           </legend>
-          <p>We’ll send the certificate to this email address.</p>
+ 
           
           <div id="contact-by-email">
             <div class="nhsuk-form-group">
-              <label class="nhsuk-label" for="contact-email">Email address</label>
-              <p class="nhsuk-body">An incorrect email address will prevent the mother from receiving her exemption.</p>
+              
+              <div class="nhsuk-hint" id="contact-hint">
+                We’ll send the certificate to this email address.
+              </div>
+              
               <input class="nhsuk-input nhsuk-input--width-20" id="contact-email" name="contact-email" autocomplete="off" maxlength="50" aria-required="true" type="text" />
             </div>
           </div>

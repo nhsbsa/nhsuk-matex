@@ -15,15 +15,7 @@
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
   <!-- Breadcrumb -->
-  <!--<div class="nhsuk-breadcrumb">
-    <div class="nhsuk-width-container nhsuk-text-right">
-      <span class="nhsuk-u-margin-right-3">Matex Test</span>
-      |
-      <a class="nhsuk-u-margin-left-3 nhsuk-u-margin-right-3" id="signout__link" href="/start-page-signed-out">Sign out</a>
-      |
-      <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
-    </div>
-  </div>-->
+  
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -47,6 +39,7 @@
 
     <div class="nhsuk-grid-column-two-thirds">
 
+
       <div class="nhsuk-back-link">
         <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
           <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
@@ -57,16 +50,39 @@
       <br>
 
       <!-- Change the page title here -->
-      <h1>
-        Registering for an NHSmail account 
-      </h1>
+      <h2>
+        What is your email address?
+      </h2>
 
-      <p>
-        If you are an individual member of staff working in a Trust or other organisation that already uses NHSmail and you wish to register an account, 
-        you should contact your local administrator or IT helpdesk.
-      </p>
+      <div class="nhsuk-form-group">
+      
+        <fieldset class="nhsuk-fieldset">
 
-      <p><a href="https://support.nhs.net/knowledge-base/registering-for-an-nhsmail-account/" title="New window">Read more about how to join NHSmail</a>.</p>
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="example">
+            <div class="nhsuk-hint" id="contact-hint">
+              Your email address needs to be with a secure service - such as NHSmail.
+            </div>
+          </label>
+          <input class="nhsuk-input" id="example" name="example" type="text">
+        </div>
+
+
+        <br><br>
+
+          <a class="nhsuk-button" type="submit" href="register-your-details">
+            Continue
+           </a>
+        </fieldset>
+      
+      </div>
+
+
+
+
+       
+
 
 
 

@@ -53,7 +53,7 @@
           Go back
         </a>
       </div>
-      <form action="/confirmation" class="form" >
+      <form action="/confirmation-post" class="form" >
         <div class="content">
           <h1 class="nhsuk-heading-l" id="title">Check your answers</h1>
           <dl class="nhsuk-summary-list">
@@ -71,14 +71,6 @@
               <dd class="nhsuk-summary-list__value" id="name">Mary Test</dd>
               <dd class="nhsuk-summary-list__actions">
                 <a href="/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
-              </dd>
-            </div>
-
-            <div class="nhsuk-summary-list__row">
-              <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's email address</dt>
-              <dd class="nhsuk-summary-list__value" id="email-add">mary.test@gmail.com</dd>
-              <dd class="nhsuk-summary-list__actions">
-                <a href="/email" id="email-change" aria-label="Change mother's email address">Change</a>
               </dd>
             </div>
 
@@ -115,10 +107,21 @@
             </div>
 
             <div class="nhsuk-summary-list__row">
-              <dt id="details-by-email" class="nhsuk-summary-list__key">Get details by email</dt>
+              <dt id="details-by-email" class="nhsuk-summary-list__key">Send certificate by post</dt>
               <dd class="nhsuk-summary-list__value" id="details-email">Yes</dd>
               <dd class="nhsuk-summary-list__actions">
                 <a href="/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's address</dt>
+              <dd class="nhsuk-summary-list__value" id="email-add">101 Newcastle Street<br>
+                Newcastle<br>
+                NE15 8NY<br>
+                </dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/email" id="email-change" aria-label="Change mother's email address">Change</a>
               </dd>
             </div>
           </dl>
@@ -133,7 +136,7 @@
               10/03/2022.<br /><br />
               I confirm that the mother:
             <ul class="nhsuk-list nhsuk-list--bullet">
-              <li class="declaration-list">has given her permission for this application to be submitted on her behalf
+              <li class="declaration-list">has given their permission for this application to be submitted on their behalf
               </li>
               <li class="declaration-list">knows the information submitted will be used by the NHS Business Services Authority and shared other organisations working on their behalf where necessary</li>
               <li class="declaration-list">understands their data will not be transferred outside of the European Economic Area and will be deleted within 24 months of the expiry date of the exemption</li>

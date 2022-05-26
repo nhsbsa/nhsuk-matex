@@ -53,28 +53,46 @@
           Go back
         </a>
       </div>
-      <form action="/certificate-email-or-post" method="post">
-        <fieldset class="nhsuk-fieldset" id="email-post">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">
-              Would the mother like their exemption details sent by email or post?
+      <div class="content">
+        <div class="indextext">
+          <div class="done-panel">
+            <h1 class="nhsuk-heading-l" id="completed">
+              <span class="done-tick" id="done-tick">Done</span>
             </h1>
-          </legend>
-          <p>Mothers will get their exemption certificate straight away if sent by email.</p>
-          <div class="nhsuk-form-group">
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-email" name="contact-group" type="radio" value="email" aria-required="true" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-yes" for="example-contact-by-email">Email</label>
+            <h2 class="nhsuk-heading-m" id="submitted">
+              <span id="submitted-hcp">You have completed the application</span>
+            </h2>
+          </div>
+          <div>
+            <div class="nhsuk-inset-text">
+              <p id="submitted-hcp-certNumber">Mother's certificate number: 
+                <span class="nhsuk-u-font-weight-bold">12345678</span>
+              </p>
+
+              <p class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
+                Exemption ends: <span class="nhsuk-u-font-weight-bold">20/05/2023</span></p>
             </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-post" name="contact-group" type="radio" value="post" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-no" for="example-contact-by-post">Post</label>
+
+            <h3 class="nhsuk-heading-m">
+              What happens next?
+            </h3>
+            <p class="nhsuk-body">We'll email the certificate to the mother. They can start using their exemption straight away.</p>
+            <p class="nhsuk-body">Check to make sure they have received the certificate at their next appointment.</p>
+            <div>
+              <h4 class="nhsuk-heading-s">
+                Ongoing feedback from mothers
+              </h4>
+              <p class="nhsuk-body">If the mother is happy to take part in further research, <a
+                  href="#">send us a contact number (link opens in a new window)</a>.</p>
             </div>
           </div>
-        </fieldset>
-      
-        <button class="nhsuk-button" type="submit">Continue</button>
-      </form>
+          <form action="/start-page-signed-in" method="POST" class="form">
+            <div class="nhsuk-form-group">
+              <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
+            </div>
+          </form>
+        </div>
+      </div>
     </div>  
   </div>
 {% endblock %}
