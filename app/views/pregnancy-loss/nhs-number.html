@@ -1,0 +1,171 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  Do you know your NHS number? - MATEX
+{% endblock %}
+
+<!-- For adding a breadcrumb -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+    <strong class="govuk-tag govuk-phase-banner__content__tag">
+     beta
+    </strong>
+    <span class="govuk-phase-banner__text">
+      This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+    </span>
+  </p>
+</div>
+
+div class="nhsuk-breadcrumb">
+    <div class="nhsuk-width-container nhsuk-text-right">
+      <span class="nhsuk-u-margin-right-3">Matex Test</span>
+      |
+      <a class="nhsuk-u-margin-left-3 nhsuk-u-margin-right-3" id="signout__link" href="/start-page-signed-out">Sign out</a>
+      |
+      <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
+    </div>
+  </div>
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+      
+      
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset" aria-describedby="contact-hint">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you know the mother's NHS number?
+            </h1>
+          </legend>
+
+          <p>You do not need to provide the mother's NHS number, but it can help us match their details correctly.</p>
+
+            
+
+            
+          
+          
+      
+          
+            <div class="nhsuk-hint" id="contact-hint">
+              This is a 10 digit number, like 485 777 3456.
+            </div>
+          <div class="nhsuk-radios nhsuk-radios--conditional">
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-1" name="contact" type="radio" value="email" aria-controls="conditional-contact-1" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+                Yes, I know their NHS number
+              </label>
+            </div>
+      
+            <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+      
+              <div class="nhsuk-form-group">
+                <label class="nhsuk-label" for="email">
+                  NHS number
+                </label>
+                <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text">
+              </div>
+      
+            </div>
+      
+            
+      
+            
+      
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="contact-3" name="contact" type="radio" value="text" aria-controls="conditional-contact-3" aria-expanded="false">
+              <label class="nhsuk-label nhsuk-radios__label" for="contact-3">
+                No, I do not know their NHS number
+              </label>
+            </div>
+      
+          
+      
+          </div>
+        </fieldset>
+      
+      </div>
+      
+        
+      
+        
+      
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Where to find an NHS number
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If the mother is registered with a GP, they will have a 10 digit NHS number unique to them.</p>
+
+          <p>It can be found on the NHS app or you can <a href="https://www.nhs.uk/nhs-services/online-services/find-nhs-number/" target="_blank">use our online NHS number finder (opens in a new tab)</a>.</p>
+            </p>
+          <p>It is also on any letters or documents the mother receives from the NHS, such as:</p>
+          <ul>
+            <li>prescriptions</li>
+            <li>test results</li>
+            <li>appointment letters</li>
+            <li>maternity notes</li>
+            
+          </ul>
+          
+      
+        </div>
+      </details>
+     
+
+        <form action="mother-present">
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
+      </form>
+
+      <!-- End of content -->
+
+    </div>  
+
+  </div>
+{% endblock %}

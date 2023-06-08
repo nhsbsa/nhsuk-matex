@@ -1,0 +1,300 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  <div class="nhsuk-breadcrumb">
+    <div class="nhsuk-width-container nhsuk-text-right">
+      <span class="nhsuk-u-margin-right-3">Matex Test</span>
+      |
+      <a class="nhsuk-u-margin-left-3 nhsuk-u-margin-right-3" id="signout__link" href="/start-page-signed-out">Sign out</a>
+      |
+      <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
+    </div>
+  </div>
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+
+    <div class="govuk-panel govuk-panel--confirmation">
+      <div style="background-color: #00703c; 
+      border-radius: 0px; 
+      box-sizing: 
+      border-box;
+      margin-bottom: 15px;
+      padding: 35px;
+      border: 5px solid transparent;
+      text-align: center;">
+        <div style="padding-top: 20px; padding-bottom: 20px;">
+        </div>
+        
+    
+      <h1 class="govuk-panel__title" style="color: white;">
+          Application complete
+      </h1>
+    
+      <p class="nhsuk-u-font-size-24" style="color: white; margin-block-start: 1em; margin-block-end: 1em; margin-top: 0px; margin-bottom: 24px;">
+        You have successfully submitted an application on behalf of the patient.
+      </p>
+      </div>
+      </div>
+    
+    
+      <div class="nhsuk-u-padding-bottom-5"></div>
+      <p>Ask the mother to take a note of the following information.</p>
+      <h3>Certificate details</h3>
+
+      
+      <div style="background-color: #005EB8; border-radius: 20px;">
+        <div style="padding-top: 15px;">
+        </div>
+        
+        <dl class="nhsuk-summary-list" style="color: white; padding: 20px ; margin-bottom: 5px; margin-top: -25px;">
+          <div class="nhsuk-summary-list__row nhsuk-print-black">
+            <dt class="nhsuk-summary-list__key nhsuk-print-black" >
+              Name
+            </dt>
+            <dd class="nhsuk-summary-list__value nhsuk-print-black">
+              Mary Test
+            </dd>
+          </div>
+        
+          <div class="nhsuk-summary-list__row nhsuk-print-black">
+            <dt class="nhsuk-summary-list__key nhsuk-print-black">
+              Certificate reference
+            </dt>
+            <dd class="nhsuk-summary-list__value nhsuk-print-black">
+              87654321
+            </dd>
+          </div>
+        
+          <div class="nhsuk-summary-list__row nhsuk-print-black">
+            <dt class="nhsuk-summary-list__key nhsuk-print-black">
+              Length
+            </dt>
+            <dd class="nhsuk-summary-list__value nhsuk-print-black">
+              12 months
+            </dd>
+          </div>
+        
+          <div class="nhsuk-summary-list__row nhsuk-print-black">
+            <dt class="nhsuk-summary-list__key nhsuk-print-black">
+              Valid from
+            </dt>
+            <dd class="nhsuk-summary-list__value nhsuk-print-black">
+              15/04/2023
+            </dd>  
+          </div>
+
+          <div class="nhsuk-summary-list__row nhsuk-print-black">
+            <dt class="nhsuk-summary-list__key nhsuk-print-black">
+              Issued on
+            </dt>
+            <dd class="nhsuk-summary-list__value nhsuk-print-black">
+              15/05/2023
+            </dd>  
+          </div>
+
+          <div class="nhsuk-summary-list__row nhsuk-print-black">
+            <dt class="nhsuk-summary-list__key nhsuk-print-black">
+              Expires on
+            </dt>
+            <dd class="nhsuk-summary-list__value nhsuk-print-black">
+              15/06/2024
+            </dd>  
+          </div> 
+        </dl>
+
+        <div style="padding-top: -10px;">
+          <div style="color:white">
+          <strong class="nhsuk-print-black" style="font-size:large; padding: 20px; padding-top: -20px;">Contact the NHSBSA if the mother's personal details change.</strong>  
+          </div>
+          
+          <div style="color:white">
+          <p class="nhsuk-print-black" style=" padding-left: 20px;">
+             If their details do not match our records, they may receive a <br> penalty charge.</p></div>
+
+             <div style="color: white;">
+          <p class="nhsuk-print-black"style=" padding-left: 20px; padding-bottom: 20px;">
+          Ways they can contact us can be found on our website:<br> <strong>https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs</strong>
+          </p>
+          </div>
+        </div>
+        
+      </div>
+  
+<div>
+            <h3 class="nhsuk-heading-m">
+              What happens next?
+            </h3>
+            <p class="nhsuk-body">We'll email the certificate to the mother. They should receive the email within 24 hours.</p>
+            <p class="nhsuk-body">Ask the mother to check their spam or junk email folder if they have not received the email.</p>
+            <p class="nhsuk-body">If the mother has not received their certificate at all, ask them to contact the NHSBSA.</p>
+            <p class="nhsuk-body">They may wish to email nhsbsa.healthcosts@nhsbsa.nhs.uk or through <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs">using alternative contact methods</a> which they can find on our website.</p>
+            <p class="nhsuk-body">They can start using their exemption straight away.</p>
+            
+          </div>
+
+<div>
+          <h3 class="nhsuk-heading-m">
+            Using the certificate
+          </h3>
+          <p class="nhsuk-body">The certificate is valid one month prior to the date that the application was received.</p>
+          <p class="nhsuk-body">The mother can start using their exemption straight away.</p>
+          <p class="nhsuk-body">If the certificate covers the date the mother decides to collect their free NHS prescriptions, the patient will not have to pay for their items.</p>
+          <p class="nhsuk-body">The mother should mark box <b>'D'</b> on the prescription form and sign the declaration when collecting their items.</p>
+          <p class="nhsuk-body">The mother may need to show their certificate as evidence that their exemption is valid. They can still collect free NHS prescriptions if they do not have their certificate with them.</p>
+          
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                How long is the certificate valid for?
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <b>When it starts</b>
+                <p>The certificate is valid one month prior to the date we receive the mother's application.</p>
+                <p>If the certificate covers the date the mother collects their items, they can get their NHS prescriptions for free.</p>
+                <p>The mother should mark box 'D' on the prescription form and sign the declaration.</p>
+                <p>The mother may need to show their certificate as evidence that their exemption is valid. The mother can still collect their NHS prescriptions for free, even if they do not have their certificate with them.</p>
+               <b>When it expires</b>
+               <p>The certificate will expire 12 months after either:</p>
+               <ul>
+                <li>the mother's due date</li>
+                <li>the birth of their baby</li>
+               </ul>
+               <p>If the baby is born later than expected, the mother should <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs">contact us</a> with a copy of the baby's birth certificate. We will extend the expiry date and send the mother a new certificate.</p>
+            </div>
+          </details>
+
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                How to claim a refund
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <b>NHS prescription charges</b>
+              <p>The mother may get an NHS prescription charge refund if:</p>
+              <ul>
+                <li>they get an NHS refund form (FP57) when they pay - they cannot get one later</li>
+                <li>their maternity exemption certificate covers the date they paid for their NHS prescriptions</li>
+              </ul>
+              <p>The FP57 tells them how to claim.</p>
+              <p>The mother will need to apply for a refund within three months of paying the prescription charge.</p>
+              <b>NHS Prescription Prepayment Certificate (PPC) fees</b>
+              <p>If the mother holds a valid PPC, they may be entitled to a refund. They can read the <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2023-04/HC11%20%28V20%29%2004.2023.pdf">HC11 booklet (PDF: 284KB)</a> for details of PPC refund arrangements.</p>
+            </div>
+          </details>
+
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                How to report a change in details or an error
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>It is the mother's responsibility to check their personal details on the certificate are correct and are kept up to date.</p>
+              <p>If they change their name, they'll need a new certificate. The mother should return the certificate to us with a copy of either their:</p>
+              <ul>
+                <li>marriage certificate</li>
+                <li>civil partnership certificate</li>
+                <li>deed poll</li>
+                <li>passport</li>
+                <li>decree absolute</li>
+              </ul>
+              <p>If the mother changes address, notices any errors on their certificate, loses or damages their certificate they should <a href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03868/en-us">seek more information.</a></p>
+              </div>
+          </details>
+
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Accidentally received more than one certificate
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>If the mother has received more than one maternity exemption certificate with different certificate numbers, it means we have received more than one application for them.</p>
+              <p>As their entitlement to these certificates has been authorised, they can use either of these certificates to claim free NHS prescriptions.</p>
+              </div>
+          </details>
+
+
+          <details class="nhsuk-details nhsuk-expander">
+            <summary class="nhsuk-details__summary">
+              <span class="nhsuk-details__summary-text">
+                Miscarriage or stillbirth
+              </span>
+            </summary>
+            <div class="nhsuk-details__text">
+              <p>The mother is eligible for a maternity exemption certificate:</p>
+              <ul>
+                <li>if they are currently pregnant</li>
+                <li>for 12 months after the birth of a live child</li>
+                <li>if they have had a miscarriage</li>
+                <li>for 12 months after the birth of a child registered as stillborn</li>
+              </ul>
+              <p>The mother can continue to use their certificate for free NHS prescriptions.</p>
+              <p>The mother is still entitled to free NHS dental treatment if this happened during, or after, their 24th week of pregnancy.</p>
+              <p>For more information about NHS dental treatment, <a href="https://www.nhsbsa.nhs.uk/help-nhs-dental-costs/free-nhs-dental-treatment">visit our website</a>.</p>
+              </div>
+          </details>
+          
+          <div class="nhsuk-u-padding-bottom-5"></div>
+          
+          
+          
+        </div>
+  </div>
+  <div class="nhsuk-grid-column-one-third">
+    <h2 class="col-heading heading-medium">Related links</h2>
+      <ul class="list list-bullet">
+        <li><a href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03868/en-us">Changing personal details on a maternity exemption certificate</a></li>
+        <li><a href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03861/en-us">Maternity exemption certificate: Issue and expiry dates explained</a></li>
+        <li><a href="https://faq.nhsbsa.nhs.uk/knowledgebase/category/?articlecategory=Refund%20of%20prescription%20charges%20and%20FP57s&id=CAT-01105">Refunding prescription charges and FP57s</a></li>
+     </ul>
+  </div>
+</div>
+          <form action="sign-in" method="POST" class="form">
+            <div class="nhsuk-form-group">
+              <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>  
+  </div>
+{% endblock %}
