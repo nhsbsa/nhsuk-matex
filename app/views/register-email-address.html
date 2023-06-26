@@ -50,6 +50,8 @@
       <br>
 
       <!-- Change the page title here -->
+
+      <span class="govuk-caption-l">Question 1 of 2</span>
       <h2>
         What is your email address?
       </h2>
@@ -58,27 +60,42 @@
       
         <fieldset class="nhsuk-fieldset">
 
-      
-        <div class="nhsuk-form-group">
+          
+        <div class="nhsuk-form-group"></div>
           <label class="nhsuk-label" for="example">
+            <div class="nhsuk-u-padding-bottom-2">
             <div class="nhsuk-hint" id="contact-hint">
-              Your email address needs to be with a secure service - such as NHSmail.
+              Your email address needs to be with a secure service - such as NHSmail. For example, danny.george@nhs.net
             </div>
+          </div>
           </label>
-          <input class="nhsuk-input" id="example" name="example" type="text">
+          <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text" value="{{ data['email']
+                }}">
         </div>
 
 
-        <br><br>
+
+        <br>
 
           <a class="nhsuk-button" type="submit" href="register-your-details">
             Continue
            </a>
         </fieldset>
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p><a href="/register-dont-have-email-address" title="External website" target="_blank">I do not have an email with a secure service standard
+               </a>
+            </p>
+
+            <span class="nhsuk-u-visually-hidden">Information: </span>
+            <p>Check if your organisation's email meets <a href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard" title="External website" target="_blank">the secure service standard</a>
+               </a>
+            </p>
+       </div>
       
       </div>
 
-
+      
 
 
        

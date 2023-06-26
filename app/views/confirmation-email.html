@@ -56,36 +56,34 @@
       <div class="content">
         <div class="indextext">
           <div class="done-panel">
-            <h1 class="nhsuk-heading-l" id="completed">
-              <span class="done-tick" id="done-tick">Done</span>
-            </h1>
-            <h2 class="nhsuk-heading-m" id="submitted">
-              <span id="submitted-hcp">You have completed the application</span>
+            <h2 class="nhsuk-heading-l" id="completed">
+              <span class="done-tick" id="done-tick">Application completed</span>
             </h2>
+            <body class="nhsuk-heading-m" id="submitted">
+              <span id="submitted-hcp">Mother's certificate number:</span>
+            </body>
+            <h2 class="nhsuk-heading-l">12345678</h2>
+            <span class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
+              Exemption ends: </span>
+              <h2 class="nhsuk-heading-l">20/05/2023</h2>
           </div>
-          <div>
-            <div class="nhsuk-inset-text">
-              <p id="submitted-hcp-certNumber">Mother's certificate number: 
-                <span class="nhsuk-u-font-weight-bold">12345678</span>
-              </p>
+          
 
-              <p class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
-                Exemption ends: <span class="nhsuk-u-font-weight-bold">20/05/2023</span></p>
-            </div>
+              
+          
+
+
 
             <h3 class="nhsuk-heading-m">
               What happens next?
             </h3>
             <p class="nhsuk-body">We'll email the certificate to the mother. They can start using their exemption straight away.</p>
-            <p class="nhsuk-body">Check to make sure they have received the certificate at their next appointment.</p>
-            <div>
-              <h4 class="nhsuk-heading-s">
-                Ongoing feedback from mothers
-              </h4>
-              <p class="nhsuk-body">If the mother is happy to take part in further research, <a
-                  href="#">send us a contact number (link opens in a new window)</a>.</p>
-            </div>
-          </div>
+            <p class="nhsuk-body">Check to make sure they have received the certificate at their next appointment. Ask the mother to check their spam or junk email folder if they have
+              not received the email.</p>
+          <div class="nhsuk-u-padding-bottom-"></div>
+
+          <div class="nhsuk-u-padding-bottom-3"></div>
+            
           <form action="/start-page-signed-in" method="POST" class="form">
             <div class="nhsuk-form-group">
               <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
@@ -93,6 +91,36 @@
           </form>
         </div>
       </div>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Any queries about the digital maternity exemption service?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If you want more information about our digital MATEX service, <a href="https://faq.nhsbsa.nhs.uk/knowledgebase/category/?articlecategory=Maternity%20Exemption%20certificate&id=CAT-01281&parentid=" title="External website" target="_blank"> please visit our knowledge base </a></p>
+          
+        </div>
+      </details>
+
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            Haven't received the maternity certificate yet?
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>If applied through paper, note that the NHS BSA takes 7-10 working days to deliver your MATEX certificate.</p>
+          <p>If applied online, we request you to check your Junk/Spam folder in your mailbox. If you still haven't received it yet, contact us through any of the below options.</p>
+          <p class="nhsuk-u-font-weight-bold">Online: <a href="https://faq.nhsbsa.nhs.uk/contact-us/" title="Contact us" target="_blank">using our online form</a></p>
+          <p class="nhsuk-u-font-weight-bold">Telephone: 0300 330 1341 </p>
+          <p>Monday to Friday, 8am to 6pm and Saturday, 9am to 3pm.</p>
+          <p>Find more about the <a href="https://www.nhsbsa.nhs.uk/contact-us/call-charges-and-phone-numbers" target="_blank">call charges here</a></p>
+      
+        </div>
+      </details>
+      <div class="nhsuk-u-padding-bottom-6"></div>
     </div>  
   </div>
 {% endblock %}
