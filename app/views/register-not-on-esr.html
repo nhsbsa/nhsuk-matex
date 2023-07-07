@@ -15,7 +15,7 @@
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
   <!-- Breadcrumb -->
-  <div class="nhsuk-breadcrumb">
+  <!--<div class="nhsuk-breadcrumb">
     <div class="nhsuk-width-container nhsuk-text-right">
       <span class="nhsuk-u-margin-right-3">Matex Test</span>
       |
@@ -23,7 +23,7 @@
       |
       <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
     </div>
-  </div>
+  </div>-->
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -53,40 +53,33 @@
           Go back
         </a>
       </div>
-      <form action="/check-answers-post" method="post">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">Mother's postal address</h1>
-          </legend>
+      <form action="/confirmation" class="form" >
+        <div class="content">
+          <h1 class="nhsuk-heading-l" id="title">Registering if you're not on ESR</h1>
           
-          <div id="contact-by-post">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="address1" for="addressLine1">Building and street</label>
-             
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" type="text" autocomplete="off" maxlength="30" aria-required="true" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-u-visually-hidden" id="address2"for="addressLine2">Building and street 2</label>
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" type="text" autocomplete="off" maxlength="30" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="town" for="addressTown">Town or city</label>
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressTown" type="text" name="addressTown" maxlength="30" autocomplete="off" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="motherPostcode" for="postcode">Postcode</label>
-             
-              <input class="nhsuk-input nhsuk-input--width-20" id="postcode" type="text" name="postcode" autocomplete="off" maxlength="8"/>
-            </div>
-          </div>
-        </fieldset>
-      
-        <button class="nhsuk-button" type="submit">Continue</button>
+          <p>If you're a midwife, practice nurse or health visitor, you can still use this service if you have an email address with an organisation that:</p>
+          
+          <ul>
+            <li>meets the <a  href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a></li>
+            <li>uses Office 365 or a Hybrid Exchange email service</li>
+           </ul>
+
+           <p>Ask your IT department if your organisation's email meets these requirements. We'll also check this for you.</p>
+
+           <p>To register, email us at <a href="mailto:healthcosts@nhsbsa.nhs.uk" title="New window">healthcosts@nhsbsa.nhs.uk</a> and include your:</p>
+           <ul>
+            <li>Full name</li>
+            <li>NMC PIN</li>
+            <li>organisational email address, such as NHSmail</li>
+           </ul>
+
+           <p>We'll use these details to verify your professional identity.</p>
+
+           <p>We'll email you to confirm when you are registered. You'll then be able to use the online service.</p>
+            
+
       </form>
     </div>  
+    
   </div>
-
-  <a href="/error-post">Error screen</a>
 {% endblock %}

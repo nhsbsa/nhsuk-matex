@@ -11,7 +11,7 @@ router.post(/certificate-email-or-post/, function (req, res) {
     res.redirect('/email')
   }
   else {
-    res.redirect('/post')
+    res.redirect('/postcode')
   }
 })
 module.exports = router;

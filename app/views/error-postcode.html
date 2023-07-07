@@ -53,40 +53,61 @@
           Go back
         </a>
       </div>
-      <form action="/check-answers-post" method="post">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">Mother's postal address</h1>
-          </legend>
-          
-          <div id="contact-by-post">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="address1" for="addressLine1">Building and street</label>
-             
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" type="text" autocomplete="off" maxlength="30" aria-required="true" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-u-visually-hidden" id="address2"for="addressLine2">Building and street 2</label>
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" type="text" autocomplete="off" maxlength="30" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="town" for="addressTown">Town or city</label>
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressTown" type="text" name="addressTown" maxlength="30" autocomplete="off" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="motherPostcode" for="postcode">Postcode</label>
-             
-              <input class="nhsuk-input nhsuk-input--width-20" id="postcode" type="text" name="postcode" autocomplete="off" maxlength="8"/>
-            </div>
-          </div>
-        </fieldset>
       
-        <button class="nhsuk-button" type="submit">Continue</button>
-      </form>
-    </div>  
-  </div>
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#dob-errors-year">Enter the mother's postcode</a>
+            </li>
+          </ul>
+        </div>
+      </div>
 
-  <a href="/error-post">Error screen</a>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+    
+          <!-- Change the page heading -->
+
+          
+          
+          
+          <div class="nhsuk-form-group nhsuk-form-group--error">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Mother's postal address
+              </h1>
+            </legend>
+             <p>
+              The address you give must match their home address given on their medical records.</p>
+            <label class="nhsuk-label" for="input-width-10">
+              Mother's postcode
+            </label>
+            <div class="nhsuk-hint" id="contact-hint">
+              For example, NE15 8NY.
+            </div>
+            <span class="nhsuk-error-message" id="example-error-error">
+              <span class="nhsuk-u-visually-hidden">Error:</span> Enter the mother's postcode
+            </span>
+            <input class="nhsuk-input nhsuk-input--width-10 nhsuk-input--error" id="input-width-10" name="test-width-10" type="text">
+          </div>
+    
+          <p><a href="/post">Enter address manually</a></p>
+
+          <form action="what-is-their-address">
+            <button class="nhsuk-button" type="submit">
+              Find address
+            </button>
+          </form>
+      
+          
+
+      
+    </div> 
+      
+    
+  </div>
 {% endblock %}

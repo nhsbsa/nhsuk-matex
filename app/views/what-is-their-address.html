@@ -53,40 +53,61 @@
           Go back
         </a>
       </div>
-      <form action="/check-answers-post" method="post">
-        <fieldset class="nhsuk-fieldset">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">Mother's postal address</h1>
-          </legend>
-          
-          <div id="contact-by-post">
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="address1" for="addressLine1">Building and street</label>
-             
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" type="text" autocomplete="off" maxlength="30" aria-required="true" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-u-visually-hidden" id="address2"for="addressLine2">Building and street 2</label>
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" type="text" autocomplete="off" maxlength="30" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="town" for="addressTown">Town or city</label>
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="addressTown" type="text" name="addressTown" maxlength="30" autocomplete="off" />
-            </div>
-            <div class="nhsuk-form-group">
-              <label class="nhsuk-label" id="motherPostcode" for="postcode">Postcode</label>
-             
-              <input class="nhsuk-input nhsuk-input--width-20" id="postcode" type="text" name="postcode" autocomplete="off" maxlength="8"/>
-            </div>
-          </div>
-        </fieldset>
       
-        <button class="nhsuk-button" type="submit">Continue</button>
-      </form>
-    </div>  
-  </div>
+      <div class="nhsuk-grid-row">
+        <div class="nhsuk-grid-column-two-thirds">
+    
+          <!-- Change the page heading -->
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              What is their address?
+            </h1>
+          </legend>
 
-  <a href="/error-post">Error screen</a>
+          <p>
+            The address you give must match their home address given on their medical records.
+          </p>
+          
+        </fieldset>
+        <label class="nhsuk-label" for="select-1">
+          Postcode
+        </label>
+        <p>NE1 0LD &nbsp; <a href="postcode">Change</a></p>
+        
+  
+        <label class="nhsuk-label" for="select-1">
+          Your address
+        </label>
+        <div class="nhsuk-form-group">
+          
+          <select class="nhsuk-select" id="select-1" name="select-1">
+            <option value="0">Select your address</option>
+            <option value="1">1 Test Road, Town, NE1 0LD</option>
+            <option value="2">3 Test Road, Town, NE1 0LD</option>
+            <option value="3">5 Test Road, Town, NE1 0LD</option>
+            <option value="4">7 Test Road, Town, NE1 0LD</option>
+            <option value="5">9 Test Road, Town, NE1 0LD</option>
+            <option value="6">11 Test Road, Town, NE1 0LD</option>
+            <option value="7">13 Test Road, Town, NE1 0LD</option>
+          </select>
+        </div>
+        
+  
+        <p><a href="/manual-address">My address is not listed</a></p>
+  
+          <form action="check-answers-post">
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+        </form>
+      
+        </div>
+      </div>  
+
+      
+    </div> 
+      
+    
+    
+  </div>
 {% endblock %}

@@ -54,6 +54,20 @@
         </a>
       </div>
       <div class="nhsuk-u-padding-bottom-3"></div>
+      <div class="nhsuk-error-summary" aria-labelledby="error-summary-title" role="alert" tabindex="-1">
+        <h2 class="nhsuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="nhsuk-error-summary__body">
+          <ul class="nhsuk-list nhsuk-error-summary__list" role="list">
+            <li>
+              <a href="#dob-errors-year">Enter a valid postcode for the mother</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+     <span class="govuk-caption-l">Question 2 of 3</span>
      <div class="nhsuk-u-padding-bottom-1"></div>
 
       <h1 id="title" class="nhsuk-heading-l">Application details</h1>
@@ -116,9 +130,12 @@
             <input class="nhsuk-input nhsuk-input--width-20" id="nhs-no" name="nhs-no" type="text">
           </div>
             
-          <div class="nhsuk-form-group">
+          <div class="nhsuk-form-group nhsuk-form-group--error">
             <label class="nhsuk-label" for="postcode">Mother's postcode</label>
-            <input class="nhsuk-input nhsuk-input--width-20" id="postcode" name="postcode" type="text">
+            <span class="nhsuk-error-message" id="example-error-error">
+              <span class="nhsuk-u-visually-hidden">Error:</span> Enter a valid postcode for the mother
+            </span>
+            <input class="nhsuk-input nhsuk-input--width-20 nhsuk-input--error" id="postcode" name="postcode" type="text">
           </div>
         </fieldset>
 
@@ -169,13 +186,7 @@
     </div>
   </div>  
 
-<p><a href="/error-application-details">All errors screen</a></p>
-<p><a href="/error-first-name-application-details">First name error</a></p>
-<p><a href="/error-last-name-application-details">Last name error</a></p>
-<p><a href="/error-mother's-dob-application-details">Mother's DOB error</a></p>
-<p><a href="/error-mother's-nhs-no-application-details">Mother's NHS number error</a></p>
-<p><a href="/error-mother's-postcode-application-details">Mother's postcode error</a></p>
-<p><a href="/error-due-date-application-details">Due date error</a></p>
+
 
 
 {% endblock %}
