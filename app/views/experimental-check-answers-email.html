@@ -15,7 +15,7 @@
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
   <!-- Breadcrumb -->
-  <!--<div class="nhsuk-breadcrumb">
+  <div class="nhsuk-breadcrumb">
     <div class="nhsuk-width-container nhsuk-text-right">
       <span class="nhsuk-u-margin-right-3">Matex Test</span>
       |
@@ -23,7 +23,7 @@
       |
       <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
     </div>
-  </div>-->
+  </div>
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -53,14 +53,13 @@
           Go back
         </a>
       </div>
-      <form action="/confirmation" class="form" >
+      <form action="/confirmation-email" class="form" >
         <div class="content">
-          <h1 class="nhsuk-heading-l" id="title">You have not been verified</h1>
-          <p>Based on the details you've given us, we have not been able to verify your professional identity in ESR.</p>
+          <h1 class="nhsuk-heading-l" id="title">Check your answers</h1>
           <dl class="nhsuk-summary-list">
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-int-date" class="nhsuk-summary-list__key">Email address</dt>
-              <dd class="nhsuk-summary-list__value" id="int-date">annie.apple.midwife@nhs.net</dd>
+              <dt id="mother-int-date" class="nhsuk-summary-list__key">Last appointment with the mother</dt>
+              <dd class="nhsuk-summary-list__value" id="int-date">11 February 2022</dd>
               <dd class="nhsuk-summary-list__actions">
                 <a href="/mother-present#contact-2" id="intdate-change"
                   aria-label="Change date you met the mother">Change</a>
@@ -68,49 +67,64 @@
             </div>
 
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-name" class="nhsuk-summary-list__key">Last name</dt>
-              <dd class="nhsuk-summary-list__value" id="name">Apple</dd>
+              <dt id="mother-name" class="nhsuk-summary-list__key">Mother's name</dt>
+              <dd class="nhsuk-summary-list__value" id="name">Mary Test</dd>
               <dd class="nhsuk-summary-list__actions">
                 <a href="/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
               </dd>
             </div>
 
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-email-address" class="nhsuk-summary-list__key">NMC PIN</dt>
-              <dd class="nhsuk-summary-list__value" id="email-add">12A3456B</dd>
+              <dt id="mother-dob" class="nhsuk-summary-list__key">Mother's date of birth</dt>
+              <dd class="nhsuk-summary-list__value" id="moth-dob">10 October 1996</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/email" id="email-change" aria-label="Change mother's email address">Change</a>
+                <a href="/application-details#example-day" id="dob-change" aria-label="Change mother's date of birth">Change</a>
               </dd>
             </div>
 
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-dob" class="nhsuk-summary-list__key">Date of birth</dt>
-              <dd class="nhsuk-summary-list__value" id="moth-dob">10 January 1989</dd>
+              <dt id="mother-nhs" class="nhsuk-summary-list__key">Mother's NHS number</dt>
+              <dd class="nhsuk-summary-list__value" id="nhs-no">11111111</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/application-details#dob" id="dob-change" aria-label="Change mother's date of birth">Change</a>
+                <a href="/application-details#nhs-no" id="nhs-change" aria-label="Change mother's NHS number">Change</a>
+              </dd>
+            </div>
+            
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-postcode" class="nhsuk-summary-list__key">Mother's postcode</dt>
+              <dd class="nhsuk-summary-list__value" id="postcode">NE15 8NY</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/application-details#postcode" id="nhs-change" aria-label="Change mother's postcode">Change</a>
+              </dd>
+            </div>
+            
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-due-date" class="nhsuk-summary-list__key">Due date or baby's birth date</dt>
+              <dd class="nhsuk-summary-list__value" id="baby-dob">25 August 2023</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/application-details#baby-dob" id="duedate-change" aria-label="Change due or birth date">Change</a>
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt id="details-by-email" class="nhsuk-summary-list__key">Certificate to be sent by</dt>
+              <dd class="nhsuk-summary-list__value" id="details-email">Email</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
+              </dd>
+            </div>
+
+            <div class="nhsuk-summary-list__row">
+              <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's email address</dt>
+              <dd class="nhsuk-summary-list__value" id="email-add">mary.test@gmail.com</dd>
+              <dd class="nhsuk-summary-list__actions">
+                <a href="/email" id="email-change" aria-label="Change mother's email address">Change</a>
               </dd>
             </div>
           </dl>
         </div>
-
-
-        <div class="nhsuk-inset-text">
-          <span class="nhsuk-u-visually-hidden">Information: </span>
-          <p>If your information is correct but we have been unable to confirm your details email us at  
-            <a href="mailto:healthcosts@nhsbsa.nhs.uk" title="New window">healthcosts@nhsbsa.nhs.uk</a>.</p>
-        </div>
-    
-
-
+        <a href="/experimental-declaration-email" class="nhsuk-button">Submit</a>
       </form>
     </div>  
-    <div class="nhsuk-u-padding-bottom-7"></div>
-    <div class="nhsuk-grid-column-one-third">
-      <h2 class="col-heading heading-medium">Related links</h2>
-        <ul class="list list-bullet">
-          <li><a href="register-not-on-esr">Registering if you're not on ESR</a></li>
-       </ul>
-    </div>
-
   </div>
 {% endblock %}

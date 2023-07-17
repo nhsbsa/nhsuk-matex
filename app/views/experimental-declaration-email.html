@@ -47,34 +47,39 @@
     <div class="nhsuk-grid-column-two-thirds">
       <div class="nhsuk-back-link">
         <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
-          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="4" width="24">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
           </svg>
           Go back
         </a>
       </div>
-      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m nhsuk-u-margin-bottom-0">
-        <h1 id="title" class="nhsuk-heading-l">Re-enter the email address.</h1>
-      </legend>
-
-      
-        <p>We need to check you have entered the correct contact details for the mother, this information should match the previous entry.</p>
-      
-          <div id="contact-by-email">
-            <div class="nhsuk-form-group nhsuk-u-margin-top-4">
-              
-              
-           
-              
-              <input class="nhsuk-input nhsuk-input--width-20" id="contact-email" name="contact-email" autocomplete="off" maxlength="50" aria-required="true" type="text" />
+        <div class="nhsuk-warning-callout">
+          <span role="text">
+            <h2 class="nhsuk-warning-callout__label">Declaration</h2>
+          </span>
+          <div class="notice" id="new-route-dec">
+            <i class="declaration-icon icon icon-important"><span class="nhsuk-u-visually-hidden">Warning</span></i>
+            <p th:object="${applicationData}" class="declaration">I confirm that this information is correct and true in accordance with the mother's records on 
+              10/03/2022.<br /><br />
+              I confirm that the mother:
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li class="declaration-list">has given their permission for this application to be submitted on their behalf
+              </li>
+              <li class="declaration-list">knows the information submitted will be used by the NHS Business Services Authority and shared other organisations working on their behalf where necessary</li>
+              <li class="declaration-list">understands their data will not be transferred outside of the European Economic Area and will be deleted within 24 months of the expiry date of the exemption</li>
+            </ul>
+            </p>
+            <div class="nhsuk-checkboxes__item">
+              <input class="nhsuk-checkboxes__input" id="example-1" name="example" type="checkbox" value="email">
+              <label class="nhsuk-label nhsuk-checkboxes__label" for="example-1">
+                <p class="declaration">I understand that when I tick this box, I am submitting an application on behalf of the named person.</p>
+              </label>
             </div>
+            
           </div>
-          
-        </fieldset>
-        <a href="check-answers-email" class="nhsuk-button" type="submit">Continue</a>
+        </div>
+        <a href="/confirmation-email" class="nhsuk-button">Submit</a>
       </form>
     </div>  
   </div>
-
-  <a href="/error-email">Error screen</a>
 {% endblock %}
