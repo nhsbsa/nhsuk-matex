@@ -1,0 +1,179 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back</a>
+      </div>
+      <br>
+
+      <span class="govuk-caption-l">Question 1 of 2</span>
+
+      <!-- Change the page title here -->
+      <h2>
+        What is your email address?
+      </h2>
+
+      <div class="nhsuk-form-group">
+      
+        <fieldset class="nhsuk-fieldset">
+
+      
+        <div class="nhsuk-form-group">
+          <label class="nhsuk-label" for="example">
+            <div class="nhsuk-hint" id="contact-hint">
+              Your email address needs to be with a secure service - such as NHSmail.
+            </div>
+            <div class="nhsuk-hint" id="contact-hint">For example, danny.george@nhs.net</div>
+          </label>
+          <input class="nhsuk-input" id="example" name="example" type="text">
+        </div>
+
+        <br><br>
+
+          <a class="nhsuk-button" type="submit" href="/v5/register-your-details">
+            Continue
+           </a>
+        </fieldset>
+
+        <div class="nhsuk-inset-text">
+          <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p><a href="/v5/register-dont-have-email-address">I do not have an email address with a secure service.</a></p>
+          <p><a href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">Check if your organisation's email meets the secure email standard.</a></p>
+        </div>
+      
+      </div>
+      
+      </div>
+
+
+
+
+       
+
+
+
+
+      <!--
+      <figure class="nhsuk-image">
+        <img class="nhsuk-image__img" src="/images/placeholder-image-16-9.jpg" alt="A 16:9 image placeholder">
+        <figcaption class="nhsuk-image__caption">
+          Image example
+        </figcaption>
+      </figure>
+
+      <h2>Level heading two</h2>
+
+      {{ list({
+        "title": "Do",
+        "type": "tick",
+        "items": [
+          {
+            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
+          },
+          {
+            "item": "wash your hands before touching a burst blister"
+          },
+          {
+            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
+          }
+        ]
+      }) }}
+
+      {{ list({
+        "title": "Don't",
+        "type": "cross",
+        "items": [
+          {
+            "item": "burst a blister yourself"
+          },
+          {
+            "item": "peel the skin off a burst blister"
+          },
+          {
+            "item": "pick at the edges of the remaining skin"
+          },
+          {
+            "item": "wear the shoes or use the equipment that caused your blister until it heals"
+          }
+        ]
+      }) }}
+
+      <h3>
+        Level heading three
+      </h3>
+
+      <p>
+        Body text:
+      </p>
+
+      <ul>
+        <li>
+          The quick brown
+        </li>
+        <li>
+          fox jumps over
+        </li>
+        <li>
+          the lazy dog
+        </li>
+      </ul>
+
+      {{ warningCallout({
+        "heading": "School, nursery or work",
+        "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
+      }) }}
+
+      {{ reviewDate({
+        "lastReview": "12 February 2017",
+        "nextReview": "1 February 2020"
+      }) }}-->
+
+      <!-- End of content -->
+
+    </div>  
+
+  </div>
+{% endblock %}
