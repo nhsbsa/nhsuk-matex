@@ -22,17 +22,43 @@ Maternity Exemption protoype NHS toolkit
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 
 {% block content %}
+
+
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    <div class="nhsuk-width-container">
+      <ol class="nhsuk-breadcrumb__list">
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one"> Search for application</a></li>
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two"> Search results </a></li>
+  
+        <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/level-one/level-two/level-three"> View application</a></li>
+  
+      </ol>
+      <p class="nhsuk-breadcrumb__back">
+        <a class="nhsuk-breadcrumb__backlink" href="/level-one/level-two/level-three">
+          <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+          View application
+        </a>
+      </p>
+    </div>
+  </nav>
+  
 <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <div class="nhsuk-back-link">
+      
+     <div class="nhsuk-back-link">
         <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
-          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+          <!--<svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
             <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
           </svg>
-          Go back
-        </a>
+          Go back -->
+        </a> 
       </div>
-      <form action="/v7/confirmation-email" class="form" >
+
+
+
+
+  
+      <form action="/v8/view-application" class="form" >
         <div class="content">
           <h1 class="nhsuk-heading-l" id="title">Application details</h1>
           <dl class="nhsuk-summary-list">
@@ -46,18 +72,18 @@ Maternity Exemption protoype NHS toolkit
             </div>
   
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-name" class="nhsuk-summary-list__key">Mother's date of birth</dt>
+              <dt id="mother-DOB" class="nhsuk-summary-list__key">Mother's date of birth</dt>
               <dd class="nhsuk-summary-list__value" id="name"> 15 March 1993 </dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
+                <a href="/v8/change-details" id="DOB-change" aria-label="Change mother's DOB">Change</a>
               </dd>
             </div>
   
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-dob" class="nhsuk-summary-list__key">Mother's NHS number </dt>
-              <dd class="nhsuk-summary-list__value" id="moth-dob">1234567890</dd>
+              <dt id="mother-NHSno" class="nhsuk-summary-list__key">Mother's NHS number </dt>
+              <dd class="nhsuk-summary-list__value" id="mother-NHSno">1234567890</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/application-details#example-day" id="dob-change" aria-label="Change mother's date of birth">Change</a>
+                <a href="/v8/change-details" id="NHS-no-change" aria-label="Change mother's NHS number">Change</a>
               </dd>
             </div>
   
@@ -65,31 +91,25 @@ Maternity Exemption protoype NHS toolkit
               <dt id="mother-nhs" class="nhsuk-summary-list__key">Mother's postcode </dt>
               <dd class="nhsuk-summary-list__value" id="nhs-no"> NE1 7PT </dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/application-details#nhs-no" id="nhs-change" aria-label="Change mother's NHS number">Change</a>
+                <a href="/v8/change-details" id="mother-postcode" aria-label="Change mother's Postcode">Change</a>
               </dd>
             </div>
             
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-postcode" class="nhsuk-summary-list__key"> Baby's due or baby's birth date </dt>
-              <dd class="nhsuk-summary-list__value" id="postcode"> 15 March 2024 </dd>
+              <dt id="baby DOB" class="nhsuk-summary-list__key"> Baby's due or birth date </dt>
+              <dd class="nhsuk-summary-list__value" id="baby-dob"> 15 March 2024 </dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/application-details#postcode" id="nhs-change" aria-label="Change mother's postcode">Change</a>
+                <a href="/v8/change-details" id="duedate-change" aria-label="Change baby's due or DOB">Change</a>
               </dd>
             </div>
             
-            <div class="nhsuk-summary-list__row">
-              <dt id="mother-due-date" class="nhsuk-summary-list__key">Due date or baby's birth date</dt>
-              <dd class="nhsuk-summary-list__value" id="baby-dob">25 February 2024</dd>
-              <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/application-details#baby-dob" id="duedate-change" aria-label="Change due or birth date">Change</a>
-              </dd>
-            </div>
+         
   
             <div class="nhsuk-summary-list__row">
               <dt id="details-by-email" class="nhsuk-summary-list__key">Certificate to be sent by</dt>
               <dd class="nhsuk-summary-list__value" id="details-email">Email</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
+                <a href="/v8/change-details" id="details-change" aria-label="Change get details by email">Change</a>
               </dd>
             </div>
   
@@ -97,7 +117,7 @@ Maternity Exemption protoype NHS toolkit
               <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's email address</dt>
               <dd class="nhsuk-summary-list__value" id="email-add"> priyakaur@mail.com </dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v7/email" id="email-change" aria-label="Change mother's email address">Change</a>
+                <a href="/v8/change-details" id="email-change" aria-label="Change mother's email address">Change</a>
               </dd>
             </div>
           </dl>
