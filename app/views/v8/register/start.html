@@ -1,0 +1,203 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+ <!-- <div class="nhsuk-breadcrumb">
+    <div class="nhsuk-width-container nhsuk-text-right">
+      <span class="nhsuk-u-margin-right-3">Matex Test</span>
+      |
+      <a class="nhsuk-u-margin-left-3 nhsuk-u-margin-right-3" id="signout__link" href="/start-page-signed-out">Sign out</a>
+      |
+      <a class="nhsuk-u-margin-left-3" href="/help-page">Help</a>
+    </div>
+  </div>-->
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+
+
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+        <h1>Register to issue maternity exemption certificates</h1>
+      </div>
+
+
+
+<div class="nhsuk-width-container">
+  <main class="nhsuk-main-wrapper" id="maincontent" role="main">
+    <div class="nhsuk-grid-row">
+      <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here 
+      <h1>
+        Register to issue maternity exemption certificates 
+      </h1>-->
+
+      <p>
+        Use this online service to register to issue digital maternity exemption certificates. 
+      </p>
+
+
+      <p>You must be a midwife, practice nurse or health visitor registered with the Nursing and Midwifery Council (NMC) to create an account.</p>
+
+      <p>You may wish to read guidance on <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2022-12/NHS%20maternity%20exemption%20certificate%20guidance%20%28V1%29%2012.2022.pdf">how to use the digital maternity exemption service</a> before you start.</p>
+
+      <h2>What you'll need</h2>
+
+      <p>
+        To help us verify your professional identity you'll need: 
+        <ul>
+          <li>your NMC PIN</li>
+          <li>an email address with a secure service, such as NHSmail</li>
+          <li>an email address which uses Office 365 or a Hybrid Exchange email service</li>
+        </ul>
+      </p>
+     <p>Ask your IT department if your organisation's email meets the <a  href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a></p>
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+        <p>Registration takes around 5 minutes.</p>
+      </div>
+
+      <a class="nhsuk-button" type="submit" href="/v7/register/email-address">
+        Start now
+       </a>
+
+       <p><a href="/v7/start-page-signed-out" title="New window">Sign in if you already have an account</a></p>
+
+      </div>
+
+
+      <div class="nhsuk-grid-column-one-third">
+        <h2 class="col-heading heading-medium">Related links</h2>
+          <ul class="list list-bullet">
+            <li><a href="/v7/register/register-as-a-gp">I am a GP</a></li>
+            <li><a href="/v7/register/dont-have-email-address">I do not have an email address with a secure service</a></li>
+            
+         </ul>
+      </div>
+    </div>
+  </main>
+</div>
+
+
+    </div>  
+
+  </div>
+
+
+
+
+
+
+
+
+
+      <!--
+      <figure class="nhsuk-image">
+        <img class="nhsuk-image__img" src="/images/placeholder-image-16-9.jpg" alt="A 16:9 image placeholder">
+        <figcaption class="nhsuk-image__caption">
+          Image example
+        </figcaption>
+      </figure>
+
+      <h2>Level heading two</h2>
+
+      {{ list({
+        "title": "Do",
+        "type": "tick",
+        "items": [
+          {
+            "item": "cover blisters that are likely to burst with a soft plaster or dressing"
+          },
+          {
+            "item": "wash your hands before touching a burst blister"
+          },
+          {
+            "item": "allow the fluid in a burst blister to drain before covering it with a plaster or dressing"
+          }
+        ]
+      }) }}
+
+      {{ list({
+        "title": "Don't",
+        "type": "cross",
+        "items": [
+          {
+            "item": "burst a blister yourself"
+          },
+          {
+            "item": "peel the skin off a burst blister"
+          },
+          {
+            "item": "pick at the edges of the remaining skin"
+          },
+          {
+            "item": "wear the shoes or use the equipment that caused your blister until it heals"
+          }
+        ]
+      }) }}
+
+      <h3>
+        Level heading three
+      </h3>
+
+      <p>
+        Body text:
+      </p>
+
+      <ul>
+        <li>
+          The quick brown
+        </li>
+        <li>
+          fox jumps over
+        </li>
+        <li>
+          the lazy dog
+        </li>
+      </ul>
+
+      {{ warningCallout({
+        "heading": "School, nursery or work",
+        "HTML": "<p>Stay away from school, nursery or work until all the spots have crusted over. This is usually 5 days after the spots first appeared.</p>"
+      }) }}
+
+      {{ reviewDate({
+        "lastReview": "12 February 2017",
+        "nextReview": "1 February 2020"
+      }) }}-->
+
+      <!-- End of content -->
+
+
+{% endblock %}

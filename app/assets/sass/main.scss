@@ -6,6 +6,7 @@
 @import 'components/phase-banner';
 @import 'components/related-nav';
 @import 'components/tag';
+@import 'components/sidebar';
 
 ///////////////////////////////////////////
 // Add your custom CSS/Sass styles below... 
@@ -25,6 +26,8 @@
 }
 
 
+
+
 .done-tick {
   background-image: url(../images/done-tick.png);
   background-size: 30px;
@@ -35,4 +38,45 @@
 
  span.line-break{
 	display:block;
+}
+
+.nhsbsa-search-group {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /*border-bottom: #ccc 1px solid; */ 
+  padding: 24px 0px;
+}
+
+.nhsbsa-job-select {
+  background-color:#005eb8; 
+  border: none; 
+  color: white; 
+  box-shadow: none;
+}
+
+.nhsbsa-job-search-button {
+  float: none;
+  background-color: #005eb8;
+  &:hover {
+    border-color: #003d78;
+  }
+  .nhsuk-icon__search {
+    position: relative;
+    top: 2px;
+    fill: #fff;
+  }
+}
+.nhsuk-body p{ 
+  padding-left: 24px ;
+
+}
+
+.preheader {
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 24px;
+
 }

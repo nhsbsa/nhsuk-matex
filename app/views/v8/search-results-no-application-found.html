@@ -1,0 +1,65 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'custom-header-layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+    MATEX Record Keeping
+{% endblock %}
+
+<!-- Set the service name in header -->
+{% block serviceName %}
+Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+
+<nav class="nhsuk-breadcrumb nhsBSA-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container-fluid">
+      <div class="nhsuk-grid-row">
+          <div class="nhsuk-grid-column-full">
+              <ol class="nhsuk-breadcrumb__list">
+                  <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="search">Search
+                          for application</a></li>
+                  <li class="nhsuk-breadcrumb__item">Search results </li>
+              </ol>
+          </div>
+      </div>
+  </div>
+</nav>
+
+<div class="nhsBSA-sidebar-container">
+  <div class="nhsBSA-sidebar-wrapper">
+      <div class="nhsBSA-sidebar-content">
+          <div class="nhsuk-width-container-fluid">
+              <div class="nhsuk-main-wrapper" id="maincontent">
+
+                  <div class="nhsuk-grid-row">
+                      <div class="nhsuk-grid-column-two-thirds">
+                          <h1 class="nhsuk-heading-xl">
+                              Search results
+                          </h1>
+                      </div>
+                      <div class="nhsuk-grid-column-one-third">
+                          <a href="#"><button class="nhsuk-button" type="submit" style="float:right">
+                                  Create a new application
+                              </button></a>
+                      </div>
+                  </div>
+
+                  <hr style="border-bottom:4px solid #005EB8; margin:0">
+
+                  <div class="nhsuk-grid-row">
+                      <div class="nhsuk-grid-column-full">
+                          <br>
+                          <br>
+                      
+                               <p class="nhsuk-body"> No results found  </p>
+
+
+
+
+{% endblock %}

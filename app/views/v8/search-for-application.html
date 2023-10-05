@@ -1,0 +1,269 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'custom-header-layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+    MATEX Record Keeping
+{% endblock %}
+
+<!-- Set the service name in header -->
+{% block serviceName %}
+Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Search for an application
+        </h1>
+      </legend>
+
+      <span class="nhsuk-hint" >
+        Enter the NHS number if you have it:
+      </span>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="NHSnumber">
+          NHS number
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="NHSnumber" name="treatmentID" type="text"> <br>
+      </div>
+
+      <span class="nhsuk-hint" >
+        You can also search by completing the following fields:
+      </span>
+    
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="firstName">
+          First name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="firstName" name="firstname" type="text">
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="lastName">
+          Last name
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="lastName" name="lastname" type="text">
+      </div>
+    
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="dateOfBirth">
+          Mother's date of birth
+        </label>
+
+        <div class="nhsuk-hint" id="hint">
+          For example, 18 09 1993
+        </div>
+    
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="dateOfBirth">
+          Baby's due or date of birth
+        </label>
+
+        <div class="nhsuk-hint" id="hint">
+          For example, 21 03 2024
+        </div>
+    
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="certificate number">
+          Certificate number
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="certificateNumber" name="certificateNumber" type="text"> <br>
+      </div>
+
+
+      <!-- select option <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="select-1">
+          Certificate type
+        </label>
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1"> Digital </option>
+          <option value="2" selected>Postal</option>
+        </select>
+      </div>
+
+      div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="select-1">
+        Status
+      </label>
+      <select class="nhsuk-select" id="select-1" name="select-1">
+        <option value="1"> In progress </option>
+        <option value="2" selected>Sent</option>
+        <option value="3" selected>Received </option>
+      </select>
+    </div> -->
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="certificate number">
+          Certificate type
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="certificateType" name="certificateType" type="text"> <br>
+      </div>
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="certificate number">
+          Status
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="status" name="country" type="text"> <br>
+      </div>
+
+
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="dateOfBirth">
+          Expiry date
+        </label>
+
+        <div class="nhsuk-hint" id="hint">
+          For example, 22 03 2025
+        </div>
+    
+        <div class="nhsuk-date-input" id="example">
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="day">
+                Day
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="day" name="day" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="month">
+                Month
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="month" name="month" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+          <div class="nhsuk-date-input__item">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label nhsuk-date-input__label" for="year">
+                Year
+              </label>
+              <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="year" name="year" type="number" pattern="[0-9]*">
+            </div>
+          </div>
+        </div> 
+      </div>
+
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="emailAddress">
+          Email address 
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="emailAddress" name="emailAddress" type="text"> <br>
+      </div>
+
+      <h4 class="nhsuk-heading-s"> Current address </h4>
+
+      <div class="nhsuk-form-group">
+        <label class="nhsuk-label" for="addressLine1">
+        
+          Address line 1 
+        </label>
+        <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" name="addressLine1" type="text"> <br>
+      </div>
+       
+      <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="addressLine1">
+      
+        Address line 2 (Optional)
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" name="addressLine2" type="text"> <br>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="addressLine1">
+      
+        Address line 3 (Optional)
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-20" id="addressLine3" name="addressLine3" type="text"> <br>
+    </div>
+
+    <div class="nhsuk-form-group">
+      <label class="nhsuk-label" for="addressLine1">
+      
+        Postcode
+      </label>
+      <input class="nhsuk-input nhsuk-input--width-10" id="postcode" name="postcode" type="text"> <br>
+    </div>
+
+
+    </fieldset>
+
+    <a class="nhsuk-button" href="/v8/search-results" title="application search" class="nhsuk-u-margin-left-3">Search</a>
+
+   
+    
+    
+ 
+  </div>
+  
+</div>
+
+
+{% endblock %}
