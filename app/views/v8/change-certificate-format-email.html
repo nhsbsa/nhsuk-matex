@@ -74,46 +74,49 @@ Maternity Exemption protoype NHS toolkit
             </a>
           </li>
 
+        
+          
+          
         </ul>
       </div>
     </nav>
 
     </header>
 {% endblock %}
+
 {% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+  <div class="nhsuk-width-container">
+    <ol class="nhsuk-breadcrumb__list">
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v8/search-for-application"> Search for application</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v8/search-results"> Search results </a></li>
 
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="v8/view-application"> View application</a></li>
+      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" > Change details</a></li>
 
-
+    </ol>
+   
+  </div>
+</nav>
 <div class="nhsuk-width-container-fluid">
 
   <div class="nhsuk-main-wrapper" id="maincontent">
 
     <div class="nhsuk-back-link">
       <a class="nhsuk-back-link__link" href="javascript:history.back()">
-       <!-- <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+        <!-- <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
           <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
         </svg>
-        Go back --> 
-      </a>
-    </div>
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
-      <div class="nhsuk-width-container">
-        <ol class="nhsuk-breadcrumb__list">
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v8/search-for-application"> Search for application</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v8/search-results"> Search results </a></li>
-    
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="v8/view-application"> View application</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="v8/change-details"> Change details</a></li>
-          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" > Reason for editing </a></li>
-    
-        </ol>
+        Go back --></a>
+          
         
-      </div>
-    </nav>
+    </div>
+    
+
     <div class="nhsuk-grid-row">
       <div class="nhsuk-grid-column-two-thirds">
         <h1 class="nhsuk-heading-xl">
-         Reason for editing
+            Change details
         </h1>
       </div>
       <div class="nhsuk-grid-column-one-third">
@@ -126,45 +129,37 @@ Maternity Exemption protoype NHS toolkit
     <hr style="border-bottom:4px solid #005EB8; margin:0">
     <div class="nhsuk-scrollable-pane">
         <br>
-        <p class="nhsuk-body"> Select all applicable options </p>
+        <p class="nhsuk-body"> You can change or update any incorrect information </p>
+
+        <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="firstName">
+               
+              First names (Given names/forenames)          
+              <div class="nhsuk-hint" id="hint">
+                For example Jane Jennifer
+               </div>
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="firstName" name="firstname" type="text">
+          </div>
+    
+         
+    
+          <div class="nhsuk-form-group">
+            <label class="nhsuk-label" for="lastName">
+              Last name (Family name/surname)
+    
+              <div class="nhsuk-hint" id="hint">
+                For example Smith
+               </div>
+              
+            </label>
+            <input class="nhsuk-input nhsuk-input--width-20" id="lastName" name="lastname" type="text">
+          </div>
+
+
         
 
-        <div class="nhsuk-grid-row">
-                <div class="nhsuk-grid-column-full">
-
-                  <div class="nhsuk-radios">
-
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-1">
-                        Data input error (name, date of birth, postal and email addresses)
-                      </label>
-                    </div>
-
-                    <div class="nhsuk-radios__item">
-                      <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-                      <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                        Legal name change
-                      </label> </div>
-
-                      <div class="nhsuk-radios__item">
-                        <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
-                        <label class="nhsuk-label nhsuk-radios__label" for="example-2">
-                          Change of postal and or email address
-                        </label>
-                    </div>
-
-                    <br>
-                    <div class="nhsuk-form-group">
-                      <label class="nhsuk-label" for="example">
-                        Additional notes (Optional)
-                      </label>
-                      <div class="nhsuk-hint" id="example-hint">
-                        You can add any additional information here, such as where the change request came from.                      </div>
-                      <textarea class="nhsuk-textarea" id="example" name="example" rows="5" aria-describedby="example-hint"></textarea>
-                    </div>
-
-                    <a href="/v8/change-details-success-screen">
+                        <a href="/v8/reasons-for-editing">
                         <button class="nhsuk-button" type="submit">
                             Save
                         </button>

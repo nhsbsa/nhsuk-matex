@@ -16,6 +16,7 @@
 Maternity Exemption protoype NHS toolkit
 
 {% endblock %}
+
 {% block header %}
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container nhsuk-header__container app-width-container">
@@ -36,7 +37,7 @@ Maternity Exemption protoype NHS toolkit
       <div class="nhsuk-header__content" id="content-header" style="margin-top: 5px;">
 
       
-        <p class="nhsuk-body-s" style="color: white; float: left; padding-right: 100px;">Jane.doe@nhs.net</p>
+        <p class="nhsuk-b ody-s" style="color: white; float: left; padding-right: 100px;">Jane.doe@nhs.net</p>
        <a href=""><p class="nhsuk-body-s" style="color: white; float: right;">Sign out</p></a>
 
       </div>
@@ -74,9 +75,6 @@ Maternity Exemption protoype NHS toolkit
             </a>
           </li>
 
-        
-          
-          
         </ul>
       </div>
     </nav>
@@ -88,6 +86,8 @@ Maternity Exemption protoype NHS toolkit
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 
+
+
 {% block beforeContent %}
 <!-- <a href="/v8/record-keeping-dashboard" title="application search" class="nhsuk-u-margin-left-3"> All Applications (temp)
 </a>
@@ -95,49 +95,21 @@ Maternity Exemption protoype NHS toolkit
 </a> -->
 
 <div class="preheader"> 
-<div> 
-<p class="nhsuk-body"> Hospital name, City  </p>  </div> 
+
 
 <div class="nhsuk-form-group">
  
 </div>
 
+<div class="nhsuk-grid-column-one-third">
+                          <a href="/v8/mother-present"><button class="nhsuk-button" type="submit" style="float:left">
+                                  Start a new application
+                              </button></a>
+                      </div>
 
-<div> <button class="nhsuk-button" data-module="nhsuk-button" type="submit" href="/v8/mother-present">
-Start new application
-</button> </div>  
 
 </div>
 
-<div class=id-filter> <center> 
-  <select class="nhsuk-select" id="select-1" name="select-1">
-  <option value="1">Last name</option>
-  <option value="2" selected> A-Z </option>
-  <option value="3" selected> Z-A</option>
-</select>
-
-<select class="nhsuk-select" id="select-1" name="select-1">
-  <option value="1"> Date application made </option>
-  <option value="2" selected> Newest first </option>
-  <option value="3" selected> Oldest first</option>
-</select>
-
-<select class="nhsuk-select" id="select-1" name="select-1">
-  <option value="1">Certificate type  </option>
-  <option value="2" selected> Digital </option>
-  <option value="3" selected> Postal </option>
-</select>
-
-<select class="nhsuk-select" id="select-1" name="select-1">
-  <option value="1">Status </option>
-  <option value="2" selected> In progress </option>
-  <option value="3" selected> Sent </option>
-  <option value="3" selected> Received </option>
-</select> </center> 
-
-<p class="nhsuk-body" font color: #005eb8> Reset filter  </p> 
-
-</div> 
 
 
 
@@ -170,11 +142,63 @@ Start new application
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}
+
 {% endblock %}
 
 <!-- For adding page content -->
 <!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+
 {% block content %}
+
+<div class="nhsuk-grid-row">
+
+  <div class= "nhsuk-grid-column-full">
+
+    <div class=id-filter> <center> 
+      <select class="nhsuk-select" id="select-1" name="select-1">
+      <option value="1">Last name</option>
+      <option value="2" selected> A-Z </option>
+      <option value="3" selected> Z-A</option>
+    </select>
+    
+    <select class="nhsuk-select" id="select-1" name="select-1">
+      <option value="1"> Date application made </option>
+      <option value="2" selected> Newest first </option>
+      <option value="3" selected> Oldest first</option>
+    </select>
+    
+    <select class="nhsuk-select" id="select-1" name="select-1">
+      <option value="1">Certificate type  </option>
+      <option value="2" selected> Digital </option>
+      <option value="3" selected> Postal </option>
+    </select>
+    
+    <select class="nhsuk-select" id="select-1" name="select-1">
+      <option value="1">Status </option>
+      <option value="2" selected> In progress </option>
+      <option value="3" selected> Sent </option>
+      <option value="3" selected> Received </option>
+    </select> </center> 
+    
+    <br> <div  style="float:right" >
+        
+      <p><a href="/v8/record-keeping-dashboard" to refresh the page] class="nhsuk-link nhsuk-link--no-visited-state "> Reset Filter</a></p>
+      
+      </div>  <br>  
+
+    <center> <div class="nhsuk-grid-row"> </center> 
+    
+       
+        
+     </div> 
+     
+    </div>
+
+</div>
+</div>
+
+
 
 <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
@@ -240,7 +264,7 @@ Start new application
                                         <td role="cell" class="nhsuk-table__cell">
                                           <span class="nhsuk-table-responsive__heading"> </span>  
                                          
-                                            <p><a href="record-keeping-dashboard.html" title="External website"> View Application </a></p>
+                                            <p><a href="v8/view-application" title="External website"> View Application </a></p>
              
                                         </td>
                                       </tr>
@@ -263,7 +287,7 @@ Start new application
                                         <td role="cell" class="nhsuk-table__cell">
                                           <span class="nhsuk-table-responsive__heading"> </span>  
                                          
-                                            <p><a href="record-keeping-dashboard.html" title="External website"> View Application </a></p>
+                                            <p><a href="v8/view-application" title="External website"> View Application </a></p>
              
                                         </td>
                                       </tr>
@@ -309,7 +333,7 @@ Start new application
                                         <td role="cell" class="nhsuk-table__cell">
                                           <span class="nhsuk-table-responsive__heading"> </span>  
                                          
-                                            <p><a href="record-keeping-dashboard.html" title="External website"> View Application </a></p>
+                                            <p><a href="v8/view-application" title="External website"> View Application </a></p>
              
                                         </td>
                                       </tr>
@@ -333,7 +357,7 @@ Start new application
                                         <td role="cell" class="nhsuk-table__cell">
                                           <span class="nhsuk-table-responsive__heading"> </span>  
                                          
-                                            <p><a href="record-keeping-dashboard.html" title="External website"> View Application </a></p>
+                                            <p><a href="v8/view-application" title="External website"> View Application </a></p>
              
                                         </td>
                                       </tr>
@@ -341,8 +365,11 @@ Start new application
                                     </tbody>
 
                                   </table>
+
                                 </center> <!-- end of table & also how can I centre it? -->
 
+
+                                
     
                         </div>
                     </div>
@@ -542,7 +569,7 @@ Start new application
         Go back
       </a>
     </div>
-    <form action="/v7/confirmation-email" class="form" >
+    <form action="/v8/confirmation-email" class="form" >
       <div class="content">
         <h1 class="nhsuk-heading-l" id="title">Application details</h1>
         <dl class="nhsuk-summary-list">
@@ -550,7 +577,7 @@ Start new application
             <dt id="mother-int-date" class="nhsuk-summary-list__key">Mother's name</dt>
             <dd class="nhsuk-summary-list__value" id="int-date"> Priya Kaur </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/mother-present#contact-2" id="intdate-change"
+              <a href="/v8/mother-present#contact-2" id="intdate-change"
                 aria-label="Change date you met the mother">Change</a>
             </dd>
           </div>
@@ -559,7 +586,7 @@ Start new application
             <dt id="mother-name" class="nhsuk-summary-list__key">Mother's date of birth</dt>
             <dd class="nhsuk-summary-list__value" id="name"> 15 March 1993 </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
+              <a href="/v8/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
             </dd>
           </div>
 
@@ -567,7 +594,7 @@ Start new application
             <dt id="mother-dob" class="nhsuk-summary-list__key">Mother's NHS number </dt>
             <dd class="nhsuk-summary-list__value" id="moth-dob">1234567890</dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/application-details#example-day" id="dob-change" aria-label="Change mother's date of birth">Change</a>
+              <a href="/8/application-details#example-day" id="dob-change" aria-label="Change mother's date of birth">Change</a>
             </dd>
           </div>
 
@@ -575,7 +602,7 @@ Start new application
             <dt id="mother-nhs" class="nhsuk-summary-list__key">Mother's postcode </dt>
             <dd class="nhsuk-summary-list__value" id="nhs-no"> NE1 7PT </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/application-details#nhs-no" id="nhs-change" aria-label="Change mother's NHS number">Change</a>
+              <a href="/v8/application-details#nhs-no" id="nhs-change" aria-label="Change mother's NHS number">Change</a>
             </dd>
           </div>
           
@@ -583,7 +610,7 @@ Start new application
             <dt id="mother-postcode" class="nhsuk-summary-list__key"> Baby's due or baby's birth date </dt>
             <dd class="nhsuk-summary-list__value" id="postcode"> 15 March 2024 </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/application-details#postcode" id="nhs-change" aria-label="Change mother's postcode">Change</a>
+              <a href="/v8/application-details#postcode" id="nhs-change" aria-label="Change mother's postcode">Change</a>
             </dd>
           </div>
           
@@ -591,7 +618,7 @@ Start new application
             <dt id="mother-due-date" class="nhsuk-summary-list__key">Due date or baby's birth date</dt>
             <dd class="nhsuk-summary-list__value" id="baby-dob">25 February 2024</dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/application-details#baby-dob" id="duedate-change" aria-label="Change due or birth date">Change</a>
+              <a href="/v8/application-details#baby-dob" id="duedate-change" aria-label="Change due or birth date">Change</a>
             </dd>
           </div>
 
@@ -599,7 +626,7 @@ Start new application
             <dt id="details-by-email" class="nhsuk-summary-list__key">Certificate to be sent by</dt>
             <dd class="nhsuk-summary-list__value" id="details-email">Email</dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
+              <a href="/v8/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
             </dd>
           </div>
 
@@ -607,7 +634,7 @@ Start new application
             <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's email address</dt>
             <dd class="nhsuk-summary-list__value" id="email-add"> priyakaur@mail.com </dd>
             <dd class="nhsuk-summary-list__actions">
-              <a href="/v7/email" id="email-change" aria-label="Change mother's email address">Change</a>
+              <a href="/v8/email" id="email-change" aria-label="Change mother's email address">Change</a>
             </dd>
           </div>
         </dl>
