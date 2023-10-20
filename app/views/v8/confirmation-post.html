@@ -33,7 +33,7 @@
       <div class="nhsuk-header__content" id="content-header" style="margin-top: 5px;">
 
       
-        <p class="nhsuk-b ody-s" style="color: white; float: left; padding-right: 100px;">Jane.doe@nhs.net</p>
+        <p class="nhsuk-b ody-s" style="color: white; float: left; padding-right: 100px;">jane.doe@nhs.net</p>
        <a href=""><p class="nhsuk-body-s" style="color: white; float: right;">Sign out</p></a>
 
       </div>
@@ -123,7 +123,7 @@
             <body class="nhsuk-heading-m" id="submitted">
               <span id="submitted-hcp">Mother's certificate number:</span>
             </body>
-            <h2 class="nhsuk-heading-l">1234567890</h2>
+            <h2 class="nhsuk-heading-l">10000 100 101</h2>
             <span class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
               Exemption ends: </span>
               <h2 class="nhsuk-heading-l">24 February 2025</h2>
@@ -144,31 +144,26 @@
             <p class="nhsuk-body">The mother should ask the pharmacist for an FP57 receipt. They could receive a refund if their maternity exemption certificate covered the date that they claimed NHS prescriptions.</p>
           <div class="nhsuk-u-padding-bottom-"></div>
 
-          <div class="nhsuk-u-padding-bottom-3"></div>
-          <form action="/v8/record-keeping-dashboard" method="POST" class="form">
-            <div class="nhsuk-form-group">
-              <input class="nhsuk-button" id="next-button" type="submit" value="Return to dashboard" />
-            </div>  
+          <div class="nhsuk-u-padding-bottom-4"></div>
+
+          <div class="button-container">
+            
+            <form action="/v8/mother-present">
+              <button style="margin-right:20px;" class="nhsuk-button style=padding-right:10px;" type="submit">
+                Start a new application
+              </button>
+            </form>
+
+
+          <form action="/v8/record-keeping-dashboard">
+            <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+              Return to dashboard
+            </button>
+          </form>
+        </div>
             
 
         </div>
       </div>
 
-
-     <!-- <button class="nhsuk-button" data-module="nhsuk-button" type="submit" href="/v8/start-page-signed-in">
-        Start a new application 
-      </button>  &ensp;  <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit" href="/v8/record-keeping-dashboard.html">
-       Return to dashboard 
-      </button>
-
-      <div class="nhsuk-u-padding-bottom-6"></div>
-    </div>  
-  </div>
-<div></div>
- 
-  </form> <form action="/v8/record-keeping-dashboard.html" method="POST" class="form">
-    <div class="nhsuk-form-group">
-      <input class="nhsuk-button nhsuk-button--secondary" id="next-button" type="submit" value="Return to dashboard" />
-    </div>
-  </form> --> 
 {% endblock %}

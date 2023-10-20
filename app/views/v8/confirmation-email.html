@@ -122,7 +122,7 @@
             <body class="nhsuk-heading-m" id="submitted">
               <span id="submitted-hcp">Mother's certificate number:</span>
             </body>
-            <h2 class="nhsuk-heading-l">1234567890</h2>
+            <h2 class="nhsuk-heading-l">10000 100 101</h2>
             <span class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
               Exemption ends: </span>
               <h2 class="nhsuk-heading-l">24 February 2025</h2>
@@ -144,16 +144,27 @@
            <p class="nhsuk-body">They can start using their exemption straight away.</p>
           <div class="nhsuk-u-padding-bottom-"></div>
 
-          <div class="nhsuk-u-padding-bottom-3"></div>
+          <div class="nhsuk-u-padding-bottom-4"></div>
             
-          <form action="/v8/record-keeping-dashboard" method="email" class="form">
-            <div class="nhsuk-form-group">
-              <input class="nhsuk-button" id="next-button" type="submit" value="Return to dashboard" />
-        </div>
-      </div>
+          <div class="button-container">
+            
+            <div class="button-container">
+            
+              <form action="/v8/mother-present">
+                <button style="margin-right:20px;" class="nhsuk-button style=padding-right:10px;" type="submit">
+                  Start a new application
+                </button>
+              </form>
+  
+  
+            <form action="/v8/record-keeping-dashboard">
+              <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+                Return to dashboard
+              </button>
+            </form>
+          </div>
 
-      
-      <div class="nhsuk-u-padding-bottom-6"></div>
+          
     </div>  
   </div>
 {% endblock %}
