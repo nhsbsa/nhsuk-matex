@@ -13,6 +13,7 @@
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+
 {% block header %}
 <header class="nhsuk-header" role="banner">
   <div class="nhsuk-width-container nhsuk-header__container app-width-container">
@@ -54,7 +55,7 @@
           
           
           <li class="nhsuk-header__navigation-item">
-            <a class="nhsuk-header__navigation-link" href="/v8/record-keeping-dashboard" >
+            <a class="nhsuk-header__navigation-link" href="/v9/record-keeping-dashboard" >
               All applications
               <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="34" height="34">
                 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
@@ -62,7 +63,7 @@
             </a>
           </li>
           <li class="nhsuk-header__navigation-item " style="float: left;">
-            <a class="nhsuk-header__navigation-link" href="/v8/mother-present" style="box-shadow: inset 0 -4px 0 #d8dde0;">
+            <a class="nhsuk-header__navigation-link" href="/v9/mother-present" style="box-shadow: inset 0 -4px 0 #d8dde0;">
             Start a new application
               <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" width="34" height="34">
                 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
@@ -72,7 +73,7 @@
 
           
           <li class="nhsuk-header__navigation-item " style="float: left;">
-            <a class="nhsuk-header__navigation-link" href="/v8/search-for-application"  >
+            <a class="nhsuk-header__navigation-link" href="/v9/search-for-application"  >
              Search for application
               <svg class="nhsuk-icon nhsuk-icon__chevron-right" xmlns="http://www.w3.org/2000/svg"  aria-hidden="true" width="34" height="34">
                 <path d="M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z"></path>
@@ -113,7 +114,7 @@
           Go back
         </a>
       </div>
-      <form action="/v8/confirmation-post" class="form" >
+      <form action="/v8/confirmation-email" class="form" >
         <div class="content">
           <h1 class="nhsuk-heading-l" id="title">Check your answers</h1>
           <dl class="nhsuk-summary-list">
@@ -121,7 +122,7 @@
               <dt id="mother-int-date" class="nhsuk-summary-list__key">Last appointment with the mother</dt>
               <dd class="nhsuk-summary-list__value" id="int-date">28 June 2023</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/mother-present#contact-2" id="intdate-change"
+                <a href="/v9/mother-present#contact-2" id="intdate-change"
                   aria-label="Change date you met the mother">Change</a>
               </dd>
             </div>
@@ -130,7 +131,7 @@
               <dt id="mother-name" class="nhsuk-summary-list__key">Mother's name</dt>
               <dd class="nhsuk-summary-list__value" id="name">Jo Bloggs</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
+                <a href="/v9/application-details#first-name" id="name-change" aria-label="Change mother's name">Change</a>
               </dd>
             </div>
 
@@ -138,7 +139,7 @@
               <dt id="mother-dob" class="nhsuk-summary-list__key">Mother's date of birth</dt>
               <dd class="nhsuk-summary-list__value" id="moth-dob">10 October 1996</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/application-details#dob" id="dob-change" aria-label="Change mother's date of birth">Change</a>
+                <a href="/v9/application-details#example-day" id="dob-change" aria-label="Change mother's date of birth">Change</a>
               </dd>
             </div>
 
@@ -146,7 +147,7 @@
               <dt id="mother-nhs" class="nhsuk-summary-list__key">Mother's NHS number</dt>
               <dd class="nhsuk-summary-list__value" id="nhs-no">1234567890</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/application-details#nhs-no" id="nhs-change" aria-label="Change mother's NHS number">Change</a>
+                <a href="/v9/application-details#nhs-no" id="nhs-change" aria-label="Change mother's NHS number">Change</a>
               </dd>
             </div>
             
@@ -154,7 +155,7 @@
               <dt id="mother-postcode" class="nhsuk-summary-list__key">Mother's postcode</dt>
               <dd class="nhsuk-summary-list__value" id="postcode">NE1 0LD</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/application-details#postcode" id="nhs-change" aria-label="Change mother's postcode">Change</a>
+                <a href="/v9/application-details#postcode" id="nhs-change" aria-label="Change mother's postcode">Change</a>
               </dd>
             </div>
             
@@ -162,26 +163,23 @@
               <dt id="mother-due-date" class="nhsuk-summary-list__key">Due date or baby's birth date</dt>
               <dd class="nhsuk-summary-list__value" id="baby-dob">25 February 2024</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/application-details#baby-dob" id="duedate-change" aria-label="Change due or birth date">Change</a>
+                <a href="/v9/application-details#baby-dob" id="duedate-change" aria-label="Change due or birth date">Change</a>
               </dd>
             </div>
 
             <div class="nhsuk-summary-list__row">
               <dt id="details-by-email" class="nhsuk-summary-list__key">Certificate to be sent by</dt>
-              <dd class="nhsuk-summary-list__value" id="details-email">Post</dd>
+              <dd class="nhsuk-summary-list__value" id="details-email">Email</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
+                <a href="/v9/certificate-email-or-post#example-contact-by-email" id="details-change" aria-label="Change get details by email">Change</a>
               </dd>
             </div>
 
             <div class="nhsuk-summary-list__row">
-              <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's address</dt>
-              <dd class="nhsuk-summary-list__value" id="email-add">101 Test Avenue<br>
-                Test Town<br>
-                NE1 0LD<br>
-                </dd>
+              <dt id="mother-email-address" class="nhsuk-summary-list__key">Mother's email address</dt>
+              <dd class="nhsuk-summary-list__value" id="email-add">jo-bloggs@hotmail.co.uk</dd>
               <dd class="nhsuk-summary-list__actions">
-                <a href="/v8/email" id="email-change" aria-label="Change mother's email address">Change</a>
+                <a href="/v9/email" id="email-change" aria-label="Change mother's email address">Change</a>
               </dd>
             </div>
           </dl>
@@ -193,7 +191,7 @@
           <div class="notice" id="new-route-dec">
             <i class="declaration-icon icon icon-important"><span class="nhsuk-u-visually-hidden">Warning</span></i>
             <p th:object="${applicationData}" class="declaration">I confirm that this information is correct and true in accordance with the mother's records on 
-              12/7/2023.<br /><br />
+              12/7/2023. <br><br>
               I confirm that the mother:
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li class="declaration-list">has given their permission for this application to be submitted on their behalf
@@ -202,11 +200,15 @@
               <li class="declaration-list">understands their data will not be transferred outside of the European Economic Area and will be deleted within 24 months of the expiry date of the exemption</li>
             </ul>
             </p>
-            <p>I understand that when I press submit, I am submitting an application on behalf of the named person.</p>
+            <p class="declaration">I understand that when I press submit, I am submitting an application on behalf of the named person.</p>
           </div>
         </div>
         <button class="nhsuk-button" id="next-button" type="submit">Submit</button>
+        <!-- <button class="nhsuk-button nhsuk-button--secondary" data-module="nhsuk-button" type="submit">
+         Save as draft
+        </button> --> 
       </form>
     </div>  
   </div>
+
 {% endblock %}
