@@ -1,0 +1,97 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Maternity Exemption protoype NHS toolkit
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  <!-- Breadcrumb -->
+  <div class="nhsuk-breadcrumb">
+    <div class="nhsuk-width-container nhsuk-text-right">
+      <span class="nhsuk-u-margin-right-3">Matex Test</span>
+      |
+      <a class="nhsuk-u-margin-left-3 nhsuk-u-margin-right-3" id="signout__link" href="/v9/start-page-signed-out">Sign out</a>
+      |
+      <a class="nhsuk-u-margin-left-3" href="/v9/help-page">Help</a>
+    </div>
+  </div>
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="#">feedback</a> will help us improve it.
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="javascript:history.go(-1)">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" height="24" width="24">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back
+        </a>
+      </div>
+      <form action="/v6/check-answers-post" method="post">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading" id="title">Mother's postal address</h1>
+          </legend>
+
+          <p>The address you give must match their home address given on their medical records.</p>
+          
+          <div id="contact-by-post">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="address1" for="addressLine1">Building and street</label>
+             <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" type="text" autocomplete="off" maxlength="30" aria-required="true" />
+            
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="address1" for="addressLine1"></label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" type="text" autocomplete="off" maxlength="30" />
+            
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="town" for="addressTown">Town or city</label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressTown" type="text" name="addressTown" maxlength="30" autocomplete="off" />
+            
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="motherPostcode" for="postcode">Postcode</label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="postcode" type="text" name="postcode" autocomplete="off" maxlength="8"/>
+            </div>
+          </div>
+        </fieldset>
+      
+        <form action="check-answers-post">
+          <a href="/v9/check-answers-post" class="nhsuk-button">
+            Continue
+          </a>
+        </form>
+</form>
+</div>
+        
+    </div>  
+  </div>
+{% endblock %}
