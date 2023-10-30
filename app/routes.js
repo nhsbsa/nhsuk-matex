@@ -3,6 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 // versioned routes files
+router.use('/v10', require('./views/v10/_routes'))
 router.use('/v9', require('./views/v9/_routes'))
 router.use('/v8', require('./views/v8/_routes'))
 router.use('/v7', require('./views/v7/_routes'))
