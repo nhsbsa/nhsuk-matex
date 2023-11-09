@@ -14,6 +14,7 @@
 <!-- Breadcrumb goes inside the beforeContent block -->
 <!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
 {% block beforeContent %}
+ 
   <!-- Phase banner -->
   <div class="app-phase-banner">
     <div class="nhsuk-width-container app-phase-banner__container">
@@ -43,33 +44,29 @@
           Go back
         </a>
       </div>
-      <form action="/confirmation" class="form" >
+      
         <div class="content">
-          <h1 class="nhsuk-heading-l" id="title">Registering if you're not on ESR</h1>
+          <h1 class="nhsuk-heading-l" id="title">Declaration</h1>
           
-          <p>If you're a midwife, practice nurse or health visitor, you can still use this service if you have an email address with an organisation that:</p>
-          
-          <ul>
-            <li>meets the <a  href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a></li>
-            <li>uses Office 365 or a Hybrid Exchange email service</li>
-           </ul>
+            <p>I confirm I understand that:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li class="declaration-list">I need to contact the NHS Business Services Authority (NHSBSA) if the security of my email address is compromised
+              <li class="declaration-list">the information submitted will be checked in the NHS Electronic Staff Record (ESR)</li>
+              <li class="declaration-list">my NMC PIN will be stored by the NHS Business Services Authority (NHSBSA)</li>
+            </ul>
+            </p>
+          </div>
+        <br>
 
-           <p>Ask your IT department if your organisation's email meets these requirements. We'll also check this for you.</p>
+        <a class="nhsuk-button" type="submit" href="/v10/register/what-happens-next">
+          Agree and submit
+         </a>
 
-           <p>To register, email at <a href="mailto:healthcosts@nhsbsa.nhs.uk" title="New window">healthcosts@nhsbsa.nhs.uk</a> and include your:</p>
-           <ul>
-            <li>full name</li>
-            <li>NMC PIN</li>
-            <li>organisational email address, such as NHSmail</li>
-           </ul>
+         
 
-           <p>We'll use these details to verify your professional identity.</p>
 
-           <p>We'll email you to confirm when you are registered. You'll then be able to use the online service.</p>
-            
-
-      </form>
+      
     </div>  
-    
   </div>
+
 {% endblock %}
