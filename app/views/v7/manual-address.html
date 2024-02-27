@@ -8,7 +8,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  Maternity Exemption protoype NHS toolkit
+  Maternity Exemption prototype NHS toolkit
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -38,7 +38,6 @@
     </div>
   </div>
 {% endblock %}
-
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
@@ -53,48 +52,45 @@
           Go back
         </a>
       </div>
-      <div class="content">
-        <div class="indextext">
-          <div class="done-panel">
-            <h2 class="nhsuk-heading-l" id="completed">
-              <span class="done-tick" id="done-tick">Application completed</span>
-            </h2>
-            <body class="nhsuk-heading-m" id="submitted">
-              <span id="submitted-hcp">Mother's certificate number:</span>
-            </body>
-            <h2 class="nhsuk-heading-l">1234567890</h2>
-            <span class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
-              Exemption ends: </span>
-              <h2 class="nhsuk-heading-l">24 February 2025</h2>
-          </div>
+      <form action="/v7/check-answers-post" method="post">
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading" id="title">Mother's postal address</h1>
+          </legend>
+
+          <p>The address you give must match their home address given on their medical records.</p>
           
-
-              
-          
-
-
-
-            <h3 class="nhsuk-heading-m">
-              What happens next?
-            </h3>
-            <p class="nhsuk-body"> We'll post the certificate to the mother. They should receive it within 10 working days.</p>
-            <p class="nhsuk-body">If the certificate has not been received within 10 working days, the mother should <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="_blank">contact the NHSBSA</a></p>
-            <p class="nhsuk-body">The mother should pay for their prescription items until they receive their paper certificate.</p>
-            <p class="nhsuk-body">To claim a refund, the mother should ask the pharmacist for an FP57 receipt when they purchase prescription items. They could receive a refund if their maternity exemption certificate covered the date that they claimed NHS prescriptions.</p>
-          <div class="nhsuk-u-padding-bottom-"></div>
-
-          <div class="nhsuk-u-padding-bottom-3"></div>
-            
-          <form action="/v7/start-page-signed-in" method="POST" class="form">
+          <div id="contact-by-post">
             <div class="nhsuk-form-group">
-              <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
+              <label class="nhsuk-label" id="address1" for="addressLine1">Address line 1</label>
+             <input class="nhsuk-input nhsuk-input--width-20" id="addressLine1" type="text" autocomplete="off" maxlength="30" aria-required="true" />
+            
             </div>
-          </form>
-        </div>
-      </div>
-
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="address1" for="addressLine1">Address line 2 (Optional)</label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressLine2" type="text" autocomplete="off" maxlength="30" />
+            
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="town" for="addressTown">Town or city</label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="addressTown" type="text" name="addressTown" maxlength="30" autocomplete="off" />
+            
+            </div>
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" id="motherPostcode" for="postcode">Postcode</label>
+              <input class="nhsuk-input nhsuk-input--width-20" id="postcode" type="text" name="postcode" autocomplete="off" maxlength="8"/>
+            </div>
+          </div>
+        </fieldset>
       
-      <div class="nhsuk-u-padding-bottom-6"></div>
+   <form action="v7/check-answers-post">
+          <button class="nhsuk-button" type="submit">
+            Continue
+          </button>
+        </form>
+</form>
+</div>
+        
     </div>  
   </div>
 {% endblock %}
