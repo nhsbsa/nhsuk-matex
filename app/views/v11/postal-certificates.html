@@ -122,32 +122,28 @@ Maternity Exemption prototype NHS toolkit
 
 <!-- For adding a breadcrumb -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
-
-
-
 {% block beforeContent %}
-<!-- <a href="/v8/record-keeping-dashboard" title="application search" class="nhsuk-u-margin-left-3"> All Applications (temp)
-</a>
-<a href="/v8/search-for-application" title="application search" class="nhsuk-u-margin-left-3"> Search for an application (temp)
-</a> -->
+
 
 
 {% endblock %}
-
-
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+<!-- main starts here -->
 {% block content %}
 
-<div class="preheader nhsuk-u-margin-bottom-0">
-  <div class="nhsuk-form-group">
-  </div>
 
 
-  <div class="nhsuk-grid-column-one-third nhsuk-u-margin-bottom-0">
-    <a href="/v11/application-details"><button class="nhsuk-button" type="submit" style="float:left">
+  <div class="nhsuk-grid-column-one-third nhsuk-u-margin-bottom-0" style="float:right">
+    <a href="/v11/application-details"><button class="nhsuk-button" type="submit" style="float:right">
         Start a new application
       </button></a>
     <a href="/v11/search-for-application"><button class="nhsuk-button nhsuk-button--secondary" type="submit"
-        style="float:left" class="nhsuk-u-margin-bottom-0">
+        style="float:right" class="nhsuk-u-margin-bottom-0">
         Search for an application
       </button></a>
   </div>
@@ -169,20 +165,29 @@ Maternity Exemption prototype NHS toolkit
           <option value="3" selected> Oldest first</option>
         </select>
 
+        <select class="nhsuk-select" id="select-1" name="select-1">
+          <option value="1">Certificate type </option>
+          <option value="2" selected> Digital </option>
+          <option value="3" selected> Postal </option>
+        </select>
+
       </center>
 
-      
-      <div class="nhsuk-u-margin-top-4" style="float:right">
-        <p><a href="/v11/record-keeping-dashboard" to refresh the page] class="nhsuk-link nhsuk-link--no-visited-state ">
+
+            
+      <div class="nhsuk-u-margin-top-4 nhsuk-u-padding-right-4 nhsuk-grid-column-one-third" style="float:right">
+        <p class="nhsuk-u-margin-bottom-2"><a href="/v11/record-keeping-dashboard" to="" refresh="" the="" page]="" class="nhsuk-link nhsuk-link--no-visited-state ">
             Reset filter</a></p>
 
       </div> <br>
-      
+
     </div>
   </div>
 </div>
 </div>
+
 <hr class="solid nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-0">
+
 
 <div class="nhsBSA-sidebar-container">
     <div class="nhsBSA-sidebar-wrapper">
@@ -195,7 +200,6 @@ Maternity Exemption prototype NHS toolkit
                                 Postal certificates
                             </h1>
 
-                            <br><br><br><br>
                            <!-- <h4>Sentence or two describing what is meant by postal application to be placed here.</h4> --> 
                             <!-- <a href="#" class="nhsuk-button nhsuk-u-margin-bottom-0 nhsbsa-sidebar-content-button" role="button">Start new application</a> --> 
                         </div>
@@ -453,7 +457,21 @@ Maternity Exemption prototype NHS toolkit
 
                                   </table>
 
-                                </center> <!-- end of table & also how can I centre it? -->
+                                </center>
+
+              <nav class="nhsuk-pagination" role="navigation" aria-label="Pagination">
+                <ul class="nhsuk-list nhsuk-pagination__list">
+        
+                  <li class="nhsuk-pagination-item--next">
+                    <a class="nhsuk-pagination__link nhsuk-pagination__link--next" href="#">
+                      <span class="nhsuk-pagination__title">Next</span>
+                      <svg class="nhsuk-icon nhsuk-icon__arrow-right" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" width="34" height="34">
+                        <path d="M19.6 11.66l-2.73-3A.51.51 0 0 0 16 9v2H5a1 1 0 0 0 0 2h11v2a.5.5 0 0 0 .32.46.39.39 0 0 0 .18 0 .52.52 0 0 0 .37-.16l2.73-3a.5.5 0 0 0 0-.64z"></path>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
 
 
                                 
