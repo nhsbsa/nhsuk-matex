@@ -18,4 +18,8 @@ router.post(/certificate-email-or-post/,  function (req, res) {
 
 
 
+//application-details
+router.post(/application-details/, (req, res) => {
+  res.redirect('certificate-email-or-post');
+})
 module.exports = router;

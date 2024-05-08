@@ -42,7 +42,7 @@
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
-
+<form class="form" action="date-of-birth" method="post"> 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
       <div class="nhsuk-back-link">
@@ -57,7 +57,7 @@
      <div class="nhsuk-u-padding-bottom-1"></div>
 
       <h1 id="title" class="nhsuk-heading-l">Application details</h1>
-      <form>
+     
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--m">
             <h2 class="nhsuk-fieldset__heading">About the mother</h2>
@@ -162,12 +162,16 @@
               </div>
             </div>
           </fieldset>
-          <div class="nhsuk-u-padding-bottom-3"></div>
-          <p><a class="nhsuk-button" href="certificate-email-or-post">Continue</a></p>
         </fieldset>  
+      </div>  
+        <br>
+        <button class="nhsuk-button" type="submit">
+          Continue
+        </button>
       </form>
-    </div>
-  </div>  
+
+
+
 
 
 
