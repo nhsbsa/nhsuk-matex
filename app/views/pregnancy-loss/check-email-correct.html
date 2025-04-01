@@ -8,7 +8,7 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  Maternity Exemption protoype NHS toolkit
+  {{ serviceName }}
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
@@ -53,7 +53,7 @@
           Go back
         </a>
       </div>
-      <form action="/check-answers-email" method="email">
+      <form action="check-answers-email" method="email">
         <fieldset class="nhsuk-fieldset">
           <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
             <h1 class="nhsuk-fieldset__heading" id="title">

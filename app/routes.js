@@ -2,6 +2,24 @@
 const express = require('express');
 const router = express.Router();
 
+//
+// DETECT CURRENT VERSION
+//
+router.use((req, res, next) => {
+
+  const versions = ['v1','v2','v3','v4','v5','v6','v7','v8','v9','v10','v11','old-version','pregnancy-loss'];
+  let version = '';
+  versions.forEach( function( vers ){
+    if( req.originalUrl.toUpperCase().indexOf( '/' + vers.toUpperCase() + '/' ) > -1 ){
+      version = vers;
+    }
+  } );
+
+  res.locals.version = version;
+  next();
+
+});
+
 // versioned routes files
 router.use('/v11', require('./views/v11/_routes'))
 router.use('/v10', require('./views/v10/_routes'))
