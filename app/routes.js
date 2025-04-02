@@ -2,7 +2,6 @@
 const express = require('express');
 const router = express.Router();
 
-
 //
 // DETECT CURRENT VERSION
 //
@@ -33,22 +32,6 @@ router.use((req, res, next) => {
 
 
 });
-
-
-// Add your routes here - above the module.exports line
-/*
-router.post(/certificate-email-or-post/, function (req, res) {
-  // creating a variable named contact - assigning the variable the value of the radio button selected
-  var contact = req.session.data['contact']
-  if (contact == "email") {
-    res.redirect('/email')
-  }
-  else {
-    res.redirect('/postcode')
-  }
-})
-  */
-
 
 module.exports = router;
 
