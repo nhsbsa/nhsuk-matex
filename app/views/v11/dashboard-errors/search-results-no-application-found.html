@@ -8,17 +8,18 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-    MATEX Record Keeping
-{% endblock %}
-
-<!-- Set the service name in header -->
-{% block serviceName %}
-{{ serviceName }}
+   {{ serviceName }}
 {% endblock %}
 
 
+{% block beforeContent %}
+  {{ statusBar() }}
+  {{ phaseBanner() }}
+{% endblock %}
 
-<nav class="nhsuk-breadcrumb nhsBSA-breadcrumb" aria-label="Breadcrumb">
+
+{% block content %}
+<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container-fluid">
       <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-full">

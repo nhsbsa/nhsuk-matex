@@ -12,11 +12,13 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-{{ serviceName }}
+  {{ serviceName }}
 {% endblock %}
 
 <!-- Breadcrumb goes inside the beforeContent block -->
 {% block beforeContent %}
+  {{ statusBar() }}
+  {{ phaseBanner() }}
 {% endblock %}
 
 <!-- Your page content goes inside the content block -->

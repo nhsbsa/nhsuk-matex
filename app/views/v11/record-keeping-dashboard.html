@@ -37,18 +37,7 @@
     })
   }}
 
-  <div class="app-phase-banner">
-    <div class="nhsuk-width-container app-phase-banner__container">
-      <p class="app-phase-banner__content">
-        <strong class="nhsuk-tag app-phase-banner__tag">
-          Prototype
-        </strong>
-        <span class="app-phase-banner__text">
-          This is a prototype - your <a href="#">feedback</a> will help us improve it.
-        </span>
-      </p>
-    </div>
-  </div>
+  {{ phaseBanner() }}
 
 {% endblock %}
 
@@ -58,11 +47,7 @@
 
 
 
-{% block beforeContent %}
 
-
-
-{% endblock %}
 <!-- For adding a back link -->
 <!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
 {% block outerContent %}

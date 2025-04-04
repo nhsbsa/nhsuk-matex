@@ -1,0 +1,17 @@
+{% macro phaseBanner() %}
+
+{% from 'tag/macro.njk' import tag %}
+
+<div class="app-phase-banner">
+  <div class="nhsuk-width-container app-phase-banner__container">
+    <p class="app-phase-banner__content">
+      {{ tag({
+        text: 'Beta',
+        classes: 'nhsuk-tag--blue nhsuk-u-margin-right-2'
+      }) }}
+      <span class="app-phase-banner__text">This is a prototype - your <a href="#">feedback</a> will help us improve it.</span>
+    </p>
+  </div>
+</div>
+
+{% endmacro %}
