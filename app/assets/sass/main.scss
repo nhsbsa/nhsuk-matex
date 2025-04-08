@@ -29,9 +29,15 @@
   background-color: white;
   margin: 0;
   padding: 16px;
+  font-size: 0.875rem;
 }
 
 @media (min-width: 40.0625em) {
+
+  .nhsuk-status-bar {
+    font-size: 1rem;
+  }
+
   .nhsuk-breadcrumb {
       margin: 0;
       padding: 16px;

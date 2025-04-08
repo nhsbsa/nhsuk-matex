@@ -22,15 +22,15 @@
       showSearch: 'false',
       primaryLinks: [
         {
-          url  : '/' + version + '/record-keeping-dashboard',
+          url  : 'record-keeping-dashboard',
           label : 'All certificates '
         },
         {
-          url : '/' + version + '/application-details',
+          url : 'application-details',
           label : 'Start a new application'
         },
         {
-          url : '/' + version + '/search-for-application',
+          url : 'search-for-application',
           label : 'Search for application'
         }
       ]
@@ -41,10 +41,9 @@
 
 {% endblock %}
 
-
-<!-- For adding a breadcrumb -->
-<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
-
+{% block header %}
+  {{ dashboardHeader() }}
+{% endblock %}
 
 
 

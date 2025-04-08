@@ -8,15 +8,29 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-    MATEX Record Keeping
+    {{ serviceName }}
 {% endblock %}
 
-<!-- Set the service name in header -->
-{% block serviceName %}
-{{ serviceName }}
+{% block beforeContent %}
+
+  {{ statusBar() }}
+  {{ phaseBanner() }}
+
+   <div class="nhsuk-width-container">
+    {{ breadcrumb({
+      classes: 'nhsuk-u-padding-left-0',
+      href: 'search-for-application',
+      text: 'Search for application'
+    }) }}
+
+  </div>
 {% endblock %}
 
+{% block header %}
+  {{ dashboardHeader() }}
+{% endblock %}
 
+{% block content %}
 
 <nav class="nhsuk-breadcrumb nhsBSA-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container-fluid">

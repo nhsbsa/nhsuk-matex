@@ -8,18 +8,31 @@
 
 <!-- Set the page title -->
 {% block pageTitle %}
-   {{ serviceName }}
+    {{ serviceName }}
 {% endblock %}
 
 
 {% block beforeContent %}
+
   {{ statusBar() }}
   {{ phaseBanner() }}
+
+   <div class="nhsuk-width-container">
+    {{ breadcrumb({
+      classes: 'nhsuk-u-padding-left-0',
+      href: 'search-for-application',
+      text: 'Search for application'
+    }) }}
+  </div>
+
+{% endblock %}
+
+{% block header %}
+  {{ dashboardHeader() }}
 {% endblock %}
 
 
 {% block content %}
-<nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container-fluid">
       <div class="nhsuk-grid-row">
           <div class="nhsuk-grid-column-full">
@@ -46,7 +59,7 @@
                           </h1>
                       </div>
                       <div class="nhsuk-grid-column-one-third">
-                          <a href="/v9/mother-present"><button class="nhsuk-button" type="submit" style="float:right">
+                          <a href="../mother-present"><button class="nhsuk-button" type="submit" style="float:right">
                                   Create a new application
                               </button></a>
                       </div>
@@ -64,4 +77,8 @@
 
 
 
+{% endblock %}
+
+{% block footer %}
+  {{ footerWithExtras( 'register' ) }}
 {% endblock %}

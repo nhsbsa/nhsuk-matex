@@ -6,14 +6,18 @@
     - add custom CSS and JavaScript
 -->
 
-<!-- Set the page title -->
 {% block pageTitle %}
-    MATEX Record Keeping
+  {{ serviceName }}
 {% endblock %}
 
-<!-- Set the service name in header -->
-{% block serviceName %}
-Maternity Exemption prototype
+{% block beforeContent %}
+  {{ statusBar() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+
+{% block header %}
+  {{ dashboardHeader() }}
 {% endblock %}
 
 
@@ -96,7 +100,9 @@ Maternity Exemption prototype
 
     </header>
     {{ phaseBanner() }}
-    <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
+    {% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
       <div class="nhsuk-width-container">
         <ol class="nhsuk-breadcrumb__list">
           <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="/v11/search-for-application"> Search for application</a></li>

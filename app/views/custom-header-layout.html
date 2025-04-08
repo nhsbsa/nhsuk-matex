@@ -21,12 +21,12 @@
 <!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
   {{ header({
-    "service": {
-        "name": "Maternity Exemption prototype",
-        "href": "/"
+    'service': {
+        'name': serviceName,
+        'href': '/'
       },
-      "showNav": "false",
-      "showSearch": "false"
+      'showNav': 'false',
+      'showSearch': 'false'
     })
   }}
 {% endblock %}
@@ -34,33 +34,7 @@
 <!-- Footer goes inside the footer block -->
 <!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
-  {{ footer({
-    'links': [
-      {
-        'label': 'Accessibility statement',
-        'URL' : 'https://www.nhsbsa.nhs.uk/accessibility-statement-apply-maternity-exemption'
-      },
-      {
-        'label': 'Cookies',
-        'URL' : 'https://maternity-exemption.nhsbsa.nhs.uk/apply/cookies'
-      },
-      {
-        'label': 'Privacy policy',
-        'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/privacy'
-      },
-      {
-        'label': 'Terms and conditions',
-        'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions'
-      },
-      {
-        'label': 'Maternity exemption certificate privacy notice',
-        'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/privacy/maternity-exemption-certificate-privacy-notice'
-      }
-    ]
-  }) }}
-
-  {{ footerExtras() }}
-
+  {{ footerWithExtras() }}
 {% endblock %}
 
 {% block bodyEnd %}
