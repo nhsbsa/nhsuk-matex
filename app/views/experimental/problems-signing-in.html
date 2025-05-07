@@ -1,0 +1,50 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+<!-- More info and code for the breadcrumb can be found at https://service-manual.nhs.uk/design-system/components/breadcrumbs -->
+{% block beforeContent %}
+  {{ statusBar( 'loggedOut' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- Go back link -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1);',
+    text: 'Go back'
+  }) }}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+            <h1 class="nhsuk-heading-l">
+              Problems signing in
+            </h1>
+
+            <p>You'll need to register to use this service before you can sign in. You can <a href="/v11/register/start">register online</a></p>
+
+            <p>If you have already registered but cannot sign in it may be because your email no longer meets the <a href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a>. You can check this with your IT department.</p>
+
+            <p>If you cannot use the digital service you can still issue maternity exemption certificates by submitting an <a href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03847/en-us">FW8 application form</a>.</p>
+
+
+    </div>  
+  </div>
+{% endblock %}
