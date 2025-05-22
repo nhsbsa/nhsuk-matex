@@ -1,0 +1,59 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="email" method="post" novalidate>
+
+            {{ input({
+                name: 'registerEmail',
+                id: 'registerEmail',
+                value: data.registerEmail,
+                label: {
+                    html: 'What is your email address?',
+                    classes: 'nhsuk-label--l',
+                    isPageHeading: true
+                },
+                attributes: { inputmode: 'email' },
+                classes: 'nhsuk-input nhsuk-input--width-20',
+                hint: {
+                    html: 'Your email address needs to be with a secure service, such as NHSmail.<br/>
+                        For example, joe.bloggs@nhs.net'
+                    }
+             }) }}
+       
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+        </form>
+
+    <div>
+  </div>
+
+{% endblock %}

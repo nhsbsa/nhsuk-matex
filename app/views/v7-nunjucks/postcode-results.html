@@ -1,0 +1,71 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {% if ( data.addressSearchResults and data.addressSearchResults.length > 0 ) %}
+
+          <h1 class="nhsuk-heading-l">Select the mother's address</h1>
+          {{ data.addressSearchResults | dwpAddressPatternGetResultsStatus( data.addressSearchPostcode, data.addressSearchBuildingNumberOrName ) | safe }}
+
+          <form action="postcode-results" method="post" novalidate>
+
+                {{ radios({
+                name: 'addressSearchResult',
+                fieldset: {
+                  legend: {
+                    text: 'Select an address',
+                    isPageHeading: false,
+                    classes: 'govuk-visually-hidden'
+                  }
+                },
+                items: data.addressSearchResults
+                }) }}
+
+                {{ button({
+                    text: 'Use this address'
+                }) }}
+
+          </form>
+
+        {% else %}
+
+           <!-- THE MESSAGE FUNCTION (i.e. dwpAddressPatternGetResultsStatus) FOR THESE PAGES IS SET IN THE FILTERS.JS FILE -->
+
+          <h1 class="nhsuk-heading-l">No address found</h1>
+          {{ data.addressSearchResults | dwpAddressPatternGetResultsStatus( data.addressSearchPostcode, data.addressSearchBuildingNumberOrName ) | safe }}
+
+        {% endif %}
+
+        <p class="nhsuk-body"><a href="postcode">Search again</a></p>
+        <p class="nhsuk-body"><a href="manual-address">Enter address manually</a></p>
+
+    </div>  
+
+  </div>
+
+{% endblock %}

@@ -1,0 +1,192 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <!-- HEADER -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">Application details</h1>
+
+      <form action="application-details" method="post" novalidate>
+
+
+        <!-- ABOUT THE MOTHER -->
+
+        {% call fieldset({
+          legend: {
+            text: 'About the mother',
+            classes: 'nhsuk-fieldset__legend--m',
+            isPageHeading: true
+          }
+        }) %}
+
+          <!-- MOTHER'S FIRST NAME -->
+          {{ input({
+            label: {
+              text: "Mother's first name"
+            },
+            classes: 'nhsuk-input--width-20',
+            attributes: { 'autocomplete' : 'off' },
+            id: 'motherFirstName',
+            name: 'motherFirstName',
+            value: data.motherFirstName
+          }) }}
+
+          <!-- MOTHER'S LAST NAME -->
+          {{ input({
+            label: {
+              text: "Mother's last name"
+            },
+            classes: 'nhsuk-input--width-20',
+            attributes: { 'autocomplete' : 'off' },
+            id: 'motherLastName',
+            name: 'motherLastName',
+            value: data.motherLastName
+          }) }}
+
+          <!-- MOTHER'S DATE OF BIRTH -->
+          {{ dateInput({
+            id: 'motherDateOfBirth',
+            namePrefix: 'motherDateOfBirth',
+            fieldset: {
+              legend: {
+                text: "Mother's date of birth",
+                isPageHeading: false
+              }
+            },
+            hint: {
+              text: 'For example, 21 10 1990'
+            },
+            items: [
+              {
+                name: 'day',
+                classes: 'nhsuk-input--width-2',
+                value: data.motherDateOfBirth.day,
+                attributes: { 'autocomplete' : 'off' }
+              },
+              {
+                name: 'month',
+                classes: 'nhsuk-input--width-2',
+                value: data.motherDateOfBirth.month,
+                attributes: { 'autocomplete' : 'off' }
+              },
+              {
+                name: 'year',
+                classes: 'nhsuk-input--width-4',
+                value: data.motherDateOfBirth.year,
+                attributes: { 'autocomplete' : 'off' }
+              }
+            ]
+          }) }}
+
+          <!-- MOTHER'S NHS NUMBER -->
+          {{ input({
+            label: {
+              text: "Mother's NHS number"
+            },
+            classes: 'nhsuk-input--width-10',
+            attributes: { 'autocomplete' : 'off', 'inputmode' : 'numeric' },
+            id: 'motherNHSNumber',
+            name: 'motherNHSNumber',
+            value: data.motherNHSNumber
+          }) }}
+
+          <!-- MOTHER'S POSTCODE -->
+          {{ input({
+            label: {
+              text: "Mother's postcode"
+            },
+            classes: 'nhsuk-input--width-10',
+            attributes: { 'autocomplete' : 'off' },
+            id: 'motherPostcode',
+            name: 'motherPostcode',
+            value: data.motherPostcode
+          }) }}
+
+        {% endcall %}
+
+        <!-- ABOUT THE BABY -->
+        
+        {% call fieldset({
+          legend: {
+            text: 'About the baby',
+            classes: 'nhsuk-fieldset__legend--m',
+            isPageHeading: true
+          }
+        }) %}
+
+          <!-- BABY'S DATE OF BIRTH -->
+          {{ dateInput({
+            id: 'babyDateOfBirth',
+            namePrefix: 'babyDateOfBirth',
+            fieldset: {
+              legend: {
+                text: "Baby's date of birth",
+                isPageHeading: false
+              }
+            },
+            hint: {
+              text: 'For example, 21 10 1990'
+            },
+            items: [
+              {
+                name: 'day',
+                classes: 'nhsuk-input--width-2',
+                value: data.babyDateOfBirth.day,
+                attributes: { 'autocomplete' : 'off' }
+              },
+              {
+                name: 'month',
+                classes: 'nhsuk-input--width-2',
+                value: data.babyDateOfBirth.month,
+                attributes: { 'autocomplete' : 'off' }
+              },
+              {
+                name: 'year',
+                classes: 'nhsuk-input--width-4',
+                value: data.babyDateOfBirth.year,
+                attributes: { 'autocomplete' : 'off' }
+              }
+            ]
+          }) }}
+
+
+        {% endcall %}
+
+
+
+
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+      </form>
+
+
+    </div>
+  </div>
+
+{% endblock %}

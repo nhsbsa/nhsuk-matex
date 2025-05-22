@@ -1,0 +1,79 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( data.loggedIn ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <!-- HEADER -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>{{ serviceName }}</h1>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <p class="nhsuk-body-l">If you are a midwife, GP or healthcare professional registered to use this online service, you can apply for a maternity exemption on behalf of expectant or new mothers.</p>
+      <p class="nhsuk-body">A maternity exemption certificate entitles the mother to free prescriptions:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>while pregnant</li>
+        <li>for 12 months after the birth of the child</li>
+      </ul>
+
+      <h2 class="nhsuk-heading-l">Before you start</h2>
+
+      <p class="nhsuk-body">You'll need the mother's:</p>
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>date of birth</li>
+        <li>NHS number</li>
+        <li>due or birth date of their child</li>
+        <li>email or postal address </li>
+      </ul>
+
+      {{ insetText({
+        html: '<p class="nhsuk-body"><a id="register-link" class="nhsuk-link" href="register/start">You\'ll need to register to use this service</a></p>'
+      }) }}
+
+      {% if data.loggedIn === 'true' %}
+
+        {{ button({
+          text: 'Start now',
+          href: 'mother-present'
+        }) }}
+
+      {% else %}
+
+        <form action="start" method="post" novalidate>
+          {{ button({
+            text: 'Sign in'
+          }) }}
+        </form>
+
+      {% endif %}
+
+    </div>
+
+    <!-- RELATED LINKS -->
+    <div class="nhsuk-grid-column-one-third">
+        <h2 class="nhsuk-heading-m">Related links</h2>
+        <p class="nhsuk-body"><a class="nhsuk-link" href="https://www.nhsbsa.nhs.uk/check-if-youre-eligible-help">Check if the mother already has a valid exemption certificate</a></p>
+        <p class="nhsuk-body"><a class="nhsuk-link" href="https://faq.nhsbsa.nhs.uk/knowledgebase/category/?articlecategory=Maternity%20Exemption%20certificate&amp;id=CAT-01281&amp;parentid=">More information about the maternity exemption service</a></p>
+    </div>
+  </div>
+
+  <div></div>
+
+{% endblock %}

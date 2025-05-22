@@ -1,0 +1,55 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+
+        <h1 class="nhsuk-heading-l">Confirm the mother's address</h1>
+        {{ data.addressSearchResults | dwpAddressPatternGetResultsStatus( data.addressSearchPostcode, data.addressSearchBuildingNumberOrName ) | safe }}
+
+        <form action="postcode-confirm" method="post" novalidate>
+
+            <div class="nhsuk-inset-text">
+              <p class="nhsuk-body">{{ data.addressSearchResult }}</p>
+            </div>
+
+            {{ button({
+                text: 'Use this address'
+            }) }}
+
+        </form>
+
+        
+
+        <p class="nhsuk-body"><a href="postcode">Search again</a></p>
+        <p class="nhsuk-body"><a href="manual-address">Enter address manually</a></p>
+
+    </div>  
+
+  </div>
+
+{% endblock %}

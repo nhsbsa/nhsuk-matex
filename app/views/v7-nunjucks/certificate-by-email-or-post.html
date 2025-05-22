@@ -1,0 +1,85 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+      <form action="certificate-by-email-or-post" method="post" novalidate>
+
+        {% set emailHTML %}
+          {{ input({
+            id: 'motherEmail',
+            name: 'motherEmail',
+            value: data.motherEmail,
+            classes: 'nhsuk-u-width-two-thirds',
+            attributes: { 'autocomplete' : 'off', 'inputmode' : 'email' },
+            label: {
+              text: "Mother's email address"
+            },
+            hint: {
+              text: 'For example, jane.doe@gmail.com'
+            }
+          }) }}
+        {% endset -%}
+
+
+        {{ radios({
+          name: 'certificateByEmailOrPost',
+          value: data.certificateByEmailOrPost,
+          fieldset: {
+            legend: {
+              text: 'Would the mother like their maternity exemption certificate sent by email or post?',
+              classes: 'nhsuk-fieldset__legend--l',
+              isPageHeading: true
+            }
+          },
+          hint: {
+            html: '<p class="nhsuk-body">Mothers will get their exemption certificate straight away if sent by email.</p><p class="nhsuk-body">If the mother chooses to receive their certificate by post, it can take up to 10 working days to arrive.</p>'
+          },
+          items: [
+            {
+              value: 'email',
+              text: 'Email',
+              conditional : {
+                html : emailHTML
+              }
+            },
+            {
+              value: 'post',
+              text: 'Post'
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

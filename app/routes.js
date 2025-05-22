@@ -8,7 +8,7 @@ const router = express.Router();
 router.use((req, res, next) => {
 
   // Versions
-  const versions = ['v1','v2','v3','v4','v5','v6','v7','v8','v9','v10','v11','old-version','pregnancy-loss'];
+  const versions = ['v1','v2','v3','v4','v5','v6','v7','v7-nunjucks','v8','v9','v10','v11','old-version','pregnancy-loss'];
 
   // Clear current routes 
   router.stack = router.stack.filter( layer => layer.name !== 'router' );
@@ -25,6 +25,7 @@ router.use((req, res, next) => {
 
   // Load the required routes
   if( version ){
+    console.log( 'Loading routes for ' + version );
     router.use('/'+version, require('./views/'+version+'/_routes'));
   }
 

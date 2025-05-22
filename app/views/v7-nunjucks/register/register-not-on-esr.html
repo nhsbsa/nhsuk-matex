@@ -1,0 +1,57 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l" id="title">Registering if you're not on ESR</h1>
+          
+          <p class="nhsuk-body">If you're a midwife, practice nurse or health visitor, you can still use this service if you have an email address with an organisation that:</p>
+          
+          <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>meets the <a class="nhsuk-link" href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a></li>
+            <li>uses Office 365 or a Hybrid Exchange email service</li>
+           </ul>
+
+           <p class="nhsuk-body">Ask your IT department if your organisation's email meets these requirements. We'll also check this for you.</p>
+
+           <p class="nhsuk-body">To register, email at <a class="nhsuk-link" href="mailto:healthcosts@nhsbsa.nhs.uk" title="New window">healthcosts@nhsbsa.nhs.uk</a> and include your:</p>
+           <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>Full name</li>
+            <li>NMC PIN</li>
+            <li>organisational email address, such as NHSmail</li>
+           </ul>
+
+           <p class="nhsuk-body">We'll use these details to verify your professional identity.</p>
+           <p class="nhsuk-body">We'll email you to confirm when you are registered. You'll then be able to use the online service.</p>
+            
+
+
+
+    <div>
+  </div>
+
+{% endblock %}

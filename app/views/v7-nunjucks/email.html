@@ -1,0 +1,53 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+      <form action="email" method="post" novalidate>
+
+       {{ input({
+        label: {
+          html: "Re-enter the mother's email address",
+          classes: 'nhsuk-label--l',
+          isPageHeading: true
+        },
+        classes: 'nhsuk-input nhsuk-input--width-20',
+        hint: {
+          text: 'We need to check you have entered the correct contact details for the mother. This information should match the previous entry.'
+        }
+        }) }}
+       
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

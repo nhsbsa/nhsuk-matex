@@ -1,0 +1,102 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+      <form action="manual-address" method="post" novalidate>
+
+        {% call fieldset({
+            legend: {
+                text: "Mother's postal address",
+                classes: 'nhsuk-fieldset__legend--l',
+                isPageHeading: true
+            }
+            }) %}
+
+            {{ input({
+                label: {
+                text: "Address line 1"
+                },
+                id: "addressLine1",
+                name: "addressLine1",
+                value: data.addressLine1
+            }) }}
+
+            {{ input({
+                label: {
+                text: "Address line 2 (optional)"
+                },
+                id: "addressLine2",
+                name: "addressLine2",
+                value: data.addressLine2
+            }) }}
+
+            {{ input({
+                label: {
+                text: "Town or city"
+                },
+                classes: "govuk-!-width-two-thirds",
+                id: "addressTown",
+                name: "addressTown",
+                value: data.addressTown
+            }) }}
+
+            {{ input({
+                label: {
+                    text: 'County (optional)'
+                },
+                classes: 'nhsuk-input--width-20',
+                id: 'addressCounty',
+                name: 'addressCounty',
+                value: data.addressCounty
+            }) }}
+
+            {{ input({
+                label: {
+                    text: 'Postcode'
+                },
+                classes: 'nhsuk-input--width-10',
+                id: 'addressPostcode',
+                name: 'addressPostcode',
+                value: data.addressPostcode
+            }) }}
+
+            {% endcall %}
+
+
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+      </form>
+
+      <p class="nhsuk-body"><a href="postcode">Search by postcode and building number or name</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

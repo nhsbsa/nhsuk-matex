@@ -1,0 +1,97 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  <!--{{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}-->
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+      <form action="mother-present" method="post" novalidate>
+
+        {% set dateLastMetMotherHTML = dateInput({
+          id: 'dateLastMetMother',
+          namePrefix: 'dateLastMetMother',
+          fieldset: {
+            legend: {
+              text: 'Date you last met with the mother'
+            }
+          },
+          hint: {
+            text: 'For example, 28 6 2023'
+          },
+          items: [
+            {
+              name: 'day',
+              classes: 'nhsuk-input--width-2',
+              attributes: { 'autocomplete' : 'off' },
+              value: data.dateLastMetMother.day
+            },
+            {
+              name: 'month',
+              classes: 'nhsuk-input--width-2',
+              attributes: { 'autocomplete' : 'off' },
+              value: data.dateLastMetMother.month
+            },
+            {
+              name: 'year',
+              classes: 'nhsuk-input--width-4',
+              attributes: { 'autocomplete' : 'off' },
+              value: data.dateLastMetMother.year
+            }
+          ]
+        }) %}
+
+
+        {{ radios({
+          name: 'motherPresent',
+          value: data.motherPresent,
+          fieldset: {
+            legend: {
+              text: 'Is the mother present?',
+              classes: 'nhsuk-fieldset__legend--l',
+              isPageHeading: true
+            }
+          },
+          items: [
+            {
+              value: 'yes',
+              text: 'Yes'
+            },
+            {
+              value: 'no',
+              text: 'No',
+              conditional: { html: dateLastMetMotherHTML }
+            }
+          ]
+        }) }}
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

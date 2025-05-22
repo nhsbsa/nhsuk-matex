@@ -1,0 +1,38 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1 class="nhsuk-heading-l">I do not have an email address with a secure service</h1>
+      
+      <p class="nhsuk-body">If you are a midwife, practice nurse, health visitor or GP without a secure email account, we suggest speaking to your organisation about this.</p>
+      <p class="nhsuk-body">You can continue to issue maternity exemption certificates by completing the FW8 paper application form.</p>
+      <p class="nhsuk-body"><a class="nhsuk-link" href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03847/en-us">Read more about FW8 forms.</a></p>
+
+    <div>
+  </div>
+
+{% endblock %}

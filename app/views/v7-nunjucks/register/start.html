@@ -1,0 +1,74 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <!-- HEADER -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      <h1>Register to issue maternity exemption certificates</h1>
+    </div>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <p class="nhsuk-body-l">Use this online service to register to issue digital maternity exemption certificates.</p>
+      <p class="nhsuk-body">You must be a midwife, practice nurse or health visitor registered with the Nursing and Midwifery Council (NMC) to create an account.</p>
+      <p class="nhsuk-body">You may wish to read guidance on <a href="https://www.nhsbsa.nhs.uk/sites/default/files/2022-12/NHS%20maternity%20exemption%20certificate%20guidance%20%28V1%29%2012.2022.pdf">how to use the digital maternity exemption service</a> before you start.</p>
+
+
+      <h2 class="nhsuk-heading-m">What you'll need</h2>
+      <p class="nhsuk-body">To help us verify your professional identity you'll need:</p>
+
+      <ul class="nhsuk-list nhsuk-list--bullet">
+        <li>your NMC PIN</li>
+        <li>an email address with a secure service, such as NHSmail</li>
+        <li>an email address which uses Office 365 or a Hybrid Exchange email service</li>
+      </ul>
+
+     <p class="nhsuk-body">Ask your IT department if your organisation's email meets the <a class="nhsuk-link" href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a></p>
+
+      {{ insetText({
+        html: '<p class="nhsuk-body">Registration takes around 5 minutes.</p>'
+      }) }}
+
+      
+      <form action="start" method="post" novalidate>
+        {{ button({
+          text: 'Start now'
+        }) }}
+      </form>
+
+      <p class="nhsuk-body"><a href="../start">Sign in if you already have an account</a></p>
+
+    </div>
+
+    <!-- RELATED LINKS -->
+    <div class="nhsuk-grid-column-one-third">
+        <h2 class="nhsuk-heading-m">Related links</h2>
+        <p class="nhsuk-body"><a class="nhsuk-link" href="register-as-a-gp">I am a GP</a></p>
+        <p class="nhsuk-body"><a class="nhsuk-link" href="dont-have-email-address">I do not have an email address with a secure service</a></p>
+    </div>
+  </div>
+
+
+
+
+{% endblock %}

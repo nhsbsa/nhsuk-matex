@@ -1,0 +1,139 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+        <h1 class="nhsuk-heading-l" id="title">Check your answers</h1>
+
+        <!-- LAST APPOINTMENT WITH MOTHER -->
+        {% set rows = [{
+            key: { text: 'Last appointment with the mother' },
+            value: { text: data.dateLastMetMother | convertDate },
+            actions: { items: [ { href: 'mother-present', text: 'Change', visuallyHiddenText: 'last appointment with the mother' } ]}
+        }] %}
+
+        <!-- MOTHER'S NAME -->
+        {% set rows = ( rows.push({
+            key: { text: "Mother's name" },
+            value: { text: '' | getMotherName },
+            actions: { items: [ { href: 'application-details#motherFirstName', text: 'Change', visuallyHiddenText: "mother's name" } ]}
+        }), rows ) %}
+
+        <!-- MOTHER'S DATE OF BIRTH -->
+        {% set rows = ( rows.push({
+            key: { text: "Mother's date of birth" },
+            value: { text: data.motherDateOfBirth | convertDate },
+            actions: { items: [ { href: 'application-details#motherDateOfBirth', text: 'Change', visuallyHiddenText: "mother's name" } ]}
+        }), rows ) %}
+
+         <!-- MOTHER'S POSTCODE -->
+        {% set rows = ( rows.push({
+            key: { text: "Mother's NHS number" },
+            value: { text: ( data.motherNHSNumber ) },
+            actions: { items: [ { href: 'application-details#motherNHSNumber', text: 'Change', visuallyHiddenText: "mother's NHS number" } ]}
+        }), rows ) %}
+
+        <!-- MOTHER'S POSTCODE -->
+        {% set rows = ( rows.push({
+            key: { text: "Mother's postcode" },
+            value: { text: ( data.motherPostcode ) },
+            actions: { items: [ { href: 'application-details#motherPostcode', text: 'Change', visuallyHiddenText: "mother's postcode" } ]}
+        }), rows ) %}
+
+        <!-- BABY'S DATE OF BIRTH -->
+        {% set rows = ( rows.push({
+            key: { text: "Due date or baby's birth date" },
+            value: { text: data.babyDateOfBirth | convertDate },
+            actions: { items: [ { href: 'application-details#babyDateOfBirth', text: 'Change', visuallyHiddenText: "due date or baby's birth date" } ]}
+        }), rows ) %}
+
+        <!-- CERTIFICATE TO BE SENT BY -->
+        {% set rows = ( rows.push({
+            key: { text: "Certificate to be sent by" },
+            value: { text: data.certificateByEmailOrPost | capitalize },
+            actions: { items: [ { href: 'certificate-by-email-or-post', text: 'Change', visuallyHiddenText: "whether the mother receives their certificate by email or post" } ]}
+        }), rows ) %}
+
+
+        {% if data.certificateByEmailOrPost === 'post' %}
+
+            {% if data.addressMethod === 'manual' %}
+                {% set addressLink = 'manual-address' %}
+            {% else %}
+                {% set addressLink = 'postcode' %}
+            {% endif %}
+
+            <!-- MOTHER'S ADDRESS -->
+            {% set rows = ( rows.push({
+                key: { text: "Mother's address" },
+                value: { html: '' | getMotherAddress  },
+                actions: { items: [ { href: addressLink, text: 'Change', visuallyHiddenText: "mother's address" } ]}
+            }), rows ) %}
+
+        {% else %}
+
+            <!-- MOTHER'S EMAIL -->
+            {% set rows = ( rows.push({
+                key: { text: "Mother's email" },
+                value: { text: data.motherEmail },
+                actions: { items: [ { href: 'certificate-by-email-or-post#motherEmail', text: 'Change', visuallyHiddenText: "mother's email" } ]}
+            }), rows ) %}
+
+        {% endif %}
+
+
+        <!-- SUMMARY LIST -->
+        {{ summaryList({
+            rows: rows
+        }) }}
+
+
+        <!-- DECLARATION -->
+        {{ warningCallout({
+            heading: 'Declaration',
+            HTML: '<p class="nhsuk-body">I confirm that this information is correct and true in accordance with the mother\'s records on ' + ( true | convertDate ) + '.</p>
+                    <p class="nhsuk-body">I confirm that the mother:</p>
+                    <ul class="nhsuk-list nhsuk-list--bullet">
+                    <li>has given their permission for this application to be submitted on their behalf</li>
+                    <li>knows the information submitted will be used by the NHS Business Services Authority and shared other organisations working on their behalf where necessary</li>
+                    <li>understands their data will not be transferred outside of the European Economic Area and will be deleted within 24 months of the expiry date of the exemption</li>
+                    </ul>
+                    <p class="nhsuk-body">I understand that when I press submit, I am submitting an application on behalf of the named person.</p>'
+        }) }}
+
+        <form action="check-your-answers" method="post" novalidate>
+            {{ button({
+                text: 'Submit'
+            }) }}
+        </form>
+
+        
+
+
+    </div>
+  </div>
+
+{% endblock %}

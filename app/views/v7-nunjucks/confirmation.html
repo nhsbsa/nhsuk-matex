@@ -1,0 +1,63 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  <!--{{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}-->
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+     
+        {{ panel({
+            titleText: 'Application completed',
+            html: '
+            <dl>
+                <div>
+                    <dd class="nhsuk-body nhsuk-u-margin-0">Mother\'s certificate number:</dd>
+                    <dt class="nhsuk-heading-l">8436 810 379</dt>
+                </div>
+                <div>
+                    <dd class="nhsuk-body nhsuk-u-margin-0">Exemption ends:</dd>
+                    <dt class="nhsuk-heading-l nhsuk-u-margin-bottom-0">' + ( 365 | alterDateByNumberOfDays( data.babyDateOfBirth.day, data.babyDateOfBirth.month, data.babyDateOfBirth.year ) ) + '</dt>
+                </div>
+            </dl>'
+        }) }}
+
+        <h2 class="nhsuk-heading-m nhsuk-u-margin-top-8">What happens next?</h2>
+        <p class="nhsuk-body">We'll email the certificate to the mother. They should receive it within 24 hours.</p>
+        <p class="nhsuk-body">Ask the mother to check their spam or junk email folder if they have not received their certificate. </p>
+        <p class="nhsuk-body">Check to make sure they have received the certificate at their next appointment.</p>
+        <p class="nhsuk-body">If the certificate has not been received within 24 hours, the mother should  should <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="_blank">contact the NHSBSA</a> </p>
+        <p class="nhsuk-body">They can start using their exemption as soon as they receive their certificate.</p>
+          
+        <form action="confirmation" method="post" novalidate>
+            {{ button({
+                text: 'Start a new application'
+            }) }}
+        </form>
+        
+
+
+
+    </div>
+  </div>
+
+{% endblock %}

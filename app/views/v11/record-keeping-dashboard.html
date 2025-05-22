@@ -12,36 +12,6 @@
 {% endblock %}
 
 {% block header %}
-
-  {{ header({
-      service: {
-        name: serviceName,
-        href: '/'
-      },
-      showNav: 'true',
-      showSearch: 'false',
-      primaryLinks: [
-        {
-          url  : 'record-keeping-dashboard',
-          label : 'All certificates '
-        },
-        {
-          url : 'application-details',
-          label : 'Start a new application'
-        },
-        {
-          url : 'search-for-application',
-          label : 'Search for application'
-        }
-      ]
-    })
-  }}
-
-  {{ phaseBanner() }}
-
-{% endblock %}
-
-{% block header %}
   {{ dashboardHeader() }}
 {% endblock %}
 

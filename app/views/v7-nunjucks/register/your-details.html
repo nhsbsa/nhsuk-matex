@@ -1,0 +1,119 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <form action="your-details" method="post" novalidate>
+
+        {% call fieldset({
+          legend: {
+            text: 'Your details',
+            classes: 'nhsuk-fieldset__legend--l',
+            isPageHeading: true
+          }
+        }) %}
+
+        <!-- LAST NAME -->
+         {{ input({
+                name: 'registerLastName',
+                id: 'registerLastName',
+                value: data.registerLastName,
+                label: {
+                    html: 'Last name',
+                    isPageHeading: false
+                },
+                classes: 'nhsuk-input nhsuk-input--width-20',
+                hint: {
+                html: 'This needs to match your NMC registration'
+                }
+            }) }}
+
+        <!-- NMC PIN -->
+        {{ input({
+                name: 'registerPIN',
+                id: 'registerPIN',
+                value: data.registerPIN,
+                label: {
+                    html: 'NMC PIN',
+                    isPageHeading: false
+                },
+                classes: 'nhsuk-input nhsuk-input--width-20',
+                hint: {
+                html: 'For example, 99A9999A'
+                }
+            }) }}
+
+            <!-- DATE OF BIRTH -->
+          {{ dateInput({
+            id: 'registerDateOfBirth',
+            namePrefix: 'registerDateOfBirth',
+            fieldset: {
+              legend: {
+                text: 'Date of birth',
+                isPageHeading: false
+              }
+            },
+            hint: {
+              text: 'For example, 10 11 1984'
+            },
+            items: [
+              {
+                name: 'day',
+                classes: 'nhsuk-input--width-2',
+                value: data.registerDateOfBirth.day,
+                attributes: { 'autocomplete' : 'off' }
+              },
+              {
+                name: 'month',
+                classes: 'nhsuk-input--width-2',
+                value: data.registerDateOfBirth.month,
+                attributes: { 'autocomplete' : 'off' }
+              },
+              {
+                name: 'year',
+                classes: 'nhsuk-input--width-4',
+                value: data.registerDateOfBirth.year,
+                attributes: { 'autocomplete' : 'off' }
+              }
+            ]
+          }) }}
+
+
+        {% endcall %}
+
+
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+        </form>
+
+    <div>
+  </div>
+
+{% endblock %}

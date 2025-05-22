@@ -1,0 +1,88 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <h1 class="nhsuk-heading-l" id="title">Check your answers</h1>
+
+        
+
+
+
+
+         <!-- EMAIL ADDRESS -->
+        {% set rows = [{
+            key: { text: 'Email address' },
+            value: { text: data.registerEmail or 'jane.smith@nhs.net' },
+            actions: { items: [ { href: 'email', text: 'Change', visuallyHiddenText: 'email address' } ]}
+        }] %}
+
+        <!-- LAST NAME -->
+        {% set rows = ( rows.push({
+            key: { text: 'Last name' },
+            value: { text: data.registerLastName or 'Smith' },
+            actions: { items: [ { href: 'your-details#registerLastName', text: 'Change', visuallyHiddenText: 'last name' } ]}
+        }), rows ) %}
+
+        <!-- NMC PIN -->
+        {% set rows = ( rows.push({
+            key: { text: 'NMC PIN' },
+            value: { text: data.registerPIN or '99A9999A' },
+            actions: { items: [ { href: 'your-details#registerPIN', text: 'Change', visuallyHiddenText: 'NMC PIN' } ]}
+        }), rows ) %}
+
+        <!-- DATE OF BIRTH -->
+        {% set rows = ( rows.push({
+            key: { text: 'Date of birth' },
+            value: { text: data.registerDateOfBirth | convertDate },
+            actions: { items: [ { href: 'your-details#registerDateOfBirth', text: 'Change', visuallyHiddenText: 'date of birth' } ]}
+        }), rows ) %}
+
+       
+
+        <!-- SUMMARY LIST -->
+        {{ summaryList({
+            rows: rows
+        }) }}
+
+
+        <!-- DECLARATION -->
+        {{ warningCallout({
+          heading: 'Declaration',
+          HTML: '<p class="nhsuk-body">I understand that:</p>
+            <ul class="nhsuk-list nhsuk-list--bullet">
+              <li>the information submitted will be checked in the NHS Electronic Staff Record system (ESR)</li>
+              <li>my NMC PIN will be stored by the NHS Business Services Authority</li>
+            </ul>'
+        }) }}
+
+        <form action="check-your-answers" method="post" novalidate>
+       
+        {{ button({
+          text: 'Confirm and submit'
+        }) }}
+
+        </form>
+
+    <div>
+  </div>
+
+{% endblock %}

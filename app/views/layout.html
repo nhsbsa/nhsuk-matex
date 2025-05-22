@@ -31,6 +31,24 @@
   }}
 {% endblock %}
 
+
+{% block outerContentEnd %}
+
+  {% if data.debug === 'true' %}
+
+    {{ textarea({
+      name: 'debug',
+      id: 'debug',
+      label: {
+        text: 'Session data'
+      },
+      value: data | dump
+    }) }}
+
+  {% endif %}
+
+{% endblock %}
+
 <!-- Footer goes inside the footer block -->
 <!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}

@@ -1,0 +1,50 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+        {% set panelHTML %}
+            <p class="nhsuk-body">The email address you have entered is <strong>{{ data.registerEmail or 'jane.smith@nhs.net' }}</strong>.</p>
+        {% endset %}
+        
+        {{ panel({
+            titleText: 'You cannot register for this service',
+            html: panelHTML
+        }) }}
+
+        <p class="nhsuk-body">You cannot register for this service because the email address is with an organisation that does not both:</p>
+        <ul class="nhsuk-list nhsuk-list--bullet">
+            <li>meets the <a class="nhsuk-link" href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard"> secure email standard</a></li>
+            <li>use Office 365 or a Hybrid Exchange email service</li>
+        </ul>
+        <p class="nhsuk-body">If you are a midwife, doctor or health visitor, you can issue maternity exemption certificates by completing the paper FW8 form. </p>
+
+        
+        {{ button({
+          href: 'email',
+          text: 'Try another email address'
+        }) }}
+
+    <div>
+  </div>
+
+{% endblock %}

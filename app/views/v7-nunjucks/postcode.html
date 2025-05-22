@@ -1,0 +1,100 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+
+<!-- PAGE TITLE -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+<!-- BEFORE CONTENT -->
+{% block beforeContent %}
+  {{ statusBarNunjucks() }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- OUTER CONTENT -->
+{% block outerContent %}
+  {{ backLink({
+    href: 'javascript:history.go(-1)',
+    text: "Go back"
+  }) }}
+{% endblock %}
+
+<!-- CONTENT -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      {% if data.showErrors === 'true' %}
+
+          {{ errorSummary({
+          titleText: 'There is a problem',
+          errorList: [
+            {
+              text: 'Enter either a postcode, or a building name or number',
+              href: '#mainForm'
+            }
+          ]
+        }) }}
+
+        {% endif %}
+
+     
+      <form id="mainForm" action="postcode-search" method="get" novalidate>
+
+        {% call fieldset({
+              legend: {
+                text: "Find the mother's address",
+                classes: 'nhsuk-fieldset__legend--l',
+                isPageHeading: true
+              }
+            }) %}
+
+              <!-- POSTCODE -->
+
+              {{ input({
+                label: {
+                  html: 'Postcode'
+                },
+                classes: 'nhsuk-input nhsuk-input--width-10',
+                hint: {
+                  text: 'For example, AA3 1AB'
+                },
+                id: 'addressSearchPostcode',
+                name: 'addressSearchPostcode',
+                value: data.addressSearchPostcode or data.motherPostcode
+              }) }}
+
+
+              <!-- BUILDING NUMBER OR NAME -->
+
+              {{ input({
+                label: {
+                  html: 'Building number or name'
+                },
+                classes: 'nhsuk-input nhsuk-input--width-20',
+                hint: {
+                  text: 'For example, 15 or Prospect Cottage'
+                },
+                id: 'addressSearchBuildingNumberOrName',
+                name: 'addressSearchBuildingNumberOrName',
+                value: data.addressSearchBuildingNumberOrName
+              }) }}
+
+            {% endcall %}
+
+
+
+        {{ button({
+          text: 'Continue'
+        }) }}
+
+      </form>
+
+      <p class="nhsuk-body"><a href="manual-address">Enter address manually</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
