@@ -62,9 +62,22 @@
           }) }}
         </form>
 
+        {% set detailsHTML %}
+
+          <p class="nhsuk-body">You'll need to register to use this service before you can sign in. You can <a class="nhsuk-link" href="register/start">register online</a>.</p>
+          <p class="nhsuk-body">If you have already registered but cannot sign in it may be because your email no longer meets the <a class="nhsuk-link" href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a>. You can check this with your IT department.</p>
+          <p class="nhsuk-body">If you cannot use the digital service you can still issue maternity exemption certificates by submitting an <a class="nhsuk-link" href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03847/en-us">FW8 application form</a>.</p>
+
+        {% endset %}
+
+        {{ details({
+          text: 'Problems signing in',
+          html: detailsHTML
+        }) }}
+
       {% endif %}
 
-    </div>
+  </div>
 
     <!-- RELATED LINKS -->
     <div class="nhsuk-grid-column-one-third">
@@ -74,6 +87,5 @@
     </div>
   </div>
 
-  <div></div>
 
 {% endblock %}
