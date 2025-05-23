@@ -1,0 +1,269 @@
+Organisation Name,System Type,Domain name ,Data processed outside of the UK? (Y/N),DMARC Policy (quarantine/reject) **please note all organisation need to implement a DMARC policy of reject within 3 months of accreditation.,SPF (Softfail/Hardfail),All outgoing mail signed with DKIM,Uses TLS version 1.2 as a minimum (Y/N)
+Accenda Limited,Office 365,accenda.co.uk,N,Reject,Hardfail,Y,Y
+Aire Logic Ltd,Google Workspace,airelogic.com,Y,Reject,Hardfail,Y,Y
+Ambulance Radio Programme,Office 365,arp.nhs.uk,N,Reject,Hardfail,Y,Y
+Ashtons Hospital Pharmacy Services,Office 365,ashtons.com,N,Reject,Hardfail,Y,Y
+Avery Healthcare / Willowbrook Healthcare Limited,Office 365,averyhealthcare.co.uk,N,Reject,Hardfail,Y,Y
+Avery Healthcare / Willowbrook Healthcare Limited,Office 365,Hawthornsretirement.co.uk,N,Reject,Hardfail,Y,Y
+Bath Mind,Office 365,bathmind.org.uk,Y,Reject,Hardfail,Y,Y
+Bedfordshire Hospitals NHS Foundation Trust,O365/Exchange,bedsft.nhs.uk,N,Reject,Hardfail,Y,Y
+Bedfordshire Hospitals NHS Foundation Trust,O365/Exchange,bedfordhospital.nhs.uk,N,Reject,Hardfail,Y,Y
+Bedfordshire Hospitals NHS Foundation Trust,O365/Exchange,ldh.nhs.uk,N,Reject,Hardfail,Y,Y
+Berkshire Healthcare NHS Foundation Trust,Office 365,berkshire.nhs.uk,Y,Reject,Hardfail,Y,Y
+Birmingham and Solihull Mental Health NHS Foundation Trust,Office 365,bsmhft.nhs.uk,N,Reject,Hardfail,Y,Y
+Birmingham and Solihull Mental Health NHS Foundation Trust,Office 365,bsmht.nhs.uk,N,Reject,Hardfail,Y,Y
+Blind Veterans UK,Office 365,blindveterans.org.uk,Y,Reject,Hardfail,Y,Y
+Bolton NHS Foundation Trust,Office 365,boltonft.nhs.uk,N,Reject,Hardfail,Y,Y
+Bradford District Care NHS Foundation Trust,Office 365,bdct.nhs.uk,Y,Reject,Hardfail,Y,Y
+Bradford Teaching Hospitals NHS Foundation Trust,O365/Exchange,bthft.nhs.uk,N,Reject,Hardfail,Y,Y
+Bradford Teaching Hospitals NHS Foundation Trust,O365/Exchange,yhhiec.nhs.uk,N,Reject,Hardfail,Y,Y
+Bradford Teaching Hospitals NHS Foundation Trust,O365/Exchange,yhia.nhs.uk,N,Reject,Hardfail,Y,Y
+Bupa Group,O365/Exchange,bupa.com,Y,Reject,Hardfail,Y,Y
+Bupa Group,O365/Exchange,richmond-villages.com,Y,Reject,Hardfail,Y,Y
+Calderdale and Huddersfield NHS Foundation Trust,Office 365,cht.nhs.uk,N,Reject,Hardfail,Y,Y
+Calderdale and Huddersfield NHS Foundation Trust,Office 365,this.nhs.uk,N,Reject,Hardfail,Y,Y
+Cambridgeshire and Peterborough NHS Foundation Trust,Office 365,cpft.nhs.uk,N,Reject,Hardfail,Y,Y
+Change Grow Live,Office 365,cgl.org.uk,Y,Reject,Hardfail,Y,Y
+Circle Health Group,Office 365,circlerehabservices.co.uk,N,Reject,Hardfail,Y,Y
+Circle Health Group,Office 365,circlehealthgroup.co.uk,N,Reject,Hardfail,Y,Y
+Circle Health Group,Office 365,circlehealthpartners.co.uk,N,Reject,Hardfail,Y,Y
+Coloplast Ltd,Office 365,coloplastcharter.co.uk,Y,Reject,Hardfail,Y,Y
+"Cumbria, Northumberland, Tyne and Wear NHS Foundation Trust",Office 365,cntw.nhs.uk,Y,Reject,Hardfail,Y,Y
+"Cumbria, Northumberland, Tyne and Wear NHS Foundation Trust",Office 365,ntw.nhs.uk,Y,Reject,Hardfail,Y,Y
+Digital Health and Care Wales,Office 365,wales.nhs.uk,N,Reject,Hardfail,Y,Y
+Dorset County Hospitals NHS Foundation Trust,O365/Exchange,dchft.nhs.uk,N,Reject,Hardfail,Y,Y
+EARL Health Technology,Google Workspace,EARL.Health,N,Reject,Hardfail,Y,Y
+EARL Health Technology,Google Workspace,ExpressMedicine.co.uk ,N,Reject,Hardfail,Y,Y
+EARL Health Technology,Google Workspace,Lrsystems.co.uk,N,Reject,Hardfail,Y,Y
+Earl Mountbatten Hospice,Office 365,mountbatten.org.uk,Y,Reject,Hardfail,Y,Y
+East Coast Community Healthcare C.I.C,Office 365,ecchcic.nhs.uk,Y,Reject,Hardfail,Y,Y
+East Midlands Ambulance Service NHS Trust,Office 365,emas.nhs.uk,N,Reject,Hardfail,Y,Y
+East of England Ambulance Service NHS Trust,Office 365,eastamb.nhs.uk,Y,Reject,Hardfail,Y,Y
+East of England NHS Collaborative Procurement Hub,Office 365,eoecph.nhs.uk,Y,Reject,Hardfail,Y,Y
+East Suffolk and North Essex NHS Foundation Trust,Office 365,esneft.nhs.uk,Y,Reject,Hardfail,Y,Y
+Eastern Academic Health Science Network,Office 365,healthinnovationeast.co.uk,N,Reject,Hardfail,Y,Y
+Eastern Academic Health Science Network,Office 365,eahsn.org,N,Reject,Hardfail,Y,Y
+Everyturn,Office 365,everyturn.org,N,Reject,Hardfail,Y,Y
+F4 IT,Office 365,f4it.co.uk,N,Reject,Hardfail,Y,Y
+Four Seasons Health Care Group,Exchange,fshc.co.uk,N,Reject,Hardfail,Y,Y
+Four Seasons Health Care Group,Exchange,brighterkind.com,N,Reject,Hardfail,Y,Y
+Four Seasons Health Care Group,Exchange,fshcgroup.com,N,Reject,Hardfail,Y,Y
+Genomics England,Office 365,genomicsengland.co.uk,N,Reject,Hardfail,Y,Y
+Gloucestershire Health and Care NHS Foundation Trust ,O365/Exchange,ghc.nhs.uk,Y,Reject,Hardfail,Y,Y
+Greater Manchester Mental Health NHS Foundation Trust,Office 365,gmmh.nhs.uk,N,Reject,Hardfail,Y,Y
+Hampshire Hospitals NHS Foundation Trust,Office 365,hhft.nhs.uk,N,Reject,Hardfail,Y,Y
+HCRG Care Services Ltd,Office 365,hcrgcaregroup.com,N,Quarantine,Hardfail,Y,Y
+Healios Ltd,Google Workspace,Healios.org.uk,Y,Reject,Hardfail,Y,Y
+Healios Ltd,Google Workspace,Melios.org.uk,Y,Reject,Hardfail,Y,Y
+Health Research Authority,Office 365,hra.nhs.uk,Y,Reject,Hardfail,Y,Y
+HealthNet Homecare,Office 365,healthnethomecare.co.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,global-clinic.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthsharediagnostics.co.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthsharediagnostics.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,Healthshare.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthsharedgs.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthsharelondon.co.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,globaldiagnostics.co.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthsharelondon.com,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthsharelondon.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthshareaqp.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,riverside-clinic.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,winchester-clinic.org.uk,N,Reject,Hardfail,Y,Y
+Healthshare Ltd,Office 365,healthshareoxfordshire.org.uk,N,Reject,Hardfail,Y,Y
+Help for Psychology,Google Workspace,help4psychology.co.uk,Y,Reject,Hardfail,Y,Y
+Holistic ADHD Solutions Ltd,Office 365,adhdnet.co.uk,N,Reject,Hardfail,Y,Y
+InHealth Group Ltd,Office 365,tachealthcare.com,Y,Reject,Softfail,Y,Y
+InHealth Group Ltd,Office 365,uprightmri.co.uk,Y,Reject,Softfail,Y,Y
+InHealth Group Ltd,Office 365,vistahealth.co.uk,Y,Reject,Softfail,Y,Y
+InHealth Group Ltd,Office 365,Vista-health.co.uk,Y,Reject,Softfail,Y,Y
+InHealth Group Ltd,Office 365,inhealthgroup.com,Y,Reject,Hardfail,Y,Y
+James Paget University Hospitals NHS Foundation Trust,Office 365,jpaget.nhs.uk,Y,Reject,Hardfail,Y,Y
+Jewish Care,Office 365,jcare.org,Y,Reject,Hardfail,Y,Y
+Lancashire Teaching Hospitals NHS Foundation Trust,Office 365,lthtr.nhs.uk,Y,Reject,Hardfail,Y,Y
+Leapmind Ltd / iStaffRota,Office 365,istaffrota.com,N,Quarantine,Hardfail,Y,Y
+Liverpool University Hospitals NHS Foundation Trust,Office 365,liverpoolft.nhs.uk,Y,Reject,Hardfail,Y,Y
+Liverpool Women's NHS Foundation Trust,O365/Exchange,lwh.nhs.uk,N,Reject,Hardfail,Y,Y
+Local Care Direct,Office 365,lcdwestyorks.nhs.uk,N,Reject,Hardfail,Y,Y
+Locala Health & Wellbeing,Office 365,Locala.org.uk,N,Reject,Hardfail,Y,Y
+Locala Health & Wellbeing,Office 365,Locala-cic.nhs.uk,N,Reject,Hardfail,Y,Y
+Manx Care,Exchange,gov.im,Y,Reject,Hardfail,Y,Y
+Manx Care,Exchange,ambulanceservices.dhss.gov.im,Y,Reject,Hardfail,Y,Y
+Manx Care,Exchange,healthservices.dhss.gov.im,Y,Reject,Hardfail,Y,Y
+Manx Care,Exchange,nobles.dhss.gov.im,Y,Reject,Hardfail,Y,Y
+Manx Care,Exchange,publichealth.dhss.gov.im,Y,Reject,Hardfail,Y,Y
+Manx Care,Exchange,ramseycottage.dhss.gov.im,Y,Reject,Hardfail,Y,Y
+Manx Care,Exchange,manxcare.im,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,cwch.com,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,mmcg.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,kingsmanorcarehome.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,windsorcourtcarehome.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,lacehillmanor.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,chartwellmanorcarehome.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,claremontmanor.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,Bentley-grange.co.uk,Y,Reject,Hardfail,Y,Y
+Maria Mallaband Care Group Ltd,Office 365,cregganbahn.co.uk,Y,Reject,Hardfail,Y,Y
+Medefer,Office 365,medefer.com,N,Reject,Hardfail,Y,Y
+Medic One Systems,Google Workspace,hemsbase.net,Y,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,MerseyWestLancs.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,midmerseyda.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,sthk.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,haltonccg.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,knowsleyccg.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,sthelensccg.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,haltongp.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,knowsley.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,sthelensrota.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey and West Lancashire Teaching Hospitals NHS Trust,Office 365,gp-n81066.nhs.uk,N,Reject,Hardfail,Y,Y
+Mersey Care NHS Foundation Trust,Office 365,merseycare.nhs.uk,Y,Reject,Hardfail,Y,Y
+Mersey Care NHS Foundation Trust,Office 365,imerseyside.nhs.uk,Y,Reject,Hardfail,Y,Y
+Mersey Internal Audit Agency,Office 365,miaa.nhs.uk,Y,Reject,Hardfail,Y,Y
+Methodist Homes,Office 365,mha.org.uk,N,Reject,Hardfail,Y,Y
+Mid Cheshire Hospitals NHS Foundation Trust,Office 365,mcht.nhs.uk,N,Reject,Hardfail,Y,Y
+Midlands Partnership NHS Foundation Trust,Office 365,mpft.nhs.uk,N,Reject,Hardfail,Y,Y
+Millbrook Healthcare,Office 365,millbrookhealthcare.co.uk,N,Reject,Hardfail,Y,Y
+Millbrook Healthcare,Office 365,livitylife.co.uk,N,Reject,Hardfail,Y,Y
+Milton Keynes University Hospital NHS Foundation Trust,Office 365,mkuh.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals of Morecambe Bay Hospitals NHS Trust,Office 365,mbht.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals of Morecambe Bay Hospitals NHS Trust,Office 365,mbhci.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals of Morecambe Bay NHS Foundation Trust,Office 365,uhmb.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Blood and Transplant,O365/Exchange,nhsbt.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Business Services Authority,Office 365,nhsbsa.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB,Office 365,cheshireandmerseyside.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 01T,Office 365,southseftonccg.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 01T,Office 365,southseftongp.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 01T,Office 365,southseftonpcn.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 01V,Office 365,southportandformbyccg.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 01V,Office 365,southportandformbygp.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 99A,Office 365,liverpoolccg.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Cheshire and Merseyside ICB - 99A,Office 365,livgp.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Dorset Integrated Care Board,Office 365,nhsdorset.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Elect,Office 365,elect.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS Elect,Office 365,nhselect.org.uk,N,Reject,Hardfail,Y,Y
+NHS England,Office 365,cmu.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS England,Office 365,england.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS England,Office 365,improvement.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS South East London ICB,Office 365,selondonccg.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS South East London ICB,Office 365,selondonicb.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS South East London ICB,Office 365,selondonics.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS South West London ICB,Office 365,swlondon.nhs.uk,Y,Reject,Hardfail,Y,Y
+NHS Suffolk and North East Essex Integrated Care Board,Office 365,snee.nhs.uk,,Reject,Hardfail,Y,Y
+NHS Suffolk and North East Essex Integrated Care Board,Office 365,eoeprimarycarecareers.nhs.uk,,Reject,Hardfail,Y,Y
+NHS West Yorkshire ICB - 36J,Office 365,bradford.nhs.uk,N,Reject,Hardfail,Y,Y
+NHS.net Connect,Office 365,nhs.net,N,Reject,Hardfail,Y,Y
+Norfolk and Suffolk NHS Foundation Trust,Office 365,wellbeingnandw.co.uk,Y,Reject,Hardfail,Y,Y
+Norfolk and Suffolk NHS Foundation Trust,Office 365,nsft.nhs.uk,Y,Reject,Hardfail,Y,Y
+Norfolk and Suffolk NHS Foundation Trust,Office 365,nandwtalkingtherapies.org.uk,Y,Reject,Hardfail,Y,Y
+Norfolk Community Health and Care NHS Trust,Office 365,nchc.nhs.uk,N,Reject,Hardfail,Y,Y
+North Bristol NHS Trust,Office 365,nbt.nhs.uk,N,Reject,Hardfail,Y,Y
+North East Ambulance Service NHS Foundation Trust,Office 365,neas.nhs.uk,N,Reject,Hardfail,Y,Y
+North East London NHS Foundation Trust,Exchange,nelft.nhs.uk,N,Reject,Hardfail,Y,Y
+North Staffordshire Combined Healthcare NHS Trust,Office 365,combined.nhs.uk,N,Reject,Hardfail,Y,Y
+North West Ambulance Service NHS Trust,Office 365,nwas.nhs.uk,N,Reject,Hardfail,Y,Y
+Northamptonshire Healthcare NHS Foundation Trust,Office 365,nhft.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northern Care Alliance NHS Foundation Trust,Office 365,srft.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northern Care Alliance NHS Foundation Trust,Office 365,pat.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northern Care Alliance NHS Foundation Trust,Office 365,nca.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northumbria Healthcare NHS Foundation Trust,O365/Exchange,northumbria-healthcare.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northumbria Healthcare NHS Foundation Trust,O365/Exchange,nhct.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northumbria Healthcare NHS Foundation Trust,O365/Exchange,northumbria.nhs.uk,Y,Reject,Hardfail,Y,Y
+Northumbria Healthcare NHS Foundation Trust,O365/Exchange,nepssg.nhs.uk,Y,Reject,Hardfail,Y,Y
+Nottinghamshire Healthcare NHS Foundation Trust,Office 365,nottshc.nhs.uk,N,Reject,Hardfail,Y,Y
+Nuffield Health,Office 365,nuffieldhealth.com,N,Reject,Hardfail,Y,Y
+Nuffield Health,Office 365,nuffieldhealthpartners.com,N,Reject,Hardfail,Y,Y
+Overgate Hospice,Office 365,overgatehospice.nhs.uk,N,Reject,Hardfail,Y,Y
+Oxford Health NHS Foundation Trust,Office 365,oxfordhealth.nhs.uk,N,Reject,Hardfail,Y,Y
+Oxford University Hospitals NHS Foundation Trust,Office 365,ouh.nhs.uk,N,Reject,Hardfail,Y,Y
+Oxford University Hospitals NHS Foundation Trust,Office 365,oxnet.nhs.uk,N,Reject,Hardfail,Y,Y
+Oxford University Hospitals NHS Foundation Trust,Office 365,ohis.nhs.uk,N,Reject,Hardfail,Y,Y
+Oxford University Hospitals NHS Foundation Trust,Office 365,cochrane.nhs.uk,N,Reject,Hardfail,Y,Y
+Personal Homecare Pharmacy Ltd,Office 365,homecare-pharmacy.co.uk,Y,Reject,Hardfail,Y,Y
+Porthaven Care Homes Ltd,Office 365,Porthaven.co.uk,N,Reject,Hardfail,Y,Y
+Portsmouth Hospitals University NHS Trust,Office 365,porthosp.nhs.uk,N,Reject,Hardfail,Y,Y
+Portsmouth Hospitals University NHS Trust,Office 365,soeprocurement.nhs.uk,N,Reject,Hardfail,Y,Y
+Portsmouth Hospitals University NHS Trust,Office 365,swash.nhs.uk ,N,Reject,Hardfail,Y,Y
+Problem Shared,Office 365,problemshared.net,N,Reject,Hardfail,Y,Y
+Psych-UK Limited,Office 365,psychiatry-uk.com,N,Reject,Hardfail,Y,Y
+Ramsay Health Care,Office 365,ramsayhealth.co.uk,Y,Reject,Hardfail,Y,Y
+Ramsay Health Care,Office 365,westbournecentre.com,Y,Reject,Hardfail,Y,Y
+Ramsay Health Care,Office 365,exetermedical.co.uk,Y,Reject,Hardfail,Y,Y
+Ramsay Health Care,Office 365,ramsayhealthpartners.co.uk,Y,Reject,Hardfail,Y,Y
+Sapphire Eye Care,Office 365,sapphire-eyecare.co.uk,N,Reject,Hardfail,Y,Y
+Sinclair-Strong Consultants Ltd,Office 365,sinclairstrong.co.uk,N,Reject,Hardfail,Y,Y
+Solent NHS Trust,Office 365,solent.nhs.uk,N,Reject,Hardfail,Y,Y
+Somerset NHS Foundation Trust,Exchange,somersetft.nhs.uk,N,Reject,Hardfail,Y,Y
+Source BioScience,Office 365,sourcebioscience.com,N,Reject,Hardfail,Y,Y
+Source BioScience,Office 365,sourceldpath.com,N,Reject,Hardfail,Y,Y
+South Central Ambulance NHS Trust,Office 365,scas.nhs.uk,N,Reject,Hardfail,Y,Y
+South East Coast Ambulance Service NHS Foundation Trust,Office 365,secamb.nhs.uk,N,Reject,Hardfail,Y,Y
+South London and Maudsley NHS Foundation Trust,Office 365,slam.nhs.uk ,Y,Reject,Hardfail,Y,Y
+South Warwickshire University NHS Foundation Trust,Office 365,swft.nhs.uk,Y,Reject,Hardfail,Y,Y
+South Warwickshire University NHS Foundation Trust,Office 365,swftcs.nhs.uk ,Y,Reject,Hardfail,Y,Y
+South Warwickshire University NHS Foundation Trust,Office 365,innovatehs.co.uk,Y,Reject,Hardfail,Y,Y
+South West London and St George's Mental Health NHS Trust,Office 365,swlstg.nhs.uk,Y,Reject,Hardfail,Y,Y
+South West Yorkshire Partnership NHS Foundation Trust,Office 365,swyt.nhs.uk,N,Reject,Hardfail,Y,Y
+Southern Health NHS Foundation Trust,O365/Exchange,southernhealth.nhs.uk,N,Reject,Hardfail,Y,Y
+Southern Health NHS Foundation Trust,O365/Exchange,hiowhealthcare.nhs.uk,N,Reject,Hardfail,Y,Y
+Spectrum Community Health CIC,Office 365,spectrum-cic.nhs.uk,N,Reject,Hardfail,Y,Y
+St Andrew's Healthcare,Office 365,stah.org,N,Reject,Hardfail,Y,Y
+St Barnabas Lincolnshire Hospice (IPU),Office 365,stbarnabashospice.co.uk,N,Reject,Hardfail,Y,Y
+St Catherine's Hospice,Office 365,stcatherines.co.uk,N,Reject,Hardfail,Y,Y
+St George's University Hospitals NHS Foundation Trust,Office 365,stgeorges.nhs.uk,N,Reject,Hardfail,Y,Y
+Staffordshire and Shropshire Health Informatics Service,Office 365,sshis.nhs.uk,N,Reject,Hardfail,Y,Y
+Staffordshire and Stoke-on-Trent ICB,Office 365,stoke.nhs.uk,N,Reject,Hardfail,Y,Y
+Staffordshire and Stoke-on-Trent ICB,Office 365,staffs.nhs.uk,N,Reject,Hardfail,Y,Y
+Staffordshire and Stoke-on-Trent ICB,Office 365,staffsstoke.icb.nhs.uk,N,Reject,Hardfail,Y,Y
+Stockport NHS Foundation Trust,Exchange,stockport.nhs.uk ,N,Reject,Hardfail,Y,Y
+Suffolk GP Federation C.I.C.,O365/Exchange,suffolkfed.org.uk,N,Reject,Hardfail,Y,Y
+Suffolk GP Federation C.I.C.,O365/Exchange,diabetesneeds.co.uk,N,Reject,Hardfail,Y,Y
+Suffolk GP Federation C.I.C.,O365/Exchange,diabetesneeds.org.uk,N,Reject,Hardfail,Y,Y
+Suffolk GP Federation C.I.C.,O365/Exchange,thegphub.org,N,Reject,Hardfail,Y,Y
+Sumo Optimus Ltd,Google Workspace,soscaremanagementsystems.com,N,Reject,Hardfail,Y,Y
+Surrey and Borders Partnership NHS Foundation Trust,Office 365,sabp.nhs.uk,N,Reject,Hardfail,Y,Y
+Sussex Partnership NHS Foundation Trust,Exchange,spft.nhs.uk,N,Reject,Hardfail,Y,Y
+Synnovis LLP,Office 365,synnovis.co.uk,N,Reject,Hardfail,Y,Y
+Tameside and Glossop Integrated Care NHS Foundation Trust,Office 365,tgh.nhs.uk,Y,Reject,Hardfail,Y,Y
+The Doctors Laboratory,Exchange,tdlpathology.com,N,Reject,Hardfail,Y,Y
+The Doctors Laboratory,Exchange,hslpathology.com,N,Reject,Hardfail,Y,Y
+The Newcastle upon Tyne Hospitals NHS Foundation Trust,Exchange,secure.nuth.nhs.uk,N,Reject,Hardfail,Y,Y
+Theta Sleep,Google Workspace,thetasleep.com,Y,Quarantine,Softfail,Y,Y
+Tavistock and Portman NHS Foundation Trust,Office 365,Tavi-port.nhs.uk,N,Reject,Hardfail,Y,Y
+The Tavistock and Portman NHS Foundation Trust,Office 365,Tavi-port.org,N,Reject,Hardfail,Y,Y
+The Tavistock and Portman NHS Foundation Trust,Office 365,Tavi-port.ac.uk,N,Reject,Hardfail,Y,Y
+The Tavistock and Portman NHS Foundation Trust,Office 365,Tavistockconsulting.co.uk,N,Reject,Hardfail,Y,Y
+Totally Group,Office 365,totallygroup.com,N,Reject,Hardfail,Y,Y
+Ufonia,Google Workspace,ufonia.com,Y,Reject,Hardfail,Y,Y
+Ufonia,Google Workspace,ufonia.co,Y,Reject,Hardfail,Y,Y
+Ufonia,Google Workspace,spoa.uk,Y,Reject,Hardfail,Y,Y
+University Hospital Southampton NHS Foundation Trust,Office 365,uhs.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospital Southampton NHS Foundation Trust,Office 365,uel.uhs.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospital Southampton NHS Foundation Trust,Office 365,upl.uhs.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospital Southampton NHS Foundation Trust,Office 365,wpl.uhs.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospital Southampton NHS Foundation Trust,Office 365,wca.uhs.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals Birmingham NHS Foundation Trust,Exchange,uhb.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals Bristol and Weston NHS Foundation Trust,Office 365,uhbw.nhs.uk,Y,Reject,Hardfail,Y,Y
+University Hospitals Bristol and Weston NHS Foundation Trust,Office 365,uhbristol.nhs.uk,Y,Reject,Hardfail,Y,Y
+University Hospitals Bristol and Weston NHS Foundation Trust,Office 365,ubht.nhs.uk,Y,Reject,Hardfail,Y,Y
+University Hospitals Coventry and Warwickshire NHS Trust,O365/Exchange,uhcw.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals Dorset NHS Foundation Trust,Office 365,uhd.nhs.uk,N,Reject,Hardfail,Y,Y
+University Hospitals of Leicester NHS Trust,O365/Exchange,uhl-tr.nhs.uk,Y,Reject,Hardfail,Y,Y
+University of Southampton Auditory Implant Service,Office 365,securemail.soton.ac.uk,N,Reject,Hardfail,Y,Y
+Vivid.Care,Office 365,vivid.care,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,aquarius.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,Calderdalerecoverysteps.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,Forwardleeds.co.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,humankindcharity.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,likewisesheffield.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,Moretimeonline.com,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,NewVisionBradford.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,Nyhorizons.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,reach-dorset.org,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,recoverystepscumbria.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,RichmondFellowship.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,Stadultrecoveryservice.co.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,together-devon.org.uk,N,Reject,Hardfail,Y,Y
+Waythrough,Office 365,waythrough.org.uk,N,Reject,Hardfail,Y,Y
+WCS Care Group Ltd,Office 365,wcs-care.co.uk,Y,Reject,Hardfail,Y,Y
+HI Weldricks Ltd,Office 365,weldricks.co.uk,Y,Reject,Hardfail,Y,Y
+West Midlands Ambulance Service University NHS Foundation Trust,Office 365,wmas.nhs.uk,N,Reject,Hardfail,Y,Y
+West Suffolk NHS Foundation Trust,Exchange,wsh.nhs.uk,N,Reject,Hardfail,Y,Y
+Your Healthcare,Office 365,yourhealthcare.org,Y,Reject,Hardfail,Y,Y

@@ -3,6 +3,30 @@ const express = require('express');
 const axios = require('axios');
 const router = express.Router();
 
+//
+// IS VALID EMAIL ADDRESS FUNCTION
+// Compares an email with a list of accredited domains for the secure email standard (data loaded in session-data-defaults.js) 
+//
+_isValidEmailAddress = function( emailAddress, emails ){
+
+  let check = false;
+
+  if( emailAddress && Array.isArray(emails) ){
+
+    let loop = emails.length;
+
+    for( let i = 0; i < loop; i++ ){
+      if( emailAddress.endsWith( emails[i] ) ){
+        check = true;
+        break;
+      }
+    }
+
+  }
+
+  return check;
+
+};
 
 //
 // HANDLE EMPTY DATE FIELDS
@@ -124,7 +148,10 @@ router.post(/register\/start/,  function (req, res) {
 
 router.post(/register\/email/,  function (req, res) {
   let redirect = ( req.session.data.returnToCYA === 'true' ) ? 'check-your-answers' : 'your-details';
-    res.redirect(redirect);
+  if( req.session.data.registerEmail !== '' && !_isValidEmailAddress( req.session.data.registerEmail, req.session.data.validEmails ) ) {
+    redirect = 'cannot-register';
+  }
+  res.redirect(redirect);
 });
 
 router.post(/register\/your-details/,  function (req, res) {
