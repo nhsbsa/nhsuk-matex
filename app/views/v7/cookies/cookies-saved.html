@@ -1,0 +1,61 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ statusBar( loggedOut ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Your cookie settings have been saved
+        </h1>
+      </legend>
+      <br>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <p>We'll save your settings for three months<br> <br>
+      We'll ask you if you're still OK with us using cookings when either:<br>
+    <ul>
+      <li>it's been three months since you last saved your settings</li>
+      <li>we add any new cookies or change the cookies we use</li>
+    </ul>
+    <p>You can also <a href="choose-cookies">choose which cookies we use</a> at any time.<br><br>
+    </p>
+   
+  <form action="cookies-decision"> 
+  <button class="nhsuk-button" type="submit">
+    Return to application
+  </button>
+  </form> 
+
+    <!-- End of content -->
+    </div>  
+  </div>
+{% endblock %}

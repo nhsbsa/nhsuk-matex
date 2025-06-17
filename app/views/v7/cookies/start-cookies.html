@@ -1,0 +1,112 @@
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout-cookies.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ statusBar( loggedOut ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+<main class="nhsuk-main-wrapper" id="maincontent" role="main">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <h1>Apply for maternity exemption certificates</h1>
+    </div>
+   
+
+  
+
+
+
+
+<div class="nhsuk-width-container">
+<main class="nhsuk-main-wrapper" id="maincontent" role="main">
+  <div class="nhsuk-grid-row nhsuk-u-margin-right-6">
+    <div class="nhsuk-grid-column-two-thirds nhsuk-u-padding-top-0 nhsuk-u-margin-right-6">
+
+    <!-- Change the page title here 
+    <h1>
+      Register to issue maternity exemption certificates 
+    </h1>-->
+
+   
+    <p class="nhsuk-caption-l nhsuk-u-margin-bottom-4">If you are a midwife, GP or healthcare professional registered to use this online service, you can apply for maternity exemption certificates on behalf of expectant or new mothers.</p>
+    <p>A maternity exemption certificate entitles the mother to free prescriptions: 
+        <ul>
+         <li>while pregnant</li>
+         <li>for 12 months after the birth of the child</li>
+        </ul>
+       </p>
+
+
+       <h2 class="nhsuk-heading-l">Before you apply</h2>
+
+
+       <p>You'll need the mother's:
+        <ul><li>date of birth</li>
+         <li>NHS number</li>
+         <li>due or birth date of their child</li>
+         <li>email or postal address </li>
+        </ul>
+       </p>
+
+       
+
+       <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Information: </span>
+          <p><a href="/v7/register/start" title="External website">You'll need to register to use this service
+             </a>
+          </p>
+     </div>
+     <a class="nhsuk-button" type="submit" href="/v11/microsoft-login">Sign In</a>
+
+     <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          Problems signing in
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+    
+        <p>You'll need to register to use this service before you can sign in. You can <a href="/v11/register/start">register online</a>.</p>
+
+        <p>If you have already registered but cannot sign in it may be because your email no longer meets the <a href="https://digital.nhs.uk/services/nhsmail/the-secure-email-standard">secure email standard</a>. You can check this with your IT department.</p>
+
+        <p>If you cannot use the digital service you can still issue maternity exemption certificates by submitting an <a href="https://faq.nhsbsa.nhs.uk/knowledgebase/article/KA-03847/en-us">FW8 application form</a>.</p>
+    
+      </div>
+    </details>
+     
+     
+</div>
+
+
+  <h2 class="col-heading heading-medium">Related links</h2>
+  <p><a href="https://www.nhsbsa.nhs.uk/check-if-you-have-nhs-exemption" target="_blank">Check if the mother already has a valid exemption certificate</a></p>
+  <p><a href="https://faq.nhsbsa.nhs.uk/knowledgebase/category/?articlecategory=Maternity%20Exemption%20certificate&id=CAT-01281&parentid=" target="_blank"> More information about the maternity exemption service</a></p>
+  </div>
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,108 @@
+{% set serviceName = registerServiceName %}
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - edit the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title -->
+{% block pageTitle %}
+  {{ serviceName }}
+{% endblock %}
+
+{% block beforeContent %}
+  {{ statusBar( 'register' ) }}
+  {{ phaseBanner() }}
+{% endblock %}
+
+
+<!-- For adding a back link -->
+<!-- Code examples can be found at https://service-manual.nhs.uk/design-system/components/back-link -->
+{% block outerContent %}
+{% endblock %}
+
+<!-- For adding page content -->
+<!-- Page layout code can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+  
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page heading -->
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h1 class="nhsuk-fieldset__heading">
+          Choose which cookies we use
+        </h1>
+      </legend>
+      <br>
+
+      <!-- Add content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+     
+      <p>Let us know which cookies we can use. We'll use a cookie to save your settings for the next 3 calendar months. This setting applies across all our digital services, not just the one you are accessing now. <br></p>
+      
+    <h4>Cookies that measure website use (analytic cookies).</h4>
+    <p>These cookies store information about how you use our website, such as the links you click on. We use them to help make our website better.<br>
+    
+
+    <details class="nhsuk-details">
+      <summary class="nhsuk-details__summary">
+        <span class="nhsuk-details__summary-text">
+          List of cookies that measure website use
+        </span>
+      </summary>
+      <div class="nhsuk-details__text">
+        Cookie list to go here.
+      </div>
+    </details>
+  
+  </p>
+  
+  <div class="nhsuk-form-group">
+
+    <fieldset class="nhsuk-fieldset">
+      <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+        <h4>
+          Do you want to allow cookies to measure website use?
+        </h4>
+      </legend>
+  
+      <div class="nhsuk-radios">
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-1" name="example" type="radio" value="yes">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-1">
+            Yes
+          </label>
+        </div>
+  
+        <div class="nhsuk-radios__item">
+          <input class="nhsuk-radios__input" id="example-2" name="example" type="radio" value="no">
+          <label class="nhsuk-label nhsuk-radios__label" for="example-2">
+            No
+          </label>
+        </div>
+  
+      </div>
+    </fieldset>
+  
+  </div>
+
+<br>
+    
+<form action="cookies-saved">
+
+  <button class="nhsuk-button" type="submit">
+    Save my cookie settings
+  </button>
+</form>
+
+    <!-- End of content -->
+    </div>  
+  </div>
+{% endblock %}
