@@ -1,5 +1,5 @@
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'custom-header-layout.html' %}
+{% extends 'layout.html' %}
 <!-- 
   In /views/layout.html you can:
     - edit the header and footer 
@@ -12,20 +12,7 @@
 {% endblock %}
 
 
-{% block beforeContent %}
 
-  {{ statusBar() }}
-  {{ phaseBanner() }}
-
-   <div class="nhsuk-width-container">
-    {{ breadcrumb({
-      classes: 'nhsuk-u-padding-left-0',
-      href: 'search-for-application',
-      text: 'Search for application'
-    }) }}
-  </div>
-
-{% endblock %}
 
 {% block header %}
   {{ dashboardHeader() }}

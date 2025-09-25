@@ -182,9 +182,17 @@ APPLY
 
 */
 
-router.post(/start/,  function (req, res) {
+router.get(/start/,function(req, res){
+
+    console.log( '*** DATA RESET ***' );
+
+    const debug = req.session.data.debug || 'false';
+
     req.session.data = {};
-    res.redirect('microsoft-login');
+    req.session.data.debug = debug;
+
+    res.render( req.originalUrl.split('?')[0].substring(1) );
+
 });
 
 router.post(/nhs-login/,  function (req, res) {

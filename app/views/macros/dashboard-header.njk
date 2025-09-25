@@ -1,6 +1,8 @@
 {% macro dashboardHeader() %}
 
     {% from 'header/macro.njk' import header %}
+    {% from 'macros/phase-banner.njk' import phaseBanner %}
+    {% from 'macros/status-bar.njk' import statusBar %}
 
     {{ header({
       service: {
@@ -25,5 +27,8 @@
       ]
     })
   }}
+
+  {{ statusBar( 'loggedIn' ) }}
+  {{ phaseBanner() }}
 
 {% endmacro %}

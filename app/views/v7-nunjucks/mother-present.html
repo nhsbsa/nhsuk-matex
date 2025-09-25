@@ -8,16 +8,10 @@
 
 <!-- BEFORE CONTENT -->
 {% block beforeContent %}
-  {{ statusBarNunjucks() }}
-  {{ phaseBanner() }}
-{% endblock %}
-
-<!-- OUTER CONTENT -->
-{% block outerContent %}
-  <!--{{ backLink({
+  {{ backLink({
     href: 'javascript:history.go(-1)',
-    text: "Go back"
-  }) }}-->
+    text: 'Back'
+  }) }}
 {% endblock %}
 
 <!-- CONTENT -->

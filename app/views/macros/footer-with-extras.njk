@@ -21,7 +21,11 @@
 		{
 		URL: 'https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions',
 		label: 'Terms and conditions'
-		}
+		},
+		 {
+          URL: '/prototype-admin/reset?returnPage=' + (currentPage | urlencode),
+          label: 'Reset data'
+        }
 	]
 	})}}
 
@@ -48,7 +52,11 @@
       {
         'label': 'Maternity exemption certificate privacy notice',
         'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/privacy/maternity-exemption-certificate-privacy-notice'
-      }
+      },
+	   {
+         'URL': '/prototype-admin/reset?returnPage=' + (currentPage | urlencode),
+         'label': 'Reset data'
+        }
     ]
   }) }}
 

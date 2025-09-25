@@ -6,12 +6,6 @@
   {{ serviceName }}
 {% endblock %}
 
-<!-- BEFORE CONTENT -->
-{% block beforeContent %}
-  {{ statusBarNunjucks( data.loggedIn ) }}
-  {{ phaseBanner() }}
-{% endblock %}
-
 <!-- CONTENT -->
 {% block content %}
 
@@ -56,11 +50,10 @@
 
       {% else %}
 
-        <form action="start" method="post" novalidate>
-          {{ button({
-            text: 'Sign in'
-          }) }}
-        </form>
+       {{ button({
+         text: 'Sign in',
+         href: 'microsoft-login'
+       }) }}
 
         {% set detailsHTML %}
 

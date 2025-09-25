@@ -36,14 +36,6 @@
 {%- from 'warning-callout/macro.njk' import warningCallout %}
 
 
-{# Custom to this project, files in 'views/macros' #}
-{%- from 'macros/dashboard-header.njk' import dashboardHeader %}
-{%- from 'macros/status-bar.njk' import statusBar %}
-{%- from 'macros/status-bar-nunjucks.njk' import statusBarNunjucks %}
-{%- from 'macros/phase-banner.njk' import phaseBanner %}
-{%- from 'macros/footer-with-extras.njk' import footerWithExtras %}
-
-
 {% block pageTitle -%}
   {%- if errors === true or (errors | length) %}Error: {% endif -%}
   {%- if pageName %}{{ pageName }} – {% endif -%}

@@ -21,10 +21,13 @@ router.use((req, res, next) => {
     }
   } );
 
-  res.locals.version = version;
+  res.locals.prototypeVersion = version;
+  res.locals.originalUrl = req.originalUrl;
 
   // Load the required routes
   if( version ){
+    console.log( '----------------------' );
+    console.log( req.originalUrl );
     console.log( 'Loading routes for ' + version );
     router.use('/'+version, require('./views/'+version+'/_routes'));
   }

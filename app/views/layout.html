@@ -7,6 +7,11 @@
 <!-- Extends the prototype kit template which in turn extends the NHS.UK frontend template -->
 {% extends "prototype-kit-template.njk" %}
 
+{%- from 'macros/status-bar.njk' import statusBar %}
+{%- from 'macros/phase-banner.njk' import phaseBanner %}
+{%- from 'macros/footer-with-extras.njk' import footerWithExtras %}
+{%- from 'macros/dashboard-header.njk' import dashboardHeader %}
+
 {% block head %}
   <!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
   <link href="/css/main.css" rel="stylesheet">
@@ -21,6 +26,7 @@
 <!-- Header goes inside the header block -->
 <!-- More info and code for the header can be found at https://service-manual.nhs.uk/design-system/components/header -->
 {% block header %}
+
   {{ header({
     'service': {
         'name': serviceName,
@@ -30,29 +36,35 @@
       'showSearch': 'false'
     })
   }}
-{% endblock %}
-
-
-{% block outerContentEnd %}
-
-  {% if data.debug === 'true' %}
-
-    {{ textarea({
-      name: 'debug',
-      id: 'debug',
-      label: {
-        text: 'Session data'
-      },
-      value: data | dump
-    }) }}
-
+  
+  <!-- Only show the status bar if register is not in the URL -->
+  {% if (originalUrl.indexOf('register') === -1 ) %}
+    {{ statusBar( loggedOut or data.loggedIn ) }}
   {% endif %}
+
+  {{ phaseBanner() }}
 
 {% endblock %}
 
 <!-- Footer goes inside the footer block -->
 <!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
+  {% if data.debug === 'true' %}
+
+  <div class="nhsuk-width-container">
+    <div class="nhsuk-grid-row">
+      {{ textarea({
+        name: 'debug',
+        id: 'debug',
+        label: {
+          text: 'Session data'
+        },
+        value: data | dump
+      }) }}
+    </div>
+  </div>
+  {% endif %}
+
   {{ footerWithExtras() }}
 {% endblock %}
 

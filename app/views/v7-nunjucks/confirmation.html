@@ -6,20 +6,6 @@
   {{ serviceName }}
 {% endblock %}
 
-<!-- BEFORE CONTENT -->
-{% block beforeContent %}
-  {{ statusBarNunjucks() }}
-  {{ phaseBanner() }}
-{% endblock %}
-
-<!-- OUTER CONTENT -->
-{% block outerContent %}
-  <!--{{ backLink({
-    href: 'javascript:history.go(-1)',
-    text: "Go back"
-  }) }}-->
-{% endblock %}
-
 <!-- CONTENT -->
 {% block content %}
 
@@ -31,11 +17,11 @@
             html: '
             <dl>
                 <div>
-                    <dd class="nhsuk-body nhsuk-u-margin-0">Mother\'s certificate number:</dd>
+                    <dd class="nhsuk-body nhsuk-u-margin-0">Mother\'s certificate number</dd>
                     <dt class="nhsuk-heading-l">8436 810 379</dt>
                 </div>
                 <div>
-                    <dd class="nhsuk-body nhsuk-u-margin-0">Exemption ends:</dd>
+                    <dd class="nhsuk-body nhsuk-u-margin-0">Exemption end</dd>
                     <dt class="nhsuk-heading-l nhsuk-u-margin-bottom-0">' + ( 365 | alterDateByNumberOfDays( data.babyDateOfBirth.day, data.babyDateOfBirth.month, data.babyDateOfBirth.year ) ) + '</dt>
                 </div>
             </dl>'

@@ -1,5 +1,5 @@
 <!-- Extends the layout from /views/layout.html -->
-{% extends 'custom-header-layout.html' %}
+{% extends 'layout.html' %}
 <!-- 
   In /views/layout.html you can:
     - edit the header and footer 
@@ -11,10 +11,7 @@
   {{ serviceName }}
 {% endblock %}
 
-{% block beforeContent %}
-  {{ statusBar() }}
-  {{ phaseBanner() }}
-{% endblock %}
+
 
 {% block header %}
   {{ dashboardHeader() }}
