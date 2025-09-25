@@ -6,12 +6,6 @@
   {{ serviceName }}
 {% endblock %}
 
-<!-- BEFORE CONTENT -->
-{% block beforeContent %}
-  {{ statusBar( 'register' ) }}
-  {{ phaseBanner() }}
-{% endblock %}
-
 <!-- OUTER CONTENT -->
 {% block outerContent %}{% endblock %}
 
@@ -64,14 +58,18 @@
         }) }}
 
 
-        <!-- DECLARATION -->
-        {{ warningCallout({
-          heading: 'Declaration',
-          HTML: '<p class="nhsuk-body">I understand that:</p>
+        {% set warningHTML %}
+          <p class="nhsuk-body">I understand that:</p>
             <ul class="nhsuk-list nhsuk-list--bullet">
               <li>the information submitted will be checked in the NHS Electronic Staff Record system (ESR)</li>
               <li>my NMC PIN will be stored by the NHS Business Services Authority</li>
-            </ul>'
+            </ul>
+        {% endset %}
+
+        <!-- DECLARATION -->
+        {{ warningCallout({
+          heading: 'Declaration',
+          html: warningHTML
         }) }}
 
         <form action="check-your-answers" method="post" novalidate>

@@ -13,9 +13,6 @@
 
 {% block beforeContent %}
 
-  {{ statusBar() }}
-  {{ phaseBanner() }}
-
    <div class="nhsuk-width-container">
     {{ breadcrumb({
       classes: 'nhsuk-u-padding-left-0',
@@ -27,7 +24,7 @@
 {% endblock %}
 
 {% block header %}
-  {{ dashboardHeader() }}
+  {{ dashboardHeader( serviceName ) }}
 {% endblock %}
 
 

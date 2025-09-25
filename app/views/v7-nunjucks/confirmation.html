@@ -14,7 +14,7 @@
      
         {% set panelHTML %}
 
-            <dl class="nhsuk-u-margin-bottom-0">
+            <dl>
                 <div>
                     <dd class="nhsuk-body nhsuk-u-visually-hidden">Name</dd>
                     <dt class="nhsuk-heading-l">{{ '' | getMotherName }}</dt>
@@ -27,7 +27,7 @@
                     <dd class="nhsuk-body nhsuk-u-margin-0">Exemption end</dd>
                     <dt class="nhsuk-heading-l nhsuk-u-margin-bottom-0">{{ 365 | alterDateByNumberOfDays( data.babyDateOfBirth.day, data.babyDateOfBirth.month, data.babyDateOfBirth.year ) }}</dt>
                 </div>
-            </dl>'
+            </dl>
 
         {% endset %}
 

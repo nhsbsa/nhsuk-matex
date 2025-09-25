@@ -2,69 +2,8 @@
 
 {% from 'footer/macro.njk' import footer %}
 
-{% if footerType === 'register' %}
-
-	{{ footer({
-	links: [
-		{
-		URL: 'https://www.nhsbsa.nhs.uk/accessibility-statement-register-issue-maternity-exemption-certificates',
-		label: 'Accessibility statement'
-		},
-		{
-		URL: 'https://maternity-exemption.nhsbsa.nhs.uk/register/cookies',
-		label: 'Cookies'
-		},
-		{
-		URL: 'https://www.nhsbsa.nhs.uk/our-policies/privacy/maternity-exemption-certificate-privacy-notice',
-		label: 'Privacy policy'
-		},
-		{
-		URL: 'https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions',
-		label: 'Terms and conditions'
-		},
-		 {
-          URL: '/prototype-admin/reset?returnPage=' + (currentPage | urlencode),
-          label: 'Reset data'
-        }
-	]
-	})}}
-
-{% else %}
-
-	{{ footer({
-    'links': [
-      {
-        'label': 'Accessibility statement',
-        'URL' : 'https://www.nhsbsa.nhs.uk/accessibility-statement-apply-maternity-exemption'
-      },
-      {
-        'label': 'Cookies',
-        'URL' : 'https://maternity-exemption.nhsbsa.nhs.uk/apply/cookies'
-      },
-      {
-        'label': 'Privacy policy',
-        'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/privacy'
-      },
-      {
-        'label': 'Terms and conditions',
-        'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions'
-      },
-      {
-        'label': 'Maternity exemption certificate privacy notice',
-        'URL' : 'https://www.nhsbsa.nhs.uk/our-policies/privacy/maternity-exemption-certificate-privacy-notice'
-      },
-	   {
-         'URL': '/prototype-admin/reset?returnPage=' + (currentPage | urlencode),
-         'label': 'Reset data'
-        }
-    ]
-  }) }}
-
-{% endif %}
-
-
-
-<div class="app-ogl-footer">
+{% set footerExtrasHTML %}
+	<div class="app-ogl-footer">
 	<div class="nhsuk-width-container app-width-container">
 		<p class="app-ogl-footer--text-bsa">Built by the <a class="nhsuk-footer__list-item-link" id="footer-link-dental" target="_blank" href="http://www.nhsbsa.nhs.uk" rel="noopener noreferrer">NHS Business Services Authority<span class="nhsuk-u-visually-hidden"> (opens in a new tab)</span></a></p>
 		<p class="app-ogl-footer--text">
@@ -75,5 +14,74 @@
 		</p>
 	</div>
 </div>
+{% endset %}
+
+{% if footerType === 'register' %}
+
+	{{ footer({
+		meta: {
+			items: [
+				{
+				href: 'https://www.nhsbsa.nhs.uk/accessibility-statement-register-issue-maternity-exemption-certificates',
+				text: 'Accessibility statement'
+				},
+				{
+				href: 'https://maternity-exemption.nhsbsa.nhs.uk/register/cookies',
+				text: 'Cookies'
+				},
+				{
+				href: 'https://www.nhsbsa.nhs.uk/our-policies/privacy/maternity-exemption-certificate-privacy-notice',
+				text: 'Privacy policy'
+				},
+				{
+				href: 'https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions',
+				text: 'Terms and conditions'
+				},
+				{
+				href: '/prototype-admin/reset?returnPage=' + (currentPage | urlencode),
+				text: 'Reset data'
+				}
+			],
+			html: footerExtrasHTML
+		},
+		copyright: { html: ' ' }
+	})}}
+
+{% else %}
+
+	{{ footer({
+		meta: {
+			items: [
+			{
+				text: 'Accessibility statement',
+				href : 'https://www.nhsbsa.nhs.uk/accessibility-statement-apply-maternity-exemption'
+			},
+			{
+				text: 'Cookies',
+				href : 'https://maternity-exemption.nhsbsa.nhs.uk/apply/cookies'
+			},
+			{
+				text: 'Privacy policy',
+				href : 'https://www.nhsbsa.nhs.uk/our-policies/privacy'
+			},
+			{
+				text: 'Terms and conditions',
+				href : 'https://www.nhsbsa.nhs.uk/our-policies/terms-and-conditions'
+			},
+			{
+				text: 'Maternity exemption certificate privacy notice',
+				href : 'https://www.nhsbsa.nhs.uk/our-policies/privacy/maternity-exemption-certificate-privacy-notice'
+			},
+			{
+				href: '/prototype-admin/reset?returnPage=' + (currentPage | urlencode),
+				text: 'Reset data'
+				}
+			],
+			html: footerExtrasHTML
+		},
+		copyright: { html: ' ' }
+  }) }}
+
+{% endif %}
   
 {% endmacro %}

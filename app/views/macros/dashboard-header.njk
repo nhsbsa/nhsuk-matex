@@ -1,4 +1,4 @@
-{% macro dashboardHeader() %}
+{% macro dashboardHeader( serviceName ) %}
 
     {% from 'header/macro.njk' import header %}
     {% from 'macros/phase-banner.njk' import phaseBanner %}
@@ -6,29 +6,28 @@
 
     {{ header({
       service: {
-        name: serviceName,
+        text: serviceName,
         href: '/'
       },
-      showNav: 'true',
-      showSearch: 'false',
-      primaryLinks: [
-        {
-          url  : 'record-keeping-dashboard',
-          label : 'All certificates '
-        },
-        {
-          url : 'application-details',
-          label : 'Start a new application'
-        },
-        {
-          url : 'search-for-application',
-          label : 'Search for application'
-        }
-      ]
+      navigation: { 
+        items: [
+          {
+            href: 'record-keeping-dashboard',
+            text: 'All certificates '
+          },
+          {
+            href: 'application-details',
+            text: 'Start a new application'
+          },
+          {
+            href: 'search-for-application',
+            text: 'Search for application'
+          }
+      ]} 
     })
   }}
 
-  {{ statusBar( 'loggedIn' ) }}
+  {{ statusBar() }}
   {{ phaseBanner() }}
 
 {% endmacro %}

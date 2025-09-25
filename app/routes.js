@@ -37,6 +37,10 @@ router.use((req, res, next) => {
 
 });
 
+router.get('/.well-known/appspecific/com.chrome.devtools.json', (req, res) => {
+  res.json({ message: 'No special config' });
+})
+
 module.exports = router;
 
 

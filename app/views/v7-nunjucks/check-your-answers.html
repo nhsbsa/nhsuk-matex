@@ -105,17 +105,24 @@
         }) }}
 
 
+        {% set warningHTML %}
+            <p class="nhsuk-body">I confirm that this information is correct and true in accordance with the mother's records on {{ true | convertDate }}.</p>
+            <p class="nhsuk-body">I confirm that the mother:</p>
+
+            <ul class="nhsuk-list nhsuk-list--bullet">
+                <li>has given their permission for this application to be submitted on their behalf</li>
+                <li>knows the information submitted will be used by the NHS Business Services Authority and shared other organisations working on their behalf where necessary</li>
+                <li>understands their data will not be transferred outside of the European Economic Area and will be deleted within 24 months of the expiry date of the exemption</li>
+            </ul>
+
+            <p class="nhsuk-body">I understand that when I press submit, I am submitting an application on behalf of the named person.</p>
+        {% endset %}
+
+
         <!-- DECLARATION -->
         {{ warningCallout({
             heading: 'Declaration',
-            HTML: '<p class="nhsuk-body">I confirm that this information is correct and true in accordance with the mother\'s records on ' + ( true | convertDate ) + '.</p>
-                    <p class="nhsuk-body">I confirm that the mother:</p>
-                    <ul class="nhsuk-list nhsuk-list--bullet">
-                    <li>has given their permission for this application to be submitted on their behalf</li>
-                    <li>knows the information submitted will be used by the NHS Business Services Authority and shared other organisations working on their behalf where necessary</li>
-                    <li>understands their data will not be transferred outside of the European Economic Area and will be deleted within 24 months of the expiry date of the exemption</li>
-                    </ul>
-                    <p class="nhsuk-body">I understand that when I press submit, I am submitting an application on behalf of the named person.</p>'
+            html: warningHTML
         }) }}
 
         <form action="check-your-answers" method="post" novalidate>

@@ -6,12 +6,6 @@
   {{ serviceName }}
 {% endblock %}
 
-<!-- BEFORE CONTENT -->
-{% block beforeContent %}
-  {{ statusBar( 'register' ) }}
-  {{ phaseBanner() }}
-{% endblock %}
-
 <!-- OUTER CONTENT -->
 {% block outerContent %}{% endblock %}
 
@@ -23,7 +17,7 @@
     <div class="nhsuk-grid-column-two-thirds">
 
         {% set panelHTML %}
-            <p class="nhsuk-body">We've sent an email to <strong>{{ data.registerEmail or 'jane.smith@nhs.net' }}</strong>.</p>
+            <p class="nhsuk-body">We've sent an email to <strong>{{ data.registerEmail or 'jane.smith@nhs.net' }}</strong></p>
         {% endset %}
         
         {{ panel({
@@ -35,7 +29,7 @@
         <p class="nhsuk-body">If you have not received confirmation of your registration, email <a class="nhsuk-link" href="mailto:healthcosts@nhsbsa.nhs.uk ">healthcosts@nhsbsa.nhs.uk </a> for further help.</p>
         <p class="nhsuk-body">To begin issuing maternity exemption certificates, click Sign in.</p>
      
-        {{ button({
+        {{ actionLink({
           href: '../start',
           text: 'Sign in'
         }) }}
