@@ -12,19 +12,28 @@
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
      
-        {{ panel({
-            titleText: 'Application completed',
-            html: '
-            <dl>
+        {% set panelHTML %}
+
+            <dl class="nhsuk-u-margin-bottom-0">
                 <div>
-                    <dd class="nhsuk-body nhsuk-u-margin-0">Mother\'s certificate number</dd>
+                    <dd class="nhsuk-body nhsuk-u-visually-hidden">Name</dd>
+                    <dt class="nhsuk-heading-l">{{ '' | getMotherName }}</dt>
+                </div>
+                <div>
+                    <dd class="nhsuk-body nhsuk-u-margin-0">Certificate number</dd>
                     <dt class="nhsuk-heading-l">8436 810 379</dt>
                 </div>
                 <div>
                     <dd class="nhsuk-body nhsuk-u-margin-0">Exemption end</dd>
-                    <dt class="nhsuk-heading-l nhsuk-u-margin-bottom-0">' + ( 365 | alterDateByNumberOfDays( data.babyDateOfBirth.day, data.babyDateOfBirth.month, data.babyDateOfBirth.year ) ) + '</dt>
+                    <dt class="nhsuk-heading-l nhsuk-u-margin-bottom-0">{{ 365 | alterDateByNumberOfDays( data.babyDateOfBirth.day, data.babyDateOfBirth.month, data.babyDateOfBirth.year ) }}</dt>
                 </div>
             </dl>'
+
+        {% endset %}
+
+        {{ panel({
+            titleText: 'Application completed',
+            html: panelHTML
         }) }}
 
         <h2 class="nhsuk-heading-m nhsuk-u-margin-top-8">What happens next?</h2>
