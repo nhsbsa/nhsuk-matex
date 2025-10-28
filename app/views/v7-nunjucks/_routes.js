@@ -195,7 +195,7 @@ router.get(/start/,function(req, res){
 
 });
 
-router.post(/nhs-login/,  function (req, res) {
+router.get(/nhs-login-redirect/, function (req, res) {
     req.session.data.loggedIn = 'true';
     res.redirect('mother-present');
 });

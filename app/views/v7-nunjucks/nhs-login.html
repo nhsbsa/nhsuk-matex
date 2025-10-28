@@ -17,23 +17,24 @@
         <div class="login-box">
           <img src="/images/nhs-logo.jpeg" alt="NHS logo" class="nhslogo" />
 
-          <form action="nhs-login" method="post" novalidate>
+          <form action="nhs-login-redirect" method="get" novalidate>
           
-          <div class="form-group">
+            <div class="form-group">
+              <label class="nhs-text" for="email" id="last-name-label">Sign in with your NHSmail account</label>
+              <input id="email" class="nhs-input" type="text" autocomplete="off" aria-required="false" />
+              <input id="password" class="nhs-input" type="text" autocomplete="off" aria-required="false" placeholder="Password" />
+            </div>
 
-            <label class="nhs-text" for="email" id="last-name-label">Sign in with your NHSmail account</label>
-            <input id="email" class="nhs-input" type="text" autocomplete="off" aria-required="false" />
-            <input id="password" class="nhs-input" type="text" autocomplete="off" aria-required="false" placeholder="Password" />
-          </div>
-          <button class="next" type="submit">Sign in</button>
+            <button class="next" type="submit">Sign in</button>
 
-          <div class="private"> 
-            <input type="checkbox" checked />
-            <span class="priv-text">This is a private computer</span>
-            <p class="priv-text">Unlock Account or Forgotten Password? <a href="#">Click here.</a></p>
-          </div>
+            <div class="private"> 
+              <input type="checkbox" checked />
+              <span class="priv-text">This is a private computer</span>
+              <p class="priv-text">Unlock Account or Forgotten Password? <a href="#">Click here.</a></p>
+            </div>
 
-        </form>
+          </form>
+
         </div>
       </div>
     </div>
