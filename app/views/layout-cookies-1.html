@@ -47,8 +47,7 @@
 
 {% block head %}
   <!-- Add your custom CSS or Sass in /app/assets/sass/main.scss -->
-  <link href="/css/main.css" rel="stylesheet">
-  <script src="/nhsuk-frontend/nhsuk.min.js" defer></script>
+  <link href="/assets/sass/main.css" rel="stylesheet">
 {% endblock %}
 
 <!-- Set the page title -->
@@ -89,18 +88,7 @@
 <!-- Edit the footer -->
 <!-- Footer code examples can be found at https://service-manual.nhs.uk/design-system/components/footer -->
 {% block footer %}
- 
-  
-{% endblock %}
-
-{% block bodyEnd %}
-  {% block scripts %}
-    <!-- Custom JavaScript files can be added to this file -->
-    {% include "includes/scripts.html" %}
-    <!-- For adding page specific JavsScript -->
-    {% block pageScripts %}{% endblock %}
-
-    {{ footer({
+ {{ footer({
       links: [
         {
           URL: 'https://www.nhsbsa.nhs.uk/accessibility-statement-buy-nhs-prescription-prepayment-certificate',
@@ -134,7 +122,11 @@
           All content is available under the <a id="ogl-link" class="nhsuk-footer__list-item-link" target="_blank" rel="license noopener" href="https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/">Open Government Licence v3.0<span class="nhsuk-u-visually-hidden"> (opens in new window)</span></a>, except where otherwise stated.
         </p>
       </div>
-    </div>
-    
-  {% endblock %}
+    </div>  
+{% endblock %}
+
+{% block bodyEnd %}
+  {{ super() }}
+  <script type="module" src="/assets/javascript/main.js"></script>
+  {% block pageScripts %}{% endblock %}
 {% endblock %}

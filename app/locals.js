@@ -1,7 +1,13 @@
-module.exports = config => (req, res, next) => {
+module.exports = function(req, res, next) {
 
-  res.locals.serviceName = config.serviceName;
+  // You can set any additional local variables here.
+  // These will be made available to any views
+  //
+  // For example:
+  //
+  // req.locals.organisationName = 'NHS'
+
   res.locals.registerServiceName = 'Register to issue maternity exemption certificates';
 
-  next();
+  next()
 }

@@ -25,6 +25,9 @@
 
 } */
 
+.nhsuk-header + .nhsuk-breadcrumb {
+  width: 100%;
+}
 
 .nhsuk-status-bar {
   background-color: white;
@@ -61,7 +64,7 @@
 
 
 .done-tick {
-  background-image: url(../images/done-tick.png);
+  background-image: url('/assets/images/done-tick.png');
   background-size: 30px;
   background-repeat: no-repeat;
   background-position: 0 px;
