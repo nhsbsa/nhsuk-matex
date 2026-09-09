@@ -8,60 +8,70 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  {{ serviceName }}
+{{ serviceName }}
 {% endblock %}
 
-
+{% block beforeContent %}
+{{ backLink({
+text: 'Go back',
+href: 'javascript:history.back();'
+}) }}
+{% endblock %}
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <a class="nhsuk-back-link" href="javascript:history.go(-1)">Go back</a>
-      <form action="/v7/certificate-email-or-post" method="post">
-        <fieldset class="nhsuk-fieldset" id="email-post">
-          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
-            <h1 class="nhsuk-fieldset__heading" id="title">
-              Would the mother like their maternity exemption certificate sent by email or post?
-            </h1>
-          </legend>
-          <div class="nhsuk-hint" id="contact-hint">
-            Mothers will get their exemption certificate straight away if sent by email.
-            </div>
-            <div class="nhsuk-hint" id="contact-hint">
-              If the mother chooses to receive their certificate by post, it can take up to 10 working days to arrive.
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <form action="/v7/certificate-email-or-post" method="post">
+      <fieldset class="nhsuk-fieldset" id="email-post">
+        <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+          <h1 class="nhsuk-fieldset__heading" id="title">
+            How does the mother want to get their exemption certificate?
+          </h1>
+        </legend>
+        <div class="nhsuk-hint" id="contact-hint">
+          Mothers will get their exemption certificate straight away if sent by email.
+        </div>
+        <div class="nhsuk-hint" id="contact-hint">
+          If the mother chooses to receive their certificate by post, it can take up to 10 working days to arrive.
+        </div>
+        <div class="nhsuk-radios nhsuk-radios--conditional">
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="contact-1" name="contact-group" type="radio" value="email"
+              aria-controls="conditional-contact-1" aria-expanded="false">
+            <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
+              Email
+            </label>
+            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-item-hint">
+                We'll email the certificate to the mother immediately
               </div>
-          <form action="certificate-email-or-post" method="post">
-            <div class="nhsuk-radios nhsuk-radios--conditional">
-              <div class="nhsuk-radios__item">
-                <input class="nhsuk-radios__input" id="contact-1" name="contact-group" type="radio" value="email"
-                  aria-controls="conditional-contact-1" aria-expanded="false">
-                <label class="nhsuk-label nhsuk-radios__label" for="contact-1">
-                  Email
-                </label>
-              </div>
-              <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
-                <div class="nhsuk-form-group">
-                  <label class="nhsuk-label" for="email">
-                    Mother's email address
-                  </label>
-                  <div class="nhsuk-hint" id="contact-hint"> For example, jane.doe@gmail.com </div>
-                  <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text" value="{{ data['email']
+          </div>
+          <div class="nhsuk-radios__conditional nhsuk-radios__conditional--hidden" id="conditional-contact-1">
+            <div class="nhsuk-form-group">
+              <label class="nhsuk-label" for="email">
+                Mother's email address
+              </label>
+              <div class="nhsuk-hint" id="contact-hint"> For example, jane.doe@gmail.com </div>
+              <input class="nhsuk-input nhsuk-u-width-two-thirds" id="email" name="email" type="text" value="{{ data['email']
                   }}">
-                </div>
-              </div>
-            <div class="nhsuk-radios__item">
-              <input class="nhsuk-radios__input" id="example-contact-by-post" name="contact-group" type="radio" value="post" />
-              <label class="nhsuk-label nhsuk-radios__label" id="email-no" for="example-contact-by-post">Post</label>
             </div>
           </div>
-        </fieldset>
-        <div class="nhsuk-u-padding-bottom-4"></div>
-      
-        <button class="nhsuk-button" type="submit">Continue</button>
-      </form>
-    </div>  
+          <div class="nhsuk-radios__item">
+            <input class="nhsuk-radios__input" id="example-contact-by-post" name="contact-group" type="radio"
+              value="post" />
+            <label class="nhsuk-label nhsuk-radios__label" id="email-no" for="example-contact-by-post">Post</label>
+            <div class="nhsuk-hint nhsuk-radios__hint" id="example-hints-item-hint">
+                Posted certificates can take 10 working days to arrive
+              </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="nhsuk-u-padding-bottom-4"></div>
+
+      <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
   </div>
+</div>
 {% endblock %}

@@ -11,7 +11,12 @@
   {{ serviceName }}
 {% endblock %}
 
-
+{% block beforeContent %}
+    {{ backLink({
+        text: 'Go back',
+        href: 'javascript:history.back();'
+    }) }}
+{% endblock %}
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
@@ -19,9 +24,6 @@
 
   <div class="nhsuk-grid-row">
     <div class="nhsuk-grid-column-two-thirds">
-      <a class="nhsuk-back-link" href="javascript:history.go(-1)">Go back</a>
-      <div class="nhsuk-u-padding-bottom-3"></div>
-     <div class="nhsuk-u-padding-bottom-1"></div>
 
       <h1 id="title" class="nhsuk-heading-l">Application details</h1>
       <form>

@@ -8,60 +8,63 @@
 
 <!-- Set the page title inside the pageTitle block -->
 {% block pageTitle %}
-  {{ serviceName }}
+{{ serviceName }}
 {% endblock %}
 
-
+{% block beforeContent %}
+{{ backLink({
+text: 'Go back',
+href: 'javascript:history.back();'
+}) }}
+{% endblock %}
 
 <!-- Your page content goes inside the content block -->
 <!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
 {% block content %}
 
-  <div class="nhsuk-grid-row">
-    <div class="nhsuk-grid-column-two-thirds">
-      <a class="nhsuk-back-link" href="javascript:history.go(-1)">Go back</a>
-      <div class="content">
-        <div class="indextext">
-          <div class="done-panel">
-            <h2 class="nhsuk-heading-l" id="completed">
-              <span class="done-tick" id="done-tick">Application completed</span>
-            </h2>
-            <body class="nhsuk-heading-m" id="submitted">
-              <span id="submitted-hcp">Mother's certificate number:</span>
-            </body>
-            <h2 class="nhsuk-heading-l">8436 810 379</h2>
-            <span class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
-              Exemption ends: </span>
-              <h2 class="nhsuk-heading-l">24 September 2025</h2>
-          </div>
-          
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+    <div class="content">
+      <div class="indextext">
+        <div class="done-panel">
+          <h2 class="nhsuk-heading-l" id="completed">
+            <span class="done-tick" id="done-tick">Application completed</span>
+          </h2>
 
-              
-          
-
-
-
-            <h3 class="nhsuk-heading-m">
-              What happens next?
-            </h3>
-            <p class="nhsuk-body"> We'll post the certificate to the mother. They should receive it within 10 working days.</p>
-            <p class="nhsuk-body">If the certificate has not been received within 10 working days, the mother should <a href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="_blank">contact the NHSBSA</a></p>
-            <p class="nhsuk-body">The mother should pay for their prescription items until they receive their paper certificate.</p>
-            <p class="nhsuk-body">To claim a refund, the mother should ask the pharmacist for an FP57 receipt when they purchase prescription items. They could receive a refund if their maternity exemption certificate covered the date that they claimed NHS prescriptions.</p>
-          <div class="nhsuk-u-padding-bottom-"></div>
-
-          <div class="nhsuk-u-padding-bottom-3"></div>
-            
-          <form action="/v7/start-page-signed-in" method="POST" class="form">
-            <div class="nhsuk-form-group">
-              <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
-            </div>
-          </form>
+          <body class="nhsuk-heading-m" id="submitted">
+            <span id="submitted-hcp">Mother's certificate number:</span>
+          </body>
+          <h2 class="nhsuk-heading-l">8436 810 379</h2>
+          <span class="nhsuk-body" id="submitted-hcp-certificateExpiryDate">
+            Exemption ends: </span>
+          <h2 class="nhsuk-heading-l">24 September 2025</h2>
         </div>
-      </div>
+        <h3 class="nhsuk-heading-m">
+          What happens next?
+        </h3>
+        <p class="nhsuk-body"> We'll post the certificate to the mother. They should receive it within 10 working days.
+        </p>
+        <p class="nhsuk-body">If the certificate has not been received within 10 working days, the mother should <a
+            href="https://www.nhsbsa.nhs.uk/contact-nhs-help-health-costs" target="_blank">contact the NHSBSA</a></p>
+        <p class="nhsuk-body">The mother should pay for their prescription items until they receive their paper
+          certificate.</p>
+        <p class="nhsuk-body">To claim a refund, the mother should ask the pharmacist for an FP57 receipt when they
+          purchase prescription items. They could receive a refund if their maternity exemption certificate covered the
+          date that they claimed NHS prescriptions.</p>
+        <div class="nhsuk-u-padding-bottom-"></div>
 
-      
-      <div class="nhsuk-u-padding-bottom-6"></div>
-    </div>  
+        <div class="nhsuk-u-padding-bottom-3"></div>
+
+        <form action="/v7/start-page-signed-in" method="POST" class="form">
+          <div class="nhsuk-form-group">
+            <input class="nhsuk-button" id="next-button" type="submit" value="Start a new application" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div class="nhsuk-u-padding-bottom-6"></div>
   </div>
+</div>
 {% endblock %}

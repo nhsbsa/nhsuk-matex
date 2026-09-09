@@ -41,6 +41,27 @@ router.get('/.well-known/appspecific/com.chrome.devtools.json', (req, res) => {
   res.json({ message: 'No special config' });
 })
 
+router.get('/v7/confirmation-email', function (req, res) {
+  res.render('v7/confirmation-email');
+});
+
+router.get('/v7/confirmation-post', function (req, res) {
+  res.render('v7/confirmation-post');
+});
+
+router.post('/v7/certificate-email-or-post', function (req, res) {
+
+  if (req.body['contact-group'] === 'email') {
+    return res.redirect('/v7/confirmation-email');
+  }
+
+  if (req.body['contact-group'] === 'post') {
+    return res.redirect('/v7/confirmation-post');
+  }
+
+  return res.redirect('/v7/certificate-email-or-post');
+});
+
 module.exports = router;
 
 
